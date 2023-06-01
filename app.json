@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "noroeste-bloco",
+    "slug": "noroeste-bloco",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/noroeste-logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/noroeste-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/noroeste-logo.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/noroeste-logo.png"
+    }
+  }
+}
