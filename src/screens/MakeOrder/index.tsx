@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TextInput, ScrollView, FlatList, Modal, TouchableOpacity, Alert } from 'react-native'
 import React, { useState, useEffect, useRef } from 'react';
-import { Table, Row, Cell } from 'react-native-table-component';
+import { Table, Row, Cell, TableWrapper } from 'react-native-table-component';
 import { Feather } from '@expo/vector-icons';;
 import ButtonDefault from '../../components/ButtonDefault';
 import RNPickerSelect from 'react-native-picker-select';
@@ -194,8 +194,16 @@ const MakeOrder = () => {
     setFilteredProducts(filtered);
   };
 
-  function CriarPedido() {
-    const date = Date();
+  function CriarPedido(ApenasVerPedido = false) {
+    function formatDateToDDMMYYYY(date: any) {
+      const d = new Date(date);
+      const day = d.getDate().toString().padStart(2, '0');
+      const month = (d.getMonth() + 1).toString().padStart(2, '0');
+      const year = d.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
+
+    const date = formatDateToDDMMYYYY(new Date());
 
     const novoPedido = {
       date,
@@ -212,27 +220,21 @@ const MakeOrder = () => {
     };
 
     dispatch(updatePedido(novoPedido));
-  }
 
-  function visualizarPedido() {
-    CriarPedido();
-
-    navigation.navigate("Visualizar pedido" as never);
-  };
-
-  function salvarPedidoNoSQLite(pedido: any) {
-    CriarPedido();
+    if (ApenasVerPedido === true) {
+      return
+    }
     // Salvar o pedido no banco de dados
     db.transaction(tx => {
       tx.executeSql(
-        'INSERT INTO pedidos (client, fantasyName, cnpj, city, district, contactName, condiPG, prazo, adress, produtos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-        [pedido.inputClient, pedido.inputFantasyName, pedido.inputCNPJ, pedido.inputCity, pedido.inputDistrict, pedido.inputContactName, pedido.inputCondiPG, pedido.inputPrazo, pedido.inputAdress, JSON.stringify(pedido.produtos)],
+        'INSERT INTO pedidos (client, date, fantasyName, cnpj, city, district, contactName, condiPG, prazo, adress, produtos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+        [novoPedido.inputClient, novoPedido.date, novoPedido.inputFantasyName, novoPedido.inputCNPJ, novoPedido.inputCity, novoPedido.inputDistrict, novoPedido.inputContactName, novoPedido.inputCondiPG, novoPedido.inputPrazo, novoPedido.inputAdress, JSON.stringify(novoPedido.produtos)],
         (_, resultSet) => {
           const { insertId } = resultSet;
 
           // Atualizar o estado Redux com o novo pedido
-          const novoPedido = { ...pedido, id: insertId };
-          dispatch(updateTodosPedidos(novoPedido));
+          const novoPedidoBD = { ...novoPedido, id: insertId };
+          dispatch(updateTodosPedidos(novoPedidoBD));
         },
         (_, error) => {
           console.log('Erro ao salvar pedido no SQLite:', error);
@@ -240,7 +242,14 @@ const MakeOrder = () => {
         }
       );
     });
+
   }
+
+  function visualizarPedido() {
+    CriarPedido();
+
+    navigation.navigate("Visualizar pedido" as never);
+  };
 
   function LimparInputs() {
     setInputClient('');
@@ -258,7 +267,6 @@ const MakeOrder = () => {
 
   function salvarEVisualizarPedido() {
     CriarPedido();
-    salvarPedidoNoSQLite(pedidoSelector)
 
     LimparInputs();
 
@@ -279,6 +287,7 @@ const MakeOrder = () => {
       <Feather name="trash-2" size={20} color="#000" />
     </TouchableOpacity>
   ]);
+
 
   const columnWidths = [3, 0.8, 0.9, 1, 0.7, 0.7];
   const columnWidthsHeader = [3, 0.8, 0.9, 1, 1.4];
@@ -572,6 +581,7 @@ const MakeOrder = () => {
             textStyle={{ ...styles.tableTotalRowText }}
           />
         </Table>
+
 
         <ButtonDefault text="Salvar e visualizar pedido" action={salvarEVisualizarPedido} />
         <ButtonDefault text="Visualizar pedido" action={visualizarPedido} />

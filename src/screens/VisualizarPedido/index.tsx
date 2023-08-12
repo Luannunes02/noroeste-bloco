@@ -4,7 +4,7 @@ import { Table, Row, Rows } from 'react-native-table-component';
 import { useNavigation } from '@react-navigation/native';
 import { captureRef } from 'react-native-view-shot';
 import * as Sharing from 'expo-sharing';
-import ViewShot from "react-native-view-shot";
+import { ScrollView } from 'react-native-gesture-handler';
 
 import {
     updateTodosPedidos,
@@ -13,7 +13,6 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 
 import ButtonDefault from '../../components/ButtonDefault';
-import { ScrollView } from 'react-native-gesture-handler';
 
 export default function VisualizarPedido() {
     const pedidoSelector = useSelector((state: any) => state.pedido);
@@ -36,9 +35,16 @@ export default function VisualizarPedido() {
 
     const renderTableRows = () => {
         const rows = pedidoSelector.produtos.map((product: any, index: any) => {
-            return [`${product.inputProduct}`, `${product.inputQuantity}`, `R$ ${product.inputValue}`,]
+            return [`${product.product}`, `${product.inputQuantity}`, `R$ ${product.value.toFixed(2).replace('.', ',')}`,]
         });
         return rows;
+    };
+
+    const calculateTotal = () => {
+        const total = pedidoSelector.produtos.reduce((sum: number, product: any) => {
+            return sum + product.value * product.inputQuantity;
+        }, 0);
+        return `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
     };
 
     const tableRef = useRef(null);
@@ -64,7 +70,7 @@ export default function VisualizarPedido() {
 
     return (
         <View style={styles.container}>
-            <ScrollView ref={tableRef} onLayout={handleLayout} style={{ backgroundColor: '#fff' }}>
+            <ScrollView ref={tableRef} onLayout={handleLayout} style={styles.scrollViewContainer}>
                 <View style={styles.header}>
                     <Image
                         style={styles.logo}
@@ -80,9 +86,10 @@ export default function VisualizarPedido() {
                 <Table borderStyle={{ borderWidth: 1, borderColor: '#C1C0B9' }}>
                     <Rows data={tableData} textStyle={{ ...styles.text }} flexArr={[1, 2]} />
                 </Table>
-                <Table style={{ marginTop: 50 }} borderStyle={{ borderWidth: 1, borderColor: '#C1C0B9' }}>
+                <Table style={{ marginTop: 50, marginBottom: 50 }} borderStyle={{ borderWidth: 1, borderColor: '#C1C0B9' }}>
                     <Row data={tableHeader} textStyle={[{ ...styles.text }, { fontWeight: 'bold' }]} flexArr={[1, 2]} />
                     <Rows data={renderTableRows()} textStyle={{ ...styles.text }} flexArr={[1, 2]} />
+                    <Row data={[calculateTotal()]} textStyle={[{ ...styles.text }, { fontWeight: 'bold' }]} flexArr={[1, 2]} />
                 </Table>
             </ScrollView>
             <ButtonDefault
@@ -94,8 +101,8 @@ export default function VisualizarPedido() {
 };
 
 const styles = StyleSheet.create({
-    container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
-    scrollViewContainer: { flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff' },
+    container: { flex: 1, backgroundColor: '#fff' },
+    scrollViewContainer: { flex: 1, padding: 16 },
     header: {
         flexDirection: 'column',
         justifyContent: 'center',
@@ -111,10 +118,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         opacity: 0.8
     },
-    head: { height: 40, backgroundColor: '#f1f8ff' },
-    text: { margin: 6, textAlign: 'center', backgroundColor: '#fff' },
     logo: {
         width: 190,
         height: 100
     },
+    text: { margin: 6, textAlign: 'center', backgroundColor: '#fff' },
+    total: { alignSelf: 'flex-end', marginTop: 20, fontSize: 16, fontWeight: 'bold', color: 'green', paddingBottom: 200 }
 });
