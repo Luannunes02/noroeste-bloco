@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, ScrollView, FlatList, Modal, TouchableOpacity, Alert } from 'react-native'
+import { StyleSheet, Text, View, TextInput, ScrollView, FlatList, Modal, TouchableOpacity, Alert, Image } from 'react-native'
 import React, { useState, useEffect, useRef } from 'react';
 import { Table, Row, Cell, TableWrapper } from 'react-native-table-component';
 import { Feather } from '@expo/vector-icons';;
@@ -42,6 +42,56 @@ const MakeOrder = () => {
 
   const [tenPorcentOfDiscont, setTenPorcentOfDiscont] = useState(false);
   const [bonification, setBonification] = useState(true);
+
+  useEffect(() => {
+    db.transaction((tx) => {
+      // Verifica se a tabela "pedidos" existe
+      tx.executeSql(
+        'SELECT name FROM sqlite_master WHERE type="table" AND name="pedidos"',
+        [],
+        (_, resultSet) => {
+          const { rows } = resultSet;
+          const tableExists = rows.length > 0;
+          if (!tableExists) {
+            // Cria a nova tabela com a estrutura correta
+            tx.executeSql(
+              'CREATE TABLE pedidos (id INTEGER PRIMARY KEY AUTOINCREMENT, client TEXT, date TEXT NOT NULL, fantasyName TEXT, cnpj TEXT, city TEXT, district TEXT, contactName TEXT, condiPG TEXT, prazo TEXT, adress TEXT, observation TEXT, produtos TEXT)',
+              [],
+              () => {
+                console.log('Tabela "pedidos" criada com a estrutura correta.');
+              },
+              (_, error) => {
+                console.log('Erro ao criar a tabela pedidos:', error);
+                return true;
+              }
+            );
+          }
+        }
+      );
+    });
+
+
+    db.transaction((tx) => {
+      // Consultar a tabela "sqlite_master" para listar os bancos de dados
+      console.log('Antes da segunda transação');
+      tx.executeSql(
+        "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%';",
+        [],
+        (_, resultSet) => {
+          const databases: string[] = [];
+          for (let i = 0; i < resultSet.rows.length; i++) {
+            databases.push(resultSet.rows.item(i).name);
+          }
+          console.log("Bancos de Dados SQLite disponíveis:", databases);
+        },
+        (_, error) => {
+          console.log('Erro ao listar os bancos de dados:', error);
+          return true;
+        }
+      );
+      console.log('Após a segunda transação');
+    });
+  }, []);
 
   const RadioButton: React.FC<{ label: string; selected: boolean; onPress: () => void }> = ({
     label,
@@ -385,7 +435,10 @@ const MakeOrder = () => {
                 value={inputCNPJ}
               />
               <TouchableOpacity style={styles.cnpjButton} onPress={pesquisarCnpj}>
-                <Feather name="search" size={25} color="#FFF" />
+                <Image
+                  style={styles.lupaIcon}
+                  source={require('../../assets/icons/lupa.png')}
+                />
               </TouchableOpacity>
             </View>
           </View>
@@ -459,7 +512,10 @@ const MakeOrder = () => {
               value={inputProduct}
             />
             <TouchableOpacity onPress={() => setShowProductModal(true)} style={styles.modalInputBtn}>
-              <Feather name="search" size={25} color="#FFF" />
+              <Image
+                style={styles.lupaIcon}
+                source={require('../../assets/icons/lupa.png')}
+              />
             </TouchableOpacity>
           </View>
         </View>
@@ -662,11 +718,15 @@ const styles = StyleSheet.create({
     color: '#fff'
   },
   cnpjButton: {
-    backgroundColor: '#000',
+    backgroundColor: '#fff813',
     paddingVertical: 4,
     paddingHorizontal: 7,
     justifyContent: 'center',
     borderRadius: 20
+  },
+  lupaIcon: {
+    width: 24,
+    height: 25
   },
   line: {
     borderColor: '#fff813',
@@ -739,7 +799,7 @@ const styles = StyleSheet.create({
   },
   modalInputBtn: {
     marginEnd: 10,
-    backgroundColor: "#000",
+    backgroundColor: "#fff813",
     padding: 6,
     borderRadius: 20
   },

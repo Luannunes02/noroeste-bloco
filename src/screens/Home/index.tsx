@@ -60,7 +60,7 @@ export default function Home() {
             <View style={styles.buttonsContainer}>
                 <ButtonDefault text={"TIRAR PEDIDO"} action={() => navigation.navigate("Tirar pedido" as never)} />
                 <ButtonDefault text={"CONSULTAR PRODUTOS"} action={() => navigation.navigate("Consultar Produtos" as never)} />
-                <ButtonDefault text={"CATÁLOGO"} />
+                <ButtonDefault text={"PEDIDOS"} />
             </View>
 
             <StatusBar style="auto" />

@@ -72,12 +72,23 @@ const AllOrders: React.FC = () => {
         }
     }
 
+    const calculateTotalValue = (produtos: any[]) => {
+        let total = 0;
+        produtos.forEach((produto: any) => {
+            console.log(produto)
+            total += parseFloat(produto.value) * parseFloat(produto.inputQuantity);
+        });
+        return total.toFixed(2); // Arredonda para 2 casas decimais
+    }
+
     const renderPedidoItem = ({ item }: { item: any }) => {
         let prazoFormatted = '';
         if (item.prazo) {
             const prazoArray = item.prazo.split('x');
             prazoFormatted = prazoArray.join('x');
         }
+
+        const totalValue = calculateTotalValue(item.produtos);
 
         return (
             <View style={styles.pedidoItemContainer}>
@@ -89,6 +100,7 @@ const AllOrders: React.FC = () => {
                 <View style={styles.prazoContainer}>
                     <Text style={styles.prazoText}>Prazo: {prazoFormatted}</Text>
                     <Text style={styles.dateText}>Data: {item.date}</Text>
+                    <Text style={styles.totalText}>Valor Total: R$ {totalValue ? 'true' : 'false'}</Text>
                 </View>
                 <TouchableOpacity onPress={() => handleDelete(item)}>
                     <Text style={styles.apagarText}>Apagar</Text>
@@ -183,6 +195,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    },
+    totalText: {
+
     },
     modalContent: {
         backgroundColor: 'white',
