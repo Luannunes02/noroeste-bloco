@@ -31,6 +31,7 @@ function Routes() {
           <Stack.Screen
             name='Tirar pedido'
             component={MakeOrder}
+            initialParams={{ pedidoId: 0 }}
           />
 
           <Stack.Screen

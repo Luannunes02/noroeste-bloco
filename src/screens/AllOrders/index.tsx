@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableOpacity, Modal, Button } from 'react-native';
+import { View, Text, FlatList, StyleSheet, TouchableOpacity, Modal, Button, ScrollView } from 'react-native';
 import * as SQLite from 'expo-sqlite';
+import { useNavigation } from '@react-navigation/native';
 
 const db = SQLite.openDatabase('pedidos.db');
+
+import LoadingIndicator from '../../components/LoadingIndicator';
 
 const AllOrders: React.FC = () => {
     const [pedidos, setPedidos] = useState<any[]>([]);
     const [modalVisible, setModalVisible] = useState(false);
     const [pedidoToDelete, setPedidoToDelete] = useState<any | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
+    const navigation = useNavigation();
 
     useEffect(() => {
         // Carregar os pedidos do banco de dados
@@ -19,6 +24,8 @@ const AllOrders: React.FC = () => {
                     const { rows } = resultSet;
                     const data = rows._array;
                     setPedidos(data);
+                    setLoading(false);
+
                 },
                 (_, error) => {
                     console.log('Erro ao carregar pedidos:', error);
@@ -72,14 +79,19 @@ const AllOrders: React.FC = () => {
         }
     }
 
-    const calculateTotalValue = (produtos: any[]) => {
+    const calculateTotalValue = (produtos: any) => {
         let total = 0;
-        produtos.forEach((produto: any) => {
-            console.log(produto)
+        const produtosArray = JSON.parse(produtos);
+
+        produtosArray.forEach((produto: any) => {
             total += parseFloat(produto.value) * parseFloat(produto.inputQuantity);
         });
         return total.toFixed(2); // Arredonda para 2 casas decimais
     }
+
+    const handleEdit = (pedidoId: number) => {
+        navigation.navigate('Tirar pedido' as never, { pedidoId });
+    };
 
     const renderPedidoItem = ({ item }: { item: any }) => {
         let prazoFormatted = '';
@@ -100,39 +112,53 @@ const AllOrders: React.FC = () => {
                 <View style={styles.prazoContainer}>
                     <Text style={styles.prazoText}>Prazo: {prazoFormatted}</Text>
                     <Text style={styles.dateText}>Data: {item.date}</Text>
-                    <Text style={styles.totalText}>Valor Total: R$ {totalValue ? 'true' : 'false'}</Text>
+                    <Text style={styles.totalText}>Valor Total: R$ {totalValue}</Text>
+                    <View style={styles.btnsContainer}>
+                        <TouchableOpacity onPress={() => handleDelete(item)}>
+                            <Text style={styles.apagarText}>Apagar</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => handleEdit(item.id)}>
+                            <Text style={styles.editarText}>Editar</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
-                <TouchableOpacity onPress={() => handleDelete(item)}>
-                    <Text style={styles.apagarText}>Apagar</Text>
-                </TouchableOpacity>
             </View>
         );
     };
 
     return (
         <View style={styles.container}>
-            <FlatList
-                data={pedidos}
-                renderItem={renderPedidoItem}
-                keyExtractor={item => item.id.toString()}
-            />
-
-            <Modal
-                visible={modalVisible}
-                animationType="slide"
-                transparent={true}
-                onRequestClose={() => setModalVisible(false)}
-            >
-                <View style={styles.modalContainer}>
-                    <View style={styles.modalContent}>
-                        <Text>Deseja realmente apagar este pedido?</Text>
-                        <View style={styles.modalButtons}>
-                            <Button title="Cancelar" onPress={() => setModalVisible(false)} />
-                            <Button title="Apagar" onPress={confirmDelete} />
-                        </View>
+            {
+                loading ?
+                    <View style={styles.loading}>
+                        <LoadingIndicator />
                     </View>
-                </View>
-            </Modal>
+                    :
+                    <View>
+                        <FlatList
+                            data={pedidos}
+                            renderItem={renderPedidoItem}
+                            keyExtractor={item => item.id.toString()}
+                        />
+
+                        <Modal
+                            visible={modalVisible}
+                            animationType="slide"
+                            transparent={true}
+                            onRequestClose={() => setModalVisible(false)}
+                        >
+                            <View style={styles.modalContainer}>
+                                <View style={styles.modalContent}>
+                                    <Text>Deseja realmente apagar este pedido?</Text>
+                                    <View style={styles.modalButtons}>
+                                        <Button title="Cancelar" onPress={() => setModalVisible(false)} />
+                                        <Button title="Apagar" onPress={confirmDelete} />
+                                    </View>
+                                </View>
+                            </View>
+                        </Modal>
+                    </View>
+            }
         </View>
     );
 };
@@ -184,11 +210,26 @@ const styles = StyleSheet.create({
         color: '#666',
         fontSize: 14,
     },
+    btnsContainer: {
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        alignItems: 'flex-end'
+    },
     apagarText: {
         color: 'red',
         fontSize: 16,
         fontWeight: 'bold',
         marginRight: 10,
+        alignContent: 'flex-end',
+        alignItems: 'flex-end'
+    },
+    editarText: {
+        color: 'green',
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginRight: 10,
+        alignContent: 'flex-end',
+        alignItems: 'flex-end'
     },
     modalContainer: {
         flex: 1,
@@ -207,8 +248,9 @@ const styles = StyleSheet.create({
     },
     modalButtons: {
         flexDirection: 'row',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         marginTop: 20,
+        gap: 20,
     },
     modalButton: {
         color: 'white',
@@ -218,6 +260,11 @@ const styles = StyleSheet.create({
         marginRight: 10,
         fontWeight: 'bold',
     },
+    loading: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
 });
 
 export default AllOrders;

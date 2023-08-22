@@ -3,6 +3,13 @@
     "name": "noroeste-bloco",
     "slug": "noroeste-bloco",
     "version": "1.0.0",
+    "permissions": [
+      "CAMERA",
+      "AUDIO_RECORDING",
+      "LOCATION",
+      "NOTIFICATIONS",
+      "FILE_SYSTEM"
+    ],
     "orientation": "portrait",
     "icon": "./assets/noroeste-logo.png",
     "userInterfaceStyle": "light",

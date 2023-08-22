@@ -4,15 +4,19 @@ import { Table, Row, Cell, TableWrapper } from 'react-native-table-component';
 import { Feather } from '@expo/vector-icons';;
 import ButtonDefault from '../../components/ButtonDefault';
 import RNPickerSelect from 'react-native-picker-select';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import * as SQLite from 'expo-sqlite';
+import { useRoute } from '@react-navigation/native';
 import { SQLError } from 'expo-sqlite';
+import * as FileSystem from 'expo-file-system';
 
 import {
   updateTodosPedidos,
   updatePedido,
 } from "../../store/slices/localizationSlice";
 import { useSelector, useDispatch } from "react-redux";
+
+import LoadingIndicator from '../../components/LoadingIndicator';
 
 const MakeOrder = () => {
   const [inputClient, setInputClient] = useState('');
@@ -35,6 +39,9 @@ const MakeOrder = () => {
     inputQuantity: '',
     value: '',
   });
+  const [productsData, setProductsData] = useState<any>();
+  const [pedidoCarregado, setPedidoCarregado] = useState<boolean>(false);
+  const [pedidoData, setPedidoData] = useState<any>('Sem data')
 
   const pedidoSelector = useSelector((state: any) => state.pedido);
 
@@ -43,7 +50,21 @@ const MakeOrder = () => {
   const [tenPorcentOfDiscont, setTenPorcentOfDiscont] = useState(false);
   const [bonification, setBonification] = useState(true);
 
+  interface TirarPedidoRouteProps {
+    params: {
+      pedidoId: number;
+    };
+  }
+
+  const route = useRoute();
+
+  const params: { pedidoId?: number } = route.params || {};
+
+  // Acessa o parâmetro pedidoId
+  const pedidoId = params.pedidoId;
+
   useEffect(() => {
+    setPedidoCarregado(false);
     db.transaction((tx) => {
       // Verifica se a tabela "pedidos" existe
       tx.executeSql(
@@ -69,29 +90,79 @@ const MakeOrder = () => {
         }
       );
     });
+    fetchData();
+    if (pedidoId == 0) {
+      setPedidoCarregado(true);
+    }
+  }, []);
 
+  useFocusEffect(
+    React.useCallback(() => {
+      if (pedidoId !== 0) {
+        setPedidoCarregado(false);
+        LimparInputs(); // Limpa os inputs antes de buscar o pedido
+        fetchPedidoById(pedidoId);
+      }
+    }, [pedidoId])
+  );
 
-    db.transaction((tx) => {
-      // Consultar a tabela "sqlite_master" para listar os bancos de dados
-      console.log('Antes da segunda transação');
+  const fetchData = async () => {
+    try {
+      // Substitua a URL abaixo pela URL da sua API
+      const response = await fetch('https://api.jsonbin.io/v3/b/64bdb5689d312622a3839e04/latest', {
+        method: 'GET',
+        headers: {
+          'X-Master-Key': '$2b$10$fTCsCYniOvsCifPdd6ZhG.5X1tU6f8dUnGi0YHNuIVveLDGZvJIjC',
+        },
+      });
+
+      if (response.status === 200) {
+        const jsonData = await response.json();
+        setProductsData(jsonData.record.Products);
+        setFilteredProducts(jsonData.record.Products);
+        setPedidoCarregado(true);
+      } else {
+        console.error('Erro ao buscar dados da API:', response.status);
+      }
+    } catch (error) {
+      console.error('Erro ao buscar dados da API:', error);
+    }
+  };
+
+  function fetchPedidoById(pedidoId: any) {
+    // Abra uma transação para consultar o pedido pelo ID
+    db.transaction(tx => {
       tx.executeSql(
-        "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%';",
-        [],
+        'SELECT * FROM pedidos WHERE id = ?',
+        [pedidoId],
         (_, resultSet) => {
-          const databases: string[] = [];
-          for (let i = 0; i < resultSet.rows.length; i++) {
-            databases.push(resultSet.rows.item(i).name);
+          const { rows } = resultSet;
+          if (rows.length > 0) {
+            const pedido = rows.item(0); // Obtém o primeiro resultado (deve ser único)
+            setInputClient(pedido.client);
+            setInputFantasyName(pedido.fantasyName);
+            setInputCNPJ(pedido.cnpj);
+            setInputCity(pedido.city);
+            setInputDistrict(pedido.district);
+            setInputContactName(pedido.contactName);
+            setInputCondiPG(pedido.condiPG);
+            setInputPrazo(pedido.prazo);
+            setInputAdress(pedido.adress);
+            setPedidoData(pedido.date);
+
+            // Converte a string de produtos em um array de objetos
+            const produtosArray = JSON.parse(pedido.produtos);
+            setProdutos(produtosArray);
+            setPedidoCarregado(true);
           }
-          console.log("Bancos de Dados SQLite disponíveis:", databases);
         },
         (_, error) => {
-          console.log('Erro ao listar os bancos de dados:', error);
-          return true;
+          console.log('Erro ao buscar pedido pelo ID:', error);
+          return true
         }
       );
-      console.log('Após a segunda transação');
     });
-  }, []);
+  }
 
   const RadioButton: React.FC<{ label: string; selected: boolean; onPress: () => void }> = ({
     label,
@@ -117,20 +188,14 @@ const MakeOrder = () => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
 
-  const productsData = [
-    { name: 'CC 2030 1KG', value: 24.00 },
-    { name: 'CC Parrots 6KG', value: 78.00 },
-    // Outros produtos...
-  ];
-
   const [showProductModal, setShowProductModal] = useState(false);
 
-  const [filteredProducts, setFilteredProducts] = useState(productsData);
+  const [filteredProducts, setFilteredProducts] = useState<any>();
 
   const paymentOptions = [
-    { label: 'Boleto', value: 'boleto' },
-    { label: 'Dinheiro/Pix', value: 'dinheiro_pix' },
-    { label: 'Cheque', value: 'cheque' },
+    { label: 'Boleto', value: 'Boleti' },
+    { label: 'Dinheiro/Pix', value: 'Dinheiro/Pix' },
+    { label: 'Cheque', value: 'Cheque' },
   ];
 
   const pesquisarCnpj = () => {
@@ -232,28 +297,34 @@ const MakeOrder = () => {
   };
 
   const selectProduct = (product: any) => {
-    setInputProduct(product.name);
-    setInputValue(product.value.toFixed(2).toString());
+    setInputProduct(product.nome);
+    setInputValue(product.valor.toFixed(2).toString());
     setShowProductModal(false);
   };
 
   const searchProducts = (text: any) => {
-    const filtered = productsData.filter((product) =>
-      product.name.toLowerCase().includes(text.toLowerCase())
+    const filtered = productsData.filter((product: any) =>
+      product.nome.toLowerCase().includes(text.toLowerCase())
     );
     setFilteredProducts(filtered);
   };
 
   function CriarPedido(ApenasVerPedido = false) {
-    function formatDateToDDMMYYYY(date: any) {
-      const d = new Date(date);
-      const day = d.getDate().toString().padStart(2, '0');
-      const month = (d.getMonth() + 1).toString().padStart(2, '0');
-      const year = d.getFullYear();
-      return `${day}/${month}/${year}`;
-    }
+    let date = '';
 
-    const date = formatDateToDDMMYYYY(new Date());
+    if (pedidoId !== 0) {
+      date = pedidoData;
+    } else {
+      function formatDateToDDMMYYYY(date: any) {
+        const d = new Date(date);
+        const day = d.getDate().toString().padStart(2, '0');
+        const month = (d.getMonth() + 1).toString().padStart(2, '0');
+        const year = d.getFullYear();
+        return `${day}/${month}/${year}`;
+      }
+
+      date = formatDateToDDMMYYYY(new Date());
+    }
 
     const novoPedido = {
       date,
@@ -270,29 +341,47 @@ const MakeOrder = () => {
     };
 
     dispatch(updatePedido(novoPedido));
-
     if (ApenasVerPedido === true) {
       return
     }
-    // Salvar o pedido no banco de dados
-    db.transaction(tx => {
-      tx.executeSql(
-        'INSERT INTO pedidos (client, date, fantasyName, cnpj, city, district, contactName, condiPG, prazo, adress, produtos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-        [novoPedido.inputClient, novoPedido.date, novoPedido.inputFantasyName, novoPedido.inputCNPJ, novoPedido.inputCity, novoPedido.inputDistrict, novoPedido.inputContactName, novoPedido.inputCondiPG, novoPedido.inputPrazo, novoPedido.inputAdress, JSON.stringify(novoPedido.produtos)],
-        (_, resultSet) => {
-          const { insertId } = resultSet;
 
-          // Atualizar o estado Redux com o novo pedido
-          const novoPedidoBD = { ...novoPedido, id: insertId };
-          dispatch(updateTodosPedidos(novoPedidoBD));
-        },
-        (_, error) => {
-          console.log('Erro ao salvar pedido no SQLite:', error);
-          return true; // Retorne true para indicar que ocorreu um erro
-        }
-      );
-    });
+    if (pedidoId !== 0) {
+      // Atualizar um pedido existente no banco de dados
+      db.transaction(tx => {
+        tx.executeSql(
+          'UPDATE pedidos SET client=?, date=?, fantasyName=?, cnpj=?, city=?, district=?, contactName=?, condiPG=?, prazo=?, adress=?, produtos=? WHERE id=?',
+          [novoPedido.inputClient, novoPedido.date, novoPedido.inputFantasyName, novoPedido.inputCNPJ, novoPedido.inputCity, novoPedido.inputDistrict, novoPedido.inputContactName, novoPedido.inputCondiPG, novoPedido.inputPrazo, novoPedido.inputAdress, JSON.stringify(novoPedido.produtos), pedidoId!.toString()],
+          (_, resultSet) => {
+            // Pedido atualizado com sucesso
+            const updatedPedido = { ...novoPedido, id: pedidoId };
+            dispatch(updatePedido(updatedPedido));
+          },
+          (_, error) => {
+            console.log('Erro ao atualizar pedido no SQLite:', error);
+            return true; // Retorne true para indicar que ocorreu um erro
+          }
+        );
+      });
+    } else {
+      // Criar um novo pedido no banco de dados
+      db.transaction(tx => {
+        tx.executeSql(
+          'INSERT INTO pedidos (client, date, fantasyName, cnpj, city, district, contactName, condiPG, prazo, adress, produtos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+          [novoPedido.inputClient, novoPedido.date, novoPedido.inputFantasyName, novoPedido.inputCNPJ, novoPedido.inputCity, novoPedido.inputDistrict, novoPedido.inputContactName, novoPedido.inputCondiPG, novoPedido.inputPrazo, novoPedido.inputAdress, JSON.stringify(novoPedido.produtos)],
+          (_, resultSet) => {
+            const { insertId } = resultSet;
 
+            // Atualizar o estado Redux com o novo pedido
+            const novoPedidoBD = { ...novoPedido, id: insertId };
+            dispatch(updateTodosPedidos(novoPedidoBD));
+          },
+          (_, error) => {
+            console.log('Erro ao salvar pedido no SQLite:', error);
+            return true; // Retorne true para indicar que ocorreu um erro
+          }
+        );
+      });
+    }
   }
 
   function visualizarPedido() {
@@ -400,248 +489,262 @@ const MakeOrder = () => {
   return (
     <View style={styles.container}>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={() => LimparInputs()}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+          LimparInputs();
+          navigation.navigate("Tirar pedido" as never)
+        }}>
           <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Todos os pedidos" as never)}>
           <Text>VER PEDIDOS</Text>
         </TouchableOpacity>
       </View>
-      <ScrollView style={styles.scrollView}>
-        <View style={styles.inputContainer}>
-          <Text style={styles.labelInput}>Razão social:</Text>
-          <TextInput
-            style={styles.input}
-            onChangeText={setInputClient}
-            value={inputClient}
-          />
-        </View>
-        <View style={styles.divideInputsContainer}>
-          <View style={styles.inputContainerHalf}>
-            <Text style={styles.labelInput}>Nome fantasia:</Text>
-            <TextInput
-              style={styles.input}
-              onChangeText={setInputFantasyName}
-              value={inputFantasyName}
-            />
+      {
+        !pedidoCarregado ?
+          <View style={styles.loading}>
+            <LoadingIndicator />
           </View>
-
-          <View style={styles.inputContainer}>
-            <Text style={styles.labelInput}>CNPJ:</Text>
-            <View style={styles.inputCnpjContainer}>
+          :
+          <ScrollView style={styles.scrollView}>
+            <View style={styles.inputContainer}>
+              <Text style={styles.labelInput}>Razão social:</Text>
               <TextInput
-                style={styles.inputCNPJ}
-                onChangeText={setInputCNPJ}
-                value={inputCNPJ}
+                style={styles.input}
+                onChangeText={setInputClient}
+                value={inputClient}
               />
-              <TouchableOpacity style={styles.cnpjButton} onPress={pesquisarCnpj}>
-                <Image
-                  style={styles.lupaIcon}
-                  source={require('../../assets/icons/lupa.png')}
+            </View>
+            <View style={styles.divideInputsContainer}>
+              <View style={styles.inputContainerHalf}>
+                <Text style={styles.labelInput}>Nome fantasia:</Text>
+                <TextInput
+                  style={styles.input}
+                  onChangeText={setInputFantasyName}
+                  value={inputFantasyName}
                 />
-              </TouchableOpacity>
+              </View>
+
+              <View style={styles.inputContainer}>
+                <Text style={styles.labelInput}>CNPJ:</Text>
+                <View style={styles.inputCnpjContainer}>
+                  <TextInput
+                    style={styles.inputCNPJ}
+                    onChangeText={setInputCNPJ}
+                    value={inputCNPJ}
+                  />
+                  <TouchableOpacity style={styles.cnpjButton} onPress={pesquisarCnpj}>
+                    <Image
+                      style={styles.lupaIcon}
+                      source={require('../../assets/icons/lupa.png')}
+                    />
+                  </TouchableOpacity>
+                </View>
+              </View>
             </View>
-          </View>
-        </View>
 
-        <View style={styles.divideInputsContainer}>
-          <View style={styles.inputContainerHalf}>
-            <Text style={styles.labelInput}>Cidade:</Text>
-            <TextInput
-              style={styles.input}
-              onChangeText={setInputCity}
-              value={inputCity}
-            />
-          </View>
-          <View style={styles.inputContainerHalf}>
-            <Text style={styles.labelInput}>Bairro:</Text>
-            <TextInput
-              style={styles.input}
-              onChangeText={setInputDistrict}
-              value={inputDistrict}
-            />
-          </View>
-        </View>
-
-        <View style={styles.divideInputsContainer}>
-          <View style={styles.inputContainerHalf}>
-            <Text style={styles.labelInput}>Endereço:</Text>
-            <TextInput
-              style={styles.input}
-              onChangeText={setInputAdress}
-              value={inputAdress}
-            />
-          </View>
-          <View style={styles.inputContainerHalf}>
-            <Text style={styles.labelInput}>Nome do contato:</Text>
-            <TextInput
-              style={styles.input}
-              onChangeText={setInputContactName}
-              value={inputContactName}
-            />
-          </View>
-        </View>
-        {/*condição de pagamento*/}
-        <View style={styles.divideInputsContainer}>
-          <View style={styles.inputContainerHalf}>
-            <Text style={styles.labelInput}>Condição de pagamento:</Text>
-            <RNPickerSelect
-              onValueChange={(value) => setInputCondiPG(value)}
-              value={inputCondiPG}
-              items={paymentOptions}
-              placeholder={{ label: 'Selecione', color: '#000', value: 'Não definido' }}
-            />
-          </View>
-          <View style={styles.inputContainerHalf}>
-            <Text style={styles.labelInput}>Prazo:</Text>
-            <TextInput
-              style={styles.input}
-              onChangeText={setInputPrazo}
-              value={inputPrazo}
-            />
-          </View>
-        </View>
-        {/*Adicionar produto*/}
-        <View style={styles.line}></View>
-        <View style={styles.inputContainer}>
-          <Text style={styles.labelInput}>Produto:</Text>
-          <View style={styles.productNameContainer}>
-            <TextInput
-              style={styles.inputProductSearch}
-              onChangeText={setInputProduct}
-              value={inputProduct}
-            />
-            <TouchableOpacity onPress={() => setShowProductModal(true)} style={styles.modalInputBtn}>
-              <Image
-                style={styles.lupaIcon}
-                source={require('../../assets/icons/lupa.png')}
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
-        <View style={styles.divideInputsContainer}>
-          <View style={styles.inputContainerHalf}>
-            <Text style={styles.labelInput}>Quantidade:</Text>
-            <TextInput
-              style={styles.input}
-              onChangeText={setInputQuantity}
-              value={inputQuantity}
-            />
-          </View>
-          <View style={styles.inputContainerHalf}>
-            <Text style={styles.labelInput}>Valor:</Text>
-            <TextInput
-              style={styles.input}
-              onChangeText={setInputValue}
-              value={inputValue}
-            />
-          </View>
-        </View>
-        <View style={styles.containerDiscont}>
-          <View>
-            <Text style={styles.labelInputRadio}>Desconto de 10%:</Text>
-            <RadioButton
-              label="Desconto"
-              selected={tenPorcentOfDiscont}
-              onPress={handleTenPorcentOfDiscontPress}
-            />
-          </View>
-          <View>
-            <Text style={styles.labelInputRadio}>Bonificação:</Text>
-            <RadioButton label="Bonificação" selected={bonification} onPress={handleBonificationPress} />
-          </View>
-        </View>
-        <ButtonDefault text="Adicionar" action={adicionarProduto} />
-
-        {/* Modal de seleção de produtos */}
-        <Modal visible={showProductModal} animationType="slide">
-          <View style={styles.modalContainer}>
-            <View style={styles.searchInputContainer}>
-              <TextInput
-                style={styles.searchInput}
-                placeholder="Pesquisar produto"
-                onChangeText={searchProducts}
-              />
+            <View style={styles.divideInputsContainer}>
+              <View style={styles.inputContainerHalf}>
+                <Text style={styles.labelInput}>Cidade:</Text>
+                <TextInput
+                  style={styles.input}
+                  onChangeText={setInputCity}
+                  value={inputCity}
+                />
+              </View>
+              <View style={styles.inputContainerHalf}>
+                <Text style={styles.labelInput}>Bairro:</Text>
+                <TextInput
+                  style={styles.input}
+                  onChangeText={setInputDistrict}
+                  value={inputDistrict}
+                />
+              </View>
             </View>
-            <FlatList
-              data={filteredProducts}
-              keyExtractor={(item) => item.name}
-              renderItem={({ item }) => (
-                <TouchableOpacity onPress={() => selectProduct(item)}>
-                  <Text style={styles.productItem}>{item.name}</Text>
+
+            <View style={styles.divideInputsContainer}>
+              <View style={styles.inputContainerHalf}>
+                <Text style={styles.labelInput}>Endereço:</Text>
+                <TextInput
+                  style={styles.input}
+                  onChangeText={setInputAdress}
+                  value={inputAdress}
+                />
+              </View>
+              <View style={styles.inputContainerHalf}>
+                <Text style={styles.labelInput}>Nome do contato:</Text>
+                <TextInput
+                  style={styles.input}
+                  onChangeText={setInputContactName}
+                  value={inputContactName}
+                />
+              </View>
+            </View>
+            {/*condição de pagamento*/}
+            <View style={styles.divideInputsContainer}>
+              <View style={styles.inputContainerHalf}>
+                <Text style={styles.labelInput}>Condição de pagamento:</Text>
+                <RNPickerSelect
+                  onValueChange={(value) => setInputCondiPG(value)}
+                  value={inputCondiPG}
+                  items={paymentOptions}
+                  placeholder={{ label: 'Selecione', color: '#000', value: 'Não definido' }}
+                />
+              </View>
+              <View style={styles.inputContainerHalf}>
+                <Text style={styles.labelInput}>Prazo:</Text>
+                <TextInput
+                  style={styles.input}
+                  onChangeText={setInputPrazo}
+                  value={inputPrazo}
+                />
+              </View>
+            </View>
+            {/*Adicionar produto*/}
+            <View style={styles.line}></View>
+            <View style={styles.inputContainer}>
+              <Text style={styles.labelInput}>Produto:</Text>
+              <View style={styles.productNameContainer}>
+                <TextInput
+                  style={styles.inputProductSearch}
+                  onChangeText={setInputProduct}
+                  value={inputProduct}
+                />
+                <TouchableOpacity onPress={() => setShowProductModal(true)} style={styles.modalInputBtn}>
+                  <Image
+                    style={styles.lupaIcon}
+                    source={require('../../assets/icons/lupa.png')}
+                  />
                 </TouchableOpacity>
-              )}
-            />
-            <TouchableOpacity onPress={() => setShowProductModal(false)}>
-              <Text style={styles.closeButton}>Fechar</Text>
-            </TouchableOpacity>
-          </View>
-        </Modal>
-        {/*Modal de edição de produto*/}
-        <Modal visible={modalVisible} animationType="slide">
-          <View style={styles.modalContainerEdit}>
-            <Text style={styles.modalTitleEdit}>Editar Produto</Text>
-            <TouchableOpacity onPress={() => setModalVisible(false)}>
-              <Text style={styles.closeButton}>Cancelar</Text>
-            </TouchableOpacity>
-            <Text style={styles.labelInputEdit}>Produto:</Text>
-            <TextInput
-              style={styles.inputEdit}
-              onChangeText={(text) =>
-                setEditProductFields((prevState) => ({
-                  ...prevState,
-                  product: text,
-                }))
-              }
-              value={editProductFields.product}
-            />
-            <Text style={styles.labelInputEdit}>Quantidade:</Text>
-            <TextInput
-              style={styles.inputEdit}
-              onChangeText={(text) =>
-                setEditProductFields((prevState) => ({
-                  ...prevState,
-                  inputQuantity: text,
-                }))
-              }
-              value={editProductFields.inputQuantity}
-            />
-            <Text style={styles.labelInputEdit}>Valor:</Text>
-            <TextInput
-              style={styles.inputEdit}
-              onChangeText={(text) =>
-                setEditProductFields((prevState) => ({
-                  ...prevState,
-                  value: text,
-                }))
-              }
-              value={editProductFields.value}
-            />
-            <ButtonDefault text="Salvar" action={salvarProdutoEditado} />
-          </View>
-        </Modal>
+              </View>
+            </View>
+            <View style={styles.divideInputsContainer}>
+              <View style={styles.inputContainerHalf}>
+                <Text style={styles.labelInput}>Quantidade:</Text>
+                <TextInput
+                  style={styles.input}
+                  onChangeText={setInputQuantity}
+                  value={inputQuantity}
+                />
+              </View>
+              <View style={styles.inputContainerHalf}>
+                <Text style={styles.labelInput}>Valor:</Text>
+                <TextInput
+                  style={styles.input}
+                  onChangeText={setInputValue}
+                  value={inputValue}
+                />
+              </View>
+            </View>
+            <View style={styles.containerDiscont}>
+              <View>
+                <Text style={styles.labelInputRadio}>Desconto de 10%:</Text>
+                <RadioButton
+                  label="Desconto"
+                  selected={tenPorcentOfDiscont}
+                  onPress={handleTenPorcentOfDiscontPress}
+                />
+              </View>
+              <View>
+                <Text style={styles.labelInputRadio}>Bonificação:</Text>
+                <RadioButton label="Bonificação" selected={bonification} onPress={handleBonificationPress} />
+              </View>
+            </View>
+            <ButtonDefault text="Adicionar" action={adicionarProduto} />
+
+            {/* Modal de seleção de produtos */}
+            <Modal visible={showProductModal} animationType="slide">
+              <View style={styles.modalContainer}>
+                <View style={styles.searchInputContainer}>
+                  <TextInput
+                    style={styles.searchInput}
+                    placeholder="Pesquisar produto"
+                    onChangeText={searchProducts}
+                  />
+                </View>
+                <FlatList
+                  data={filteredProducts}
+                  keyExtractor={(item) => item.id}
+                  renderItem={({ item }) => (
+                    <TouchableOpacity onPress={() => selectProduct(item)}>
+                      <Text style={styles.productItem}>{item.nome} - {item.valor.toFixed(2).replace('.', ',')} R$</Text>
+                    </TouchableOpacity>
+                  )}
+                />
+                <TouchableOpacity onPress={() => {
+                  setShowProductModal(false);
+                  setFilteredProducts(productsData);
+                }
+                }>
+                  <Text style={styles.closeButton}>Fechar</Text>
+                </TouchableOpacity>
+              </View>
+            </Modal>
+            {/*Modal de edição de produto*/}
+            <Modal visible={modalVisible} animationType="slide">
+              <View style={styles.modalContainerEdit}>
+                <Text style={styles.modalTitleEdit}>Editar Produto</Text>
+                <TouchableOpacity onPress={() => setModalVisible(false)}>
+                  <Text style={styles.closeButton}>Cancelar</Text>
+                </TouchableOpacity>
+                <Text style={styles.labelInputEdit}>Produto:</Text>
+                <TextInput
+                  style={styles.inputEdit}
+                  onChangeText={(text) =>
+                    setEditProductFields((prevState) => ({
+                      ...prevState,
+                      product: text,
+                    }))
+                  }
+                  value={editProductFields.product}
+                />
+                <Text style={styles.labelInputEdit}>Quantidade:</Text>
+                <TextInput
+                  style={styles.inputEdit}
+                  onChangeText={(text) =>
+                    setEditProductFields((prevState) => ({
+                      ...prevState,
+                      inputQuantity: text,
+                    }))
+                  }
+                  value={editProductFields.inputQuantity}
+                />
+                <Text style={styles.labelInputEdit}>Valor:</Text>
+                <TextInput
+                  style={styles.inputEdit}
+                  onChangeText={(text) =>
+                    setEditProductFields((prevState) => ({
+                      ...prevState,
+                      value: text,
+                    }))
+                  }
+                  value={editProductFields.value}
+                />
+                <ButtonDefault text="Salvar" action={salvarProdutoEditado} />
+              </View>
+            </Modal>
 
 
 
 
-        <View style={styles.line}></View>
+            <View style={styles.line}></View>
 
-        <Table borderStyle={styles.tableBorder}>
-          <Row data={tableHead} style={styles.tableHeader} textStyle={{ ...styles.tableHeaderText }} flexArr={columnWidthsHeader} />
-          {tableData.map((rowData: any, index: any) => (
-            <Row key={index} data={rowData} style={styles.tableRow} textStyle={{ ...styles.tableRowText }} flexArr={columnWidths} />
-          ))}
-          <Row
-            data={['TOTAL', tableData.reduce((sum: any, row: any) => sum + row[3], 0).toFixed(2)]}
-            style={styles.tableTotalRow}
-            textStyle={{ ...styles.tableTotalRowText }}
-          />
-        </Table>
+            <Table borderStyle={styles.tableBorder}>
+              <Row data={tableHead} style={styles.tableHeader} textStyle={{ ...styles.tableHeaderText }} flexArr={columnWidthsHeader} />
+              {tableData.map((rowData: any, index: any) => (
+                <Row key={index} data={rowData} style={styles.tableRow} textStyle={{ ...styles.tableRowText }} flexArr={columnWidths} />
+              ))}
+              <Row
+                data={['TOTAL', tableData.reduce((sum: any, row: any) => sum + row[3], 0).toFixed(2)]}
+                style={styles.tableTotalRow}
+                textStyle={{ ...styles.tableTotalRowText }}
+              />
+            </Table>
 
 
-        <ButtonDefault text="Salvar e visualizar pedido" action={salvarEVisualizarPedido} />
-        <ButtonDefault text="Visualizar pedido" action={visualizarPedido} />
-      </ScrollView>
+            <ButtonDefault text="Salvar e visualizar pedido" action={salvarEVisualizarPedido} />
+            <ButtonDefault text="Visualizar pedido" action={visualizarPedido} />
+          </ScrollView>
+      }
     </View>
   )
 }
@@ -652,6 +755,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#212121'
+  },
+  loading: {
+    flex: 1,
   },
   buttonContainer: {
     flexDirection: 'row',
