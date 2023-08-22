@@ -193,7 +193,7 @@ const MakeOrder = () => {
   const [filteredProducts, setFilteredProducts] = useState<any>();
 
   const paymentOptions = [
-    { label: 'Boleto', value: 'Boleti' },
+    { label: 'Boleto', value: 'Boleto' },
     { label: 'Dinheiro/Pix', value: 'Dinheiro/Pix' },
     { label: 'Cheque', value: 'Cheque' },
   ];
@@ -217,7 +217,16 @@ const MakeOrder = () => {
   };
 
   const adicionarProduto = () => {
-    const updateValue = parseFloat(inputValue.replace(',', '.'));
+    if (inputProduct === '' || inputQuantity === '') {
+      return
+    }
+
+    let updateValue = 0;
+
+    if (inputValue !== '') {
+      updateValue = parseFloat(inputValue.replace(',', '.'));
+    }
+
     const quantity = parseFloat(inputQuantity.replace(',', '.'));
     if (bonification) {
       if (quantity >= 10 && quantity < 20) {
@@ -267,9 +276,7 @@ const MakeOrder = () => {
         return;
       } else {
         // Ação padrão para outros valores
-
       }
-
     }
 
     if (tenPorcentOfDiscont) {
@@ -588,6 +595,10 @@ const MakeOrder = () => {
                   value={inputCondiPG}
                   items={paymentOptions}
                   placeholder={{ label: 'Selecione', color: '#000', value: 'Não definido' }}
+                  style={{
+                    inputAndroid: { color: 'white' },
+                    inputIOS: { color: 'white' },
+                  }}
                 />
               </View>
               <View style={styles.inputContainerHalf}>
@@ -622,16 +633,37 @@ const MakeOrder = () => {
                 <Text style={styles.labelInput}>Quantidade:</Text>
                 <TextInput
                   style={styles.input}
-                  onChangeText={setInputQuantity}
+                  onChangeText={(text) => {
+                    // Use uma função de validação para permitir apenas números
+                    const numericText = text.replace(/[^0-9]/g, '');
+                    setInputQuantity(numericText);
+                  }}
                   value={inputQuantity}
+                  keyboardType="numeric"
                 />
               </View>
               <View style={styles.inputContainerHalf}>
                 <Text style={styles.labelInput}>Valor:</Text>
                 <TextInput
                   style={styles.input}
-                  onChangeText={setInputValue}
+                  onChangeText={(text) => {
+                    // Use uma função de validação para permitir apenas números e um único ponto decimal
+                    const numericText = text.replace(/[^0-9.]/g, '');
+
+                    // Certifique-se de que não há mais de um ponto decimal
+                    const parts = numericText.split('.');
+                    if (parts.length > 2) {
+                      // Se houver mais de um ponto decimal, remova os extras
+                      const integerPart = parts[0];
+                      const decimalPart = parts[1];
+                      const sanitizedText = `${integerPart}.${decimalPart}`;
+                      setInputValue(sanitizedText);
+                    } else {
+                      setInputValue(numericText);
+                    }
+                  }}
                   value={inputValue}
+                  keyboardType="numeric"
                 />
               </View>
             </View>
