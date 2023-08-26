@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, ScrollView, FlatList, Modal, TouchableOpacity, Alert, Image } from 'react-native'
+import { StyleSheet, Text, View, TextInput, ScrollView, FlatList, Modal, TouchableOpacity, Alert, Image, Button } from 'react-native'
 import React, { useState, useEffect, useRef } from 'react';
 import { Table, Row, Cell, TableWrapper } from 'react-native-table-component';
 import { Feather } from '@expo/vector-icons';;
@@ -76,7 +76,7 @@ const MakeOrder = () => {
           if (!tableExists) {
             // Cria a nova tabela com a estrutura correta
             tx.executeSql(
-              'CREATE TABLE pedidos (id INTEGER PRIMARY KEY AUTOINCREMENT, client TEXT, date TEXT NOT NULL, fantasyName TEXT, cnpj TEXT, city TEXT, district TEXT, contactName TEXT, condiPG TEXT, prazo TEXT, adress TEXT, observation TEXT, produtos TEXT)',
+              'CREATE TABLE pedidos (id INTEGER PRIMARY KEY AUTOINCREMENT, client TEXT, date TEXT NOT NULL, fantasyName TEXT, cnpj TEXT, city TEXT, district TEXT, contactName TEXT, condiPG TEXT, prazo TEXT, adress TEXT, observation TEXT, produtos TEXT, commissionPaid BOOLEAN DEFAULT 0)',
               [],
               () => {
                 console.log('Tabela "pedidos" criada com a estrutura correta.');
@@ -412,6 +412,11 @@ const MakeOrder = () => {
 
 
   function salvarEVisualizarPedido() {
+    if (inputClient === '' || inputCity === '' || produtos.length === 0) {
+      Alert.alert('Preencha razão social, cidade e produtos');
+      return
+    }
+
     CriarPedido();
 
     LimparInputs();
