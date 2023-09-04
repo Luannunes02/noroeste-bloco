@@ -9,8 +9,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196977962-9ad4c6a0-88f3-430b-ac1f-24f22d3d217e.jpg",
             "embalagem_tamanho": "10x500gr",
-            "valor": 45,
-            "info_nutricional": "ALPISTE, ARROZ C/ CASCA AGULHA, AVEIA C/ CASCA, AVEIA DESCASCADA, CÁRTAMO, GIRASSOL COMUM, MILHETO, ÓLEO VEGETAL, PAINÇO, PAINÇO PRETO, PAINÇO VERMELHO, SORGO, AROMATIZANTE IDÊNTICO AO NATURAL, PP12 PÁSSAROS (MILHO MOÍDO (E.D.G. Bacillus Thuringiensis, Agrobacterium tumefaciens, Streptomyces viridochromogenes), FARELO DE TRIGO, FARELO DE ARROZ, FARELO DE SOJA, CALCÁRIO CALCÍTICO, CLORETO DE SÓDIO (SAL COMUM), SULFATO DE FERRO, SULFATO DE COBRE, ÓXIDO DE ZINCO, SULFATO DE MANGANÊS, IODATO DE CÁLCIO, SELENITO DE SÓDIO, ADITIVO FUNGISTÁTICO (PROPRIONATO DE CÁLCIO), SELLECTA EXTRUSADO (MILHO (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS), FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), FOSFATO BICÁLCIO, CALCÁRIO, PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE). "
+            "valor": 45
         },
         {
             "id": 1,
@@ -21,8 +20,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196977962-9ad4c6a0-88f3-430b-ac1f-24f22d3d217e.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 75,
-            "info_nutricional": "ALPISTE, ARROZ C/ CASCA AGULHA, AVEIA C/ CASCA, AVEIA DESCASCADA, CÁRTAMO, GIRASSOL COMUM, MILHETO, ÓLEO VEGETAL, PAINÇO, PAINÇO PRETO, PAINÇO VERMELHO, SORGO, AROMATIZANTE IDÊNTICO AO NATURAL, PP12 PÁSSAROS (MILHO MOÍDO (E.D.G. Bacillus Thuringiensis, Agrobacterium tumefaciens, Streptomyces viridochromogenes), FARELO DE TRIGO, FARELO DE ARROZ, FARELO DE SOJA, CALCÁRIO CALCÍTICO, CLORETO DE SÓDIO (SAL COMUM), SULFATO DE FERRO, SULFATO DE COBRE, ÓXIDO DE ZINCO, SULFATO DE MANGANÊS, IODATO DE CÁLCIO, SELENITO DE SÓDIO, ADITIVO FUNGISTÁTICO (PROPRIONATO DE CÁLCIO), SELLECTA EXTRUSADO (MILHO (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS), FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), FOSFATO BICÁLCIO, CALCÁRIO, PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE). "
+            "valor": 75
         },
         {
             "id": 2,
@@ -33,8 +31,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196977962-9ad4c6a0-88f3-430b-ac1f-24f22d3d217e.jpg",
             "embalagem_tamanho": "25KG",
-            "valor": 160,
-            "info_nutricional": "ALPISTE, ARROZ C/ CASCA AGULHA, AVEIA C/ CASCA, AVEIA DESCASCADA, CÁRTAMO, GIRASSOL COMUM, MILHETO, ÓLEO VEGETAL, PAINÇO, PAINÇO PRETO, PAINÇO VERMELHO, SORGO, AROMATIZANTE IDÊNTICO AO NATURAL, PP12 PÁSSAROS (MILHO MOÍDO (E.D.G. Bacillus Thuringiensis, Agrobacterium tumefaciens, Streptomyces viridochromogenes), FARELO DE TRIGO, FARELO DE ARROZ, FARELO DE SOJA, CALCÁRIO CALCÍTICO, CLORETO DE SÓDIO (SAL COMUM), SULFATO DE FERRO, SULFATO DE COBRE, ÓXIDO DE ZINCO, SULFATO DE MANGANÊS, IODATO DE CÁLCIO, SELENITO DE SÓDIO, ADITIVO FUNGISTÁTICO (PROPRIONATO DE CÁLCIO), SELLECTA EXTRUSADO (MILHO (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS), FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), FOSFATO BICÁLCIO, CALCÁRIO, PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE). "
+            "valor": 160
         },
         {
             "id": 3,
@@ -45,8 +42,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978010-5657b345-8a94-4af2-b1fa-6fde6122496b.jpg",
             "embalagem_tamanho": "10x500gr",
-            "valor": 50,
-            "info_nutricional": "AMENDOIM COM CASCA, AMENDOIM DESCASCADO, AVEIA C/ CASCA, ERVILHA PARTIDA, FARELO DE PÃO, FRUTAS CRISTALIZADAS, GIRASSOL COMUM, GIRASSOL GRANDE, MILHO EM GRÃOS, ÓLEO VEGETAL, SEMENTE DE ABÓBORA, TRIGO, AROMATIZANTE IDÊNTICO AO NATURAL, SELLECTA EXTRUSADO (MILHO 65%, (O.G.M. POR BACILLUS THURINGIENSIS E  STREPTOMYCES TUMEFACIES) FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), ARROZ, SAL (CLORETO DE SÓDIO), REMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO,SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE)"
+            "valor": 50
         },
         {
             "id": 4,
@@ -57,8 +53,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978010-5657b345-8a94-4af2-b1fa-6fde6122496b.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 92.80,
-            "info_nutricional": "AMENDOIM COM CASCA, AMENDOIM DESCASCADO, AVEIA C/ CASCA, ERVILHA PARTIDA, FARELO DE PÃO, FRUTAS CRISTALIZADAS, GIRASSOL COMUM, GIRASSOL GRANDE, MILHO EM GRÃOS, ÓLEO VEGETAL, SEMENTE DE ABÓBORA, TRIGO, AROMATIZANTE IDÊNTICO AO NATURAL, SELLECTA EXTRUSADO (MILHO 65%, (O.G.M. POR BACILLUS THURINGIENSIS E  STREPTOMYCES TUMEFACIES) FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), ARROZ, SAL (CLORETO DE SÓDIO), REMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO,SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE)"
+            "valor": 92.80
         },
         {
             "id": 5,
@@ -69,8 +64,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978010-5657b345-8a94-4af2-b1fa-6fde6122496b.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 185,
-            "info_nutricional": "AMENDOIM COM CASCA, AMENDOIM DESCASCADO, AVEIA C/ CASCA, ERVILHA PARTIDA, FARELO DE PÃO, FRUTAS CRISTALIZADAS, GIRASSOL COMUM, GIRASSOL GRANDE, MILHO EM GRÃOS, ÓLEO VEGETAL, SEMENTE DE ABÓBORA, TRIGO, AROMATIZANTE IDÊNTICO AO NATURAL, SELLECTA EXTRUSADO (MILHO 65%, (O.G.M. POR BACILLUS THURINGIENSIS E  STREPTOMYCES TUMEFACIES) FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), ARROZ, SAL (CLORETO DE SÓDIO), REMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO,SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE)"
+            "valor": 185
         },
         {
             "id": 6,
@@ -81,8 +75,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978110-5273f269-7ea6-4bb9-8e1e-19875e5258c5.png",
             "embalagem_tamanho": "10x500gr",
-            "valor": 59,
-            "info_nutricional": "ALPISTE, AVEIA DESCASCADA, COLZA, LINHAÇA, MILHETO, NABÃO, NIGER, ÓLEO VEGETAL, SENHA, AROMATIZANTE IDÊNTICO AO NATURAL, SELLECTA EXTRUSADO (MILHO 74% (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS),FARELO DE SOJA (O.M.G. POR AGROBACTERIUM SP), ARROZ, ÓLEO DE SOJA, SAL (CLORETO DE SÓDIO) CALCÁRIO, PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DECOLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DECÁLCIO, SORBATO DE POTÁSSIO E CORANTE)."
+            "valor": 59
         },
         {
             "id": 7,
@@ -93,8 +86,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978110-5273f269-7ea6-4bb9-8e1e-19875e5258c5.png",
             "embalagem_tamanho": "10KG",
-            "valor": 99,
-            "info_nutricional": "ALPISTE, AVEIA DESCASCADA, COLZA, LINHAÇA, MILHETO, NABÃO, NIGER, ÓLEO VEGETAL, SENHA, AROMATIZANTE IDÊNTICO AO NATURAL, SELLECTA EXTRUSADO (MILHO 74% (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS),FARELO DE SOJA (O.M.G. POR AGROBACTERIUM SP), ARROZ, ÓLEO DE SOJA, SAL (CLORETO DE SÓDIO) CALCÁRIO, PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DECOLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DECÁLCIO, SORBATO DE POTÁSSIO E CORANTE)."
+            "valor": 99
         },
         {
             "id": 8,
@@ -105,8 +97,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978110-5273f269-7ea6-4bb9-8e1e-19875e5258c5.png",
             "embalagem_tamanho": "25KG",
-            "valor": 245,
-            "info_nutricional": "ALPISTE, AVEIA DESCASCADA, COLZA, LINHAÇA, MILHETO, NABÃO, NIGER, ÓLEO VEGETAL, SENHA, AROMATIZANTE IDÊNTICO AO NATURAL, SELLECTA EXTRUSADO (MILHO 74% (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS),FARELO DE SOJA (O.M.G. POR AGROBACTERIUM SP), ARROZ, ÓLEO DE SOJA, SAL (CLORETO DE SÓDIO) CALCÁRIO, PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DECOLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DECÁLCIO, SORBATO DE POTÁSSIO E CORANTE)."
+            "valor": 245
         },
         {
             "id": 9,
@@ -117,8 +108,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196977987-ed8f73f1-28b3-43dc-a232-e8f720d6286b.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 69,
-            "info_nutricional": "ALPISTE, AMENDOIM DESCASCADO, AVEIA COM CASCA, AVEIA DESCASCADA, CÁRTAMO, ERVILHA, FARINHA DE CONCHAS DE OSTRAS, LINHAÇA, MILHETO, NIGER, ÓLEO VEGETAL, PAINÇO PRETO, QUIRERA DE MILHO, SENHA, SORGO, TRIGO E AROMATIZANTE IDÊNTICO AO NATURAL, PP12 PÁSSAROS (MILHO MOÍDO (E.D.G. Bacillus Thuringiensis, Agrobacterium tumefaciens, Streptomyces viridochromogenes), FARELO DE TRIGO, FARELO DE ARROZ, FARELO DE SOJA, CALCÁRIO CALCÍTICO, CLORETO DE SÓDIO (SAL COMUM), SULFATO DE FERRO, SULFATO DE COBRE, ÓXIDO DE ZINCO, SULFATO DE MANGANÊS, IODATO DE CÁLCIO, SELENITO DE SÓDIO, ADITIVO FUNGISTÁTICO (PROPRIONATO DE CÁLCIO)."
+            "valor": 69
         },
         {
             "id": 10,
@@ -129,8 +119,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978030-d4665c29-09af-4f85-96ef-56b9f813799f.jpg",
             "embalagem_tamanho": "10x500gr",
-            "valor": 42,
-            "info_nutricional": "AVEIA DESCASCADA, GIRASSOL COMUM, MILHETO, ÓLEO VEGETAL, PAINÇO (61,7%), TRIGO, AROMATIZANTE IDÊNTICO AO NATURAL, SELLECTA EXTRUSADO (MILHO (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS), FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), FARELO DE TRIGO, ARROZ, FOFATO BICÁLCIO, CALCÁRIO, SAL (CLORETO DE SÓDIO), PREMIX VITAMÍNICO E MINERAL) ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE), PP12 PÁSSAROS (MILHO MOÍDO (E.D.G. Bacillus thuringiensis, Agrobacterium tumefaciens, Streptomyces viridochromogenes), FARELO DE TRIGO, FARELO DE ARROZ, FARELO DE SOJA, CALCÁRIO CALCÍTICO, CLORETO DE SÓDIO (SAL COMUM), SULFATO DE FERRO, SULFATO DE COBRE, ÓXIDO DE ZINCO, SULFATO DE MANGANÊS, IODATO DE CÁLCIO, SELENITO DE SÓDIO, ADITIVO FUNGISTÁTICO (PROPRIONATO DE CÁLCIO)."
+            "valor": 42
         },
         {
             "id": 11,
@@ -141,8 +130,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978030-d4665c29-09af-4f85-96ef-56b9f813799f.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 70,
-            "info_nutricional": "AVEIA DESCASCADA, GIRASSOL COMUM, MILHETO, ÓLEO VEGETAL, PAINÇO (61,7%), TRIGO, AROMATIZANTE IDÊNTICO AO NATURAL, SELLECTA EXTRUSADO (MILHO (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS), FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), FARELO DE TRIGO, ARROZ, FOFATO BICÁLCIO, CALCÁRIO, SAL (CLORETO DE SÓDIO), PREMIX VITAMÍNICO E MINERAL) ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE), PP12 PÁSSAROS (MILHO MOÍDO (E.D.G. Bacillus thuringiensis, Agrobacterium tumefaciens, Streptomyces viridochromogenes), FARELO DE TRIGO, FARELO DE ARROZ, FARELO DE SOJA, CALCÁRIO CALCÍTICO, CLORETO DE SÓDIO (SAL COMUM), SULFATO DE FERRO, SULFATO DE COBRE, ÓXIDO DE ZINCO, SULFATO DE MANGANÊS, IODATO DE CÁLCIO, SELENITO DE SÓDIO, ADITIVO FUNGISTÁTICO (PROPRIONATO DE CÁLCIO)."
+            "valor": 70
         },
         {
             "id": 12,
@@ -153,8 +141,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978030-d4665c29-09af-4f85-96ef-56b9f813799f.jpg",
             "embalagem_tamanho": "25KG",
-            "valor": 150,
-            "info_nutricional": "AVEIA DESCASCADA, GIRASSOL COMUM, MILHETO, ÓLEO VEGETAL, PAINÇO (61,7%), TRIGO, AROMATIZANTE IDÊNTICO AO NATURAL, SELLECTA EXTRUSADO (MILHO (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS), FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), FARELO DE TRIGO, ARROZ, FOFATO BICÁLCIO, CALCÁRIO, SAL (CLORETO DE SÓDIO), PREMIX VITAMÍNICO E MINERAL) ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE), PP12 PÁSSAROS (MILHO MOÍDO (E.D.G. Bacillus thuringiensis, Agrobacterium tumefaciens, Streptomyces viridochromogenes), FARELO DE TRIGO, FARELO DE ARROZ, FARELO DE SOJA, CALCÁRIO CALCÍTICO, CLORETO DE SÓDIO (SAL COMUM), SULFATO DE FERRO, SULFATO DE COBRE, ÓXIDO DE ZINCO, SULFATO DE MANGANÊS, IODATO DE CÁLCIO, SELENITO DE SÓDIO, ADITIVO FUNGISTÁTICO (PROPRIONATO DE CÁLCIO)."
+            "valor": 150
         },
         {
             "id": 13,
@@ -165,8 +152,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978084-4c33616f-72a2-40b5-a611-24163009bc2b.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 65,
-            "info_nutricional": "ALPISTE, AMENDOIM DESCASCADO, ARROZ C/ CASCA CATETO, AVEIA DESCASCADA, CÁRTAMO, ERVILHA PARTIDA, FARELO DE PÃO, FRUTAS CRISTALIZADA, GIRASSOL COMUM, ÓLEO VEGETAL, PIMENTA CALABREZA MOÍDA, QUIRERA DE MILHO, SORGO E AROMATIZANTE IDÊNTICO AO NATURAL, SELLECTA EXTRUSADO (MILHO 65%, (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIES) FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), ARROZ, SAL (CLORETO DE SÓDIO), PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE), PP12 PÁSSAROS (MILHO MOÍDO (E.D.G. Bacillus thuringiensis, Agrobacterium tumefaciens, Streptomyces viridochromogenes), FARELO DE TRIGO,FARELO DE ARROZ, FARELO DE SOJA, CALCÁRIO CALCÍTICO, CLORETO DE SÓDIO (SAL COMUM), SULFATO DE FERRO, SULFATO DE COBRE, ÓXIDO DE ZINCO, SULFATO DE MANGANÊS, IODATO DE CÁLCIO, SELENITO DE SÓDIO, ADITIVO FUNGISTÁTICO (PROPRIONATO DE CÁLCIO)."
+            "valor": 65
         },
         {
             "id": 14,
@@ -177,8 +163,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978030-d4665c29-09af-4f85-96ef-56b9f813799f.jpg",
             "embalagem_tamanho": "10x500gr",
-            "valor": 35,
-            "info_nutricional": "AMENDOIM COM CASCA, AMENDOIM DESCASCADO, ARROZ COM CASCA AGULHA, AVEIA COM CASCA, AVEIA DESCASCADA, ERVILHA PARTIDA, FARELO DE PÃO, GIRASSOL COMUM, MILHETO, MILHO EM GRÃOS, ÓLEO VEGETAL, SORGO, AROMATIZANTE IDÊNTICO AO NATURAL, SELLECTA EXTRUSADO (MILHO 65%, (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIES) FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), ARROZ, SAL (CLORETO DE SÓDIO), PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DECÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE), H18 HAMSTER (FARELO DE ARROZ, FARELO DE TRIGO, FARELO DE SOJA (E. D. G. Agrobacterium spp, bacillus thuringiensis e streptomyces spp) ÓLEO DE SOJA DEGOLADO, CASCA DE ARROZ MOÍDA, CLORETO DE SÓDIO, CALCÁRIO CALCÍTICO, SULFATO DE FERRO, SULFATO DE COBRE, ÓXIDO DE ZINCO, SULFATO DE MANGANÊS, IODATO DE CÁLCIO, SELENITO DE SÓDIO, SULFATO DE COBALTO, ADITIVO FUNGISTÁTICO (PROPRIONATO DE CÁLCIO)."
+            "valor": 35
         },
         {
             "id": 15,
@@ -189,8 +174,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978030-d4665c29-09af-4f85-96ef-56b9f813799f.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 65,
-            "info_nutricional": "AMENDOIM COM CASCA, AMENDOIM DESCASCADO, ARROZ COM CASCA AGULHA, AVEIA COM CASCA, AVEIA DESCASCADA, ERVILHA PARTIDA, FARELO DE PÃO, GIRASSOL COMUM, MILHETO, MILHO EM GRÃOS, ÓLEO VEGETAL, SORGO, AROMATIZANTE IDÊNTICO AO NATURAL, SELLECTA EXTRUSADO (MILHO 65%, (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIES) FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), ARROZ, SAL (CLORETO DE SÓDIO), PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DECÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE), H18 HAMSTER (FARELO DE ARROZ, FARELO DE TRIGO, FARELO DE SOJA (E. D. G. Agrobacterium spp, bacillus thuringiensis e streptomyces spp) ÓLEO DE SOJA DEGOLADO, CASCA DE ARROZ MOÍDA, CLORETO DE SÓDIO, CALCÁRIO CALCÍTICO, SULFATO DE FERRO, SULFATO DE COBRE, ÓXIDO DE ZINCO, SULFATO DE MANGANÊS, IODATO DE CÁLCIO, SELENITO DE SÓDIO, SULFATO DE COBALTO, ADITIVO FUNGISTÁTICO (PROPRIONATO DE CÁLCIO)."
+            "valor": 65
         },
         {
             "id": 16,
@@ -201,8 +185,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978110-5273f269-7ea6-4bb9-8e1e-19875e5258c5.png",
             "embalagem_tamanho": "10x500gr",
-            "valor": 55,
-            "info_nutricional": "ALPISTE, ARROZ C/ CASCA AGULHA, ARROZ C/ CASCA CATETO, AVEIA DESCASCADA, COLZA, LINHAÇA, MILHETO, NIGER,ÓLEO VEGETAL, PAINÇO, PAINÇO PRETO, PAINÇO VERDE, PAINÇO VERMELHO, SENHA E AROMATIZANTE IDÊNTICO AONATURAL, SELLECTA EXTRUSADO (MILHO 74% (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS), FARELO DE SOJA (O.G. M. POR AGROBACTERIUM SP), ARROZ, ÓLEO DE SOJA, SAL (CLORETO DE SÓDIO) CALCÁRIO, PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO,SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1,VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE)"
+            "valor": 55
         },
         {
             "id": 17,
@@ -213,8 +196,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978110-5273f269-7ea6-4bb9-8e1e-19875e5258c5.png",
             "embalagem_tamanho": "10KG",
-            "valor": 89,
-            "info_nutricional": "ALPISTE, ARROZ C/ CASCA AGULHA, ARROZ C/ CASCA CATETO, AVEIA DESCASCADA, COLZA, LINHAÇA, MILHETO, NIGER,ÓLEO VEGETAL, PAINÇO, PAINÇO PRETO, PAINÇO VERDE, PAINÇO VERMELHO, SENHA E AROMATIZANTE IDÊNTICO AONATURAL, SELLECTA EXTRUSADO (MILHO 74% (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS), FARELO DE SOJA (O.G. M. POR AGROBACTERIUM SP), ARROZ, ÓLEO DE SOJA, SAL (CLORETO DE SÓDIO) CALCÁRIO, PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO,SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1,VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE)"
+            "valor": 89
         },
         {
             "id": 18,
@@ -225,8 +207,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978131-3c2c69fe-1d1e-44e7-ad3a-a4e716cc7961.jpg",
             "embalagem_tamanho": "10x500gr",
-            "valor": 36,
-            "info_nutricional": "AMENDOIM DESCASCADO, ARROZ COM CASCA AGULHA, FARELO DE PÃO, FLOCOS DE MILHO, FRUTAS CRISTALIZADAS, MILHETO, ÓLEO VEGETAL, QUIRERA DE MILHO, SORGO, AROMATIZANTE IDÊNTICO AO NATURAL, PP12 PÁSSAROS (MILHO MOÍDO (E.D.G. Bacillus Thuringiensis, Agrobacterium tumefaciens, Streptomyces viridochromogenes), FARELO DE TRIGO, FARELO DE ARROZ, FARELO DE SOJA, CALCÁRIO CALCÍTICO, CLORETO DE SÓDIO (SAL COMUM), SULFATO DE FERRO, SULFATO DE COBRE, ÓXIDO DE ZINCO, SULFATO DE MANGANÊS, IODATO DE CÁLCIO, SELENITO DE SÓDIO, ADITIVO FUNGISTÁTICO (PROPRIONATO DE CÁLCIO), SELLECTA EXTRUSADO (MILHO (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS), FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), FOSFATO BICÁLCIO, PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE)."
+            "valor": 36
         },
         {
             "id": 19,
@@ -237,8 +218,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978131-3c2c69fe-1d1e-44e7-ad3a-a4e716cc7961.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 65,
-            "info_nutricional": "AMENDOIM DESCASCADO, ARROZ COM CASCA AGULHA, FARELO DE PÃO, FLOCOS DE MILHO, FRUTAS CRISTALIZADAS, MILHETO, ÓLEO VEGETAL, QUIRERA DE MILHO, SORGO, AROMATIZANTE IDÊNTICO AO NATURAL, PP12 PÁSSAROS (MILHO MOÍDO (E.D.G. Bacillus Thuringiensis, Agrobacterium tumefaciens, Streptomyces viridochromogenes), FARELO DE TRIGO, FARELO DE ARROZ, FARELO DE SOJA, CALCÁRIO CALCÍTICO, CLORETO DE SÓDIO (SAL COMUM), SULFATO DE FERRO, SULFATO DE COBRE, ÓXIDO DE ZINCO, SULFATO DE MANGANÊS, IODATO DE CÁLCIO, SELENITO DE SÓDIO, ADITIVO FUNGISTÁTICO (PROPRIONATO DE CÁLCIO), SELLECTA EXTRUSADO (MILHO (O.G.M. POR BACILLUS THURINGIENSIS E STREPTOMYCES TUMEFACIENS), FARELO DE SOJA (O.G.M. POR AGROBACTERIUM SP), FOSFATO BICÁLCIO, PREMIX VITAMÍNICO E MINERAL (ÁCIDO FÓLICO, ÃCIDO NICOTÍNICO, ÁCIDO PANTOTÊNICO, ADITIVO ANTIOXIDANTE, CLORETO DE COLINA, IODATO DE CÁLCIO, ÓXIDO DE ZINCO, SELENITO DE SÓDIO, SULFATO DE COBRE PENTAHIDRATADO, SULFATO DE FERRO, SULFATO DE MANGANÊS, VITAMINA A, VITAMINA D3, VITAMINA E, VITAMINA H, VITAMINA K3, VITAMINA B1, VITAMINA B2, VITAMINA B6, VITAMINA B12-0,1%, VEÍCULO Q.S.P.) ADITIVOS ANTIOXIDANTES (BHT/BHA) PROPRIONATO DE CÁLCIO, SORBATO DE POTÁSSIO E CORANTE)."
+            "valor": 65
         },
         {
             "id": 20,
@@ -249,8 +229,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978155-942a1161-eaab-4bee-b5bb-ae29c9b7be50.jpg",
             "embalagem_tamanho": "10x500gr",
-            "valor": 39,
-            "info_nutricional": "AVEIA DESCASCADA, COLZA, FARELO DE PÃO, FARINHA DE CONCHAS DE OSTRAS, LINHAÇA, MILHETO, NABÃO, NIGER, ÓLEO VEGETAL, SENHA, AROMATIZANTE IDÊNTICO AO NATURAL E CORANTE ARTIFICIAL."
+            "valor": 39
         },
         {
             "id": 21,
@@ -261,8 +240,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978155-942a1161-eaab-4bee-b5bb-ae29c9b7be50.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 69,
-            "info_nutricional": "AVEIA DESCASCADA, COLZA, FARELO DE PÃO, FARINHA DE CONCHAS DE OSTRAS, LINHAÇA, MILHETO, NABÃO, NIGER, ÓLEO VEGETAL, SENHA, AROMATIZANTE IDÊNTICO AO NATURAL E CORANTE ARTIFICIAL."
+            "valor": 69
         },
         {
             "id": 22,
@@ -273,8 +251,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978242-1ac4d554-58d0-4a0b-a665-a2fef52db371.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 69,
-            "info_nutricional": "AVEIA DESCASCADA, COLZA, FARELO DE PÃO, FARINHA DE CONCHAS DE OSTRAS, LINHAÇA, MILHETO, NABÃO, NIGER, ÓLEO VEGETAL, SENHA, AROMATIZANTE IDÊNTICO AO NATURAL E CORANTE ARTIFICIAL."
+            "valor": 69
         },
         {
             "id": 23,
@@ -285,8 +262,7 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978193-3acb1306-ec58-4abe-9d44-2ccea8b5d249.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 69,
-            "info_nutricional": "AVEIA DESCASCADA, COLZA, FARELO DE PÃO, FARINHA DE CONCHAS DE OSTRAS, LINHAÇA, MILHETO, NABÃO, NIGER, ÓLEO VEGETAL, SENHA, AROMATIZANTE IDÊNTICO AO NATURAL E CORANTE ARTIFICIAL."
+            "valor": 69
         },
         {
             "id": 24,
@@ -297,8 +273,1025 @@
             "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978221-a9217349-9a2f-4bb7-9ae0-8d44483bfbb1.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 69,
-            "info_nutricional": "AVEIA DESCASCADA, COLZA, FARELO DE PÃO, FARINHA DE CONCHAS DE OSTRAS, LINHAÇA, MILHETO, NABÃO, NIGER, ÓLEO VEGETAL, SENHA, AROMATIZANTE IDÊNTICO AO NATURAL E CORANTE ARTIFICIAL."
+            "valor": 69
+        },
+        {
+            "id": 25,
+            "nome": "Alpiste 45,36KG",
+            "descricao": "O alpiste é um grão amplamente utilizado na alimentação de pássaros, conhecido por ser rico em nutrientes essenciais para a saúde das aves. É uma excelente fonte de energia e proteínas de alta qualidade, além de fibras dietéticas que auxiliam na digestão das aves. O alpiste também contribui para manter a saúde das penas e o bem-estar das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/771fc6cd-7309-4867-8a7e-010b64aab994",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/771fc6cd-7309-4867-8a7e-010b64aab994",
+            "embalagem_tamanho": "45,36KG",
+            "valor": 450.00
+        },
+        {
+            "id": 26,
+            "nome": "Alpiste 10KG",
+            "descricao": "O alpiste é um grão amplamente utilizado na alimentação de pássaros, conhecido por ser rico em nutrientes essenciais para a saúde das aves. É uma excelente fonte de energia e proteínas de alta qualidade, além de fibras dietéticas que auxiliam na digestão das aves. O alpiste também contribui para manter a saúde das penas e o bem-estar das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/771fc6cd-7309-4867-8a7e-010b64aab994",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/771fc6cd-7309-4867-8a7e-010b64aab994",
+            "embalagem_tamanho": "10KG",
+            "valor": 100.00
+        },
+        {
+            "id": 27,
+            "nome": "Arara 5KG",
+            "descricao": "O alimento Arara é uma mistura especialmente formulada para atender às necessidades nutricionais das araras. Ela contém uma variedade de ingredientes de alta qualidade que fornecem vitaminas, minerais e fibras essenciais para a saúde e vitalidade das araras. A dieta ajuda a manter o peso ideal e as penas brilhantes.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a9b5da03-ab5c-4ac6-8a5f-ec2460503f21",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/43f32dcc-913a-4356-b4f7-ecf978827296",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f8c0feea-6cdd-45a1-90cb-25b5853e2cb1",
+            "embalagem_tamanho": "5KG",
+            "valor": 111.00
+        },
+        {
+            "id": 28,
+            "nome": "Aveia com casca 40KG",
+            "descricao": "A aveia com casca é uma excelente opção de alimento para aves, sendo rica em fibras que auxiliam na digestão e promovem o bem-estar digestivo. Além disso, é uma fonte de energia de liberação lenta que ajuda a manter as aves saciadas e ativas.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5be87829-7ece-419e-a66d-cf2c006363db",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5be87829-7ece-419e-a66d-cf2c006363db",
+            "embalagem_tamanho": "40KG",
+            "valor": 115.00
+        },
+        {
+            "id": 29,
+            "nome": "Aveia descascada 05 KG",
+            "descricao": "A aveia descascada é uma excelente fonte de carboidratos complexos e fibras dietéticas. Ela fornece energia de liberação lenta e ajuda a manter as aves saciadas. Além disso, contém minerais como ferro e cálcio.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d959b0cd-dbd1-4f96-b948-de0aea2e4d33",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d959b0cd-dbd1-4f96-b948-de0aea2e4d33",
+            "embalagem_tamanho": "05 KG",
+            "valor": 20.00
+        },
+        {
+            "id": 30,
+            "nome": "Aveia descascada 10KG",
+            "descricao": "A aveia descascada é uma excelente fonte de carboidratos complexos e fibras dietéticas. Ela fornece energia de liberação lenta e ajuda a manter as aves saciadas. Além disso, contém minerais como ferro e cálcio.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d959b0cd-dbd1-4f96-b948-de0aea2e4d33",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d959b0cd-dbd1-4f96-b948-de0aea2e4d33",
+            "embalagem_tamanho": "10KG",
+            "valor": 40.00
+        },
+        {
+            "id": 31,
+            "nome": "Aveia descascada 30KG",
+            "descricao": "A aveia descascada é uma excelente fonte de carboidratos complexos e fibras dietéticas. Ela fornece energia de liberação lenta e ajuda a manter as aves saciadas. Além disso, contém minerais como ferro e cálcio.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d959b0cd-dbd1-4f96-b948-de0aea2e4d33",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d959b0cd-dbd1-4f96-b948-de0aea2e4d33",
+            "embalagem_tamanho": "30KG",
+            "valor": 120.00
+        },
+        {
+            "id": 32,
+            "nome": "Bambito Extrusado",
+            "descricao": "O Bambito Extrusado é um alimento completo para calopsitas, formulado para atender às necessidades nutricionais dessas aves. Ele fornece todos os nutrientes essenciais, incluindo proteínas, vitaminas e minerais, para manter suas aves saudáveis e ativas.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f03adedf-246b-4ad3-9e23-2d1304303b84",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/43f32dcc-913a-4356-b4f7-ecf978827296",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/99cd7d40-f0a9-455d-99a1-6fd3299b3e74",
+            "embalagem_tamanho": "Varia",
+            "valor": 99.00
+        },
+        {
+            "id": 33,
+            "nome": "Bambito Mix (Calopsita BIOTRON) 5KG",
+            "descricao": "O Bambito Mix é uma mistura especialmente formulada para calopsitas, com ingredientes que atendem às necessidades nutricionais dessas aves. Esta mistura é rica em sementes e grãos que fornecem energia e nutrientes essenciais para manter suas aves saudáveis e felizes.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dccd5ab8-59b8-4e8d-9a1d-c21ab6055b83",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/43f32dcc-913a-4356-b4f7-ecf978827296",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/16c45c41-ec83-4dfd-bc74-4ed5cce3eebb",
+            "embalagem_tamanho": "5KG",
+            "valor": 70.00
+        },
+        {
+            "id": 34,
+            "nome": "Bico Torto (BIOTRON) 5KG",
+            "descricao": "O Bico Torto é um alimento especialmente formulado para atender às necessidades nutricionais de aves como os Bicos Tortos. Esta dieta fornece proteínas, vitaminas e minerais essenciais para manter a saúde e a vitalidade dessas aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/abf2ada1-f22a-40da-bd6c-358ec68939cc",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/43f32dcc-913a-4356-b4f7-ecf978827296",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/00c70709-3bb8-4228-912c-596cfaef3320",
+            "embalagem_tamanho": "5KG",
+            "valor": 70.00
+        },
+        {
+            "id": 35,
+            "nome": "Bio Classic Amarela 01KG",
+            "descricao": "A Bio Classic Amarela é uma mistura de sementes e grãos de alta qualidade, enriquecida com nutrientes essenciais. É uma escolha ideal para aves de pequeno porte, como canários, que precisam de uma dieta equilibrada para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4b9ba2c3-7490-4890-bc1f-8b73848b7165",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4b9ba2c3-7490-4890-bc1f-8b73848b7165",
+            "embalagem_tamanho": "01KG",
+            "valor": 28.00
+        },
+        {
+            "id": 36,
+            "nome": "Bio Classic Branca 5KG",
+            "descricao": "A Bio Classic Branca é uma mistura de sementes e grãos de alta qualidade, enriquecida com nutrientes essenciais. É uma escolha ideal para aves de pequeno porte, como canários, que precisam de uma dieta equilibrada para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/fc5bcf9f-3968-4e6c-9ef4-8aa506c2c41a",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/b3f5fe90-8915-4bd8-b169-6ac9ec7ec207",
+            "embalagem_tamanho": "5KG",
+            "valor": 99.00
+        },
+        {
+            "id": 37,
+            "nome": "Bio Classic Vermelha 1KG",
+            "descricao": "A Bio Classic Vermelha é uma mistura de sementes e grãos de alta qualidade, enriquecida com nutrientes essenciais. É uma escolha ideal para aves de pequeno porte, como canários, que precisam de uma dieta equilibrada para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/10b7e963-7466-482b-886d-57b27b2f67df",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d0c574bd-2eaf-4d58-a443-b4fe4815db5b",
+            "embalagem_tamanho": "01KG",
+            "valor": 36.00
+        },
+        {
+            "id": 38,
+            "nome": "Bio Classic Vermelha 5KG",
+            "descricao": "A Bio Classic Vermelha é uma mistura de sementes e grãos de alta qualidade, enriquecida com nutrientes essenciais. É uma escolha ideal para aves de pequeno porte, como canários, que precisam de uma dieta equilibrada para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d0c574bd-2eaf-4d58-a443-b4fe4815db5b",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d0c574bd-2eaf-4d58-a443-b4fe4815db5b",
+            "embalagem_tamanho": "5KG",
+            "valor": 167.00
+        },
+        {
+            "id": 39,
+            "nome": "CC 2030 Amarela 01KG",
+            "descricao": "A CC 2030 Amarela é uma ração completa para aves, formulada para atender às necessidades nutricionais específicas dessas aves. Ela fornece proteínas de alta qualidade, vitaminas e minerais essenciais para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/752fc2e9-a1f0-4458-a4cf-dc1f0e39208d",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/6a1ae2f0-6470-46d1-94c2-139ccdf25060",
+            "mistura": "",
+            "embalagem_tamanho": "01KG",
+            "valor": 27.00
+        },
+        {
+            "id": 40,
+            "nome": "CC 2030 Premium 01KG",
+            "descricao": "A CC 2030 Premium é uma ração completa para aves, formulada para atender às necessidades nutricionais específicas dessas aves. Ela fornece proteínas de alta qualidade, vitaminas e minerais essenciais para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/62d81fd5-4c93-4740-bef1-3f5ae4ada095",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1d684e22-0c70-4f05-bce6-1b82cc62e2f8",
+            "embalagem_tamanho": "01KG",
+            "valor": 21.00
+        },
+        {
+            "id": 41,
+            "nome": "CC 2030 Premium 5KG",
+            "descricao": "A CC 2030 Premium é uma ração completa para aves, formulada para atender às necessidades nutricionais específicas dessas aves. Ela fornece proteínas de alta qualidade, vitaminas e minerais essenciais para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/62d81fd5-4c93-4740-bef1-3f5ae4ada095",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1d684e22-0c70-4f05-bce6-1b82cc62e2f8",
+            "embalagem_tamanho": "5KG",
+            "valor": 94.00
+        },
+        {
+            "id": 42,
+            "nome": "CC 2030 Vermelha 01KG",
+            "descricao": "A CC 2030 Vermelha é uma ração completa para aves, formulada para atender às necessidades nutricionais específicas dessas aves. Ela fornece proteínas de alta qualidade, vitaminas e minerais essenciais para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/57d153f3-2115-49db-a8e4-ac2f92d81913",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/9d054c72-c04f-4cb1-9f99-eaf234d71409",
+            "embalagem_tamanho": "1KG",
+            "valor": 35.00
+        },
+        {
+            "id": 43,
+            "nome": "CC 2030 Vermelha 05KG",
+            "descricao": "A CC 2030 Vermelha é uma ração completa para aves, formulada para atender às necessidades nutricionais específicas dessas aves. Ela fornece proteínas de alta qualidade, vitaminas e minerais essenciais para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/57d153f3-2115-49db-a8e4-ac2f92d81913",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/9d054c72-c04f-4cb1-9f99-eaf234d71409",
+            "valor": 167.00
+        },
+        {
+            "id": 44,
+            "nome": "CC Albium 0,250GR",
+            "descricao": "O CC Albium é um suplemento vitamínico e mineral para aves, especialmente formulado para atender às necessidades nutricionais dessas aves. Ele fornece vitaminas e minerais essenciais para manter a saúde e a vitalidade das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/92b3c65c-de8f-4026-8688-26aad8568bd7",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c6f37cc8-2ff9-47b9-8d87-b8382926f1f2",
+            "valor": 19.00
+        },
+        {
+            "id": 45,
+            "nome": "CC Albium 0,500GR",
+            "descricao": "O CC Albium é um suplemento vitamínico e mineral para aves, especialmente formulado para atender às necessidades nutricionais dessas aves. Ele fornece vitaminas e minerais essenciais para manter a saúde e a vitalidade das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/92b3c65c-de8f-4026-8688-26aad8568bd7",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c6f37cc8-2ff9-47b9-8d87-b8382926f1f2",
+            "valor": 26.00
+        },
+        {
+            "id": 46,
+            "nome": "CC Albium 5KG",
+            "descricao": "O CC Albium é um suplemento vitamínico e mineral para aves, especialmente formulado para atender às necessidades nutricionais dessas aves. Ele fornece vitaminas e minerais essenciais para manter a saúde e a vitalidade das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/92b3c65c-de8f-4026-8688-26aad8568bd7",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c6f37cc8-2ff9-47b9-8d87-b8382926f1f2",
+            "valor": 222.00
+        },
+        {
+            "id": 47,
+            "nome": "CC Fruta mix 05KG",
+            "descricao": "O CC Fruta Mix é uma mistura de frutas desidratadas, especialmente formulada para fornecer nutrientes essenciais para aves de pequeno porte. Esta mistura é uma fonte de vitaminas e minerais naturais que contribuem para a saúde das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d5a5c017-433b-42eb-955b-0776d32a09b4",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4071f409-b9cd-4ac5-a4d6-39e486ca4149",
+            "valor": 138.00
+        },
+        {
+            "id": 48,
+            "nome": "CC Fruta mix 0,500g",
+            "descricao": "O CC Fruta Mix é uma mistura de frutas desidratadas, especialmente formulada para fornecer nutrientes essenciais para aves de pequeno porte. Esta mistura é uma fonte de vitaminas e minerais naturais que contribuem para a saúde das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d5a5c017-433b-42eb-955b-0776d32a09b4",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4071f409-b9cd-4ac5-a4d6-39e486ca4149",
+            "valor": 19.00
+        },
+        {
+            "id": 49,
+            "nome": "CC Mineral mix 1,5KG s/ carvão",
+            "descricao": "O CC Mineral Mix é um suplemento vitamínico e mineral para aves, formulado para atender às necessidades nutricionais dessas aves. Ele fornece vitaminas e minerais essenciais para manter a saúde e a vitalidade das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/222610a2-a6ba-4478-bc47-69e51e7407ef",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a25932cc-f0a2-44a9-89de-e8272956ceef",
+            "valor": 10.00
+        },
+        {
+            "id": 50,
+            "nome": "CC Mineral mix c/carvão",
+            "descricao": "O CC Mineral Mix com Carvão é um suplemento vitamínico e mineral para aves, formulado para atender às necessidades nutricionais dessas aves e auxiliar na digestão. Ele fornece vitaminas, minerais e carvão ativado para manter a saúde das aves e auxiliar na digestão.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/9cd2d3ce-8e5e-4442-95e2-381244155c45",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/ca9e7564-f332-4f74-aa2a-cf6a045b8370",
+            "mistura": "Varia",
+            "valor": 10.00
+        },
+        {
+            "id": 51,
+            "nome": "CC Nectrall loris 5KG",
+            "descricao": "O CC Nectrall Loris é uma mistura especialmente formulada para loris, com ingredientes que atendem às necessidades nutricionais dessas aves. Esta mistura é rica em sementes e grãos que fornecem energia e nutrientes essenciais para manter suas aves saudáveis e felizes.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dc52c095-68dd-4ca7-a73d-83d7f397c004",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/74701132-32c7-4b48-b691-31fa0539c7d5",
+            "valor": 191.00
+        },
+        {
+            "id": 52,
+            "nome": "CC Nectrall loris 0,500GR",
+            "descricao": "O CC Nectrall Loris é uma mistura especialmente formulada para loris, com ingredientes que atendem às necessidades nutricionais dessas aves. Esta mistura é rica em sementes e grãos que fornecem energia e nutrientes essenciais para manter suas aves saudáveis e felizes.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dc52c095-68dd-4ca7-a73d-83d7f397c004",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/74701132-32c7-4b48-b691-31fa0539c7d5",
+            "valor": 26.00
+        },
+        {
+            "id": 53,
+            "nome": "CC Parrots 6KG",
+            "descricao": "O CC Parrots é uma mistura de sementes e grãos especialmente formulada para atender às necessidades nutricionais das aves da família dos papagaios. Esta mistura é rica em nutrientes essenciais para manter seus papagaios saudáveis e ativos.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/bea70aff-7baa-4fee-920c-88277e9e3ef8",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/b00f41af-f962-416c-9766-fdc8a6e0ecc3",
+            "valor": 87.00
+        },
+        {
+            "id": 54,
+            "nome": "CC Premiata 5KG",
+            "descricao": "A CC Premiata é uma mistura de sementes e grãos especialmente formulada para atender às necessidades nutricionais das aves, proporcionando uma dieta equilibrada para uma saúde ótima. Esta mistura é enriquecida com nutrientes essenciais para manter as aves saudáveis e felizes.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e96ab113-3f96-4fe6-bda8-beb781159ed2",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/2adf0016-24d5-4249-ace3-cde5756908ac",
+            "valor": 88.00
+        },
+        {
+            "id": 55,
+            "nome": "Curió Bicudo Azulão 0,500GR",
+            "descricao": "A Curió Bicudo Azulão é uma mistura de sementes e grãos especialmente formulada para atender às necessidades nutricionais de curiós e bicudos. Esta mistura é rica em nutrientes essenciais para manter seus pássaros saudáveis e ativos.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/958a6520-0a75-4506-99ed-ffb25dbddaca",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/b2cc8cf3-ec71-451e-ad2c-6d47c483442d",
+            "mistura": "0,500GR",
+            "valor": 16.00
+        },
+        {
+            "id": 56,
+            "nome": "Curió Bicudo Azulão 5KG",
+            "descricao": "A Curió Bicudo Azulão é uma mistura de sementes e grãos especialmente formulada para atender às necessidades nutricionais de curiós e bicudos. Esta mistura é rica em nutrientes essenciais para manter seus pássaros saudáveis e ativos.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/958a6520-0a75-4506-99ed-ffb25dbddaca",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/b2cc8cf3-ec71-451e-ad2c-6d47c483442d",
+            "valor": 128.00
+        },
+        {
+            "id": 57,
+            "nome": "Extrusada grande porte mix 10KG",
+            "descricao": "A Extrusada Grande Porte Mix é uma ração completa para aves de grande porte, formulada para atender às necessidades nutricionais específicas dessas aves. Ela fornece proteínas de alta qualidade, vitaminas e minerais essenciais para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
+            "valor": 110.00
+        },
+        {
+            "id": 58,
+            "nome": "Extrusada médio porte mix 20KG",
+            "descricao": "A Extrusada Médio Porte Mix é uma ração completa para aves de médio porte, formulada para atender às necessidades nutricionais específicas dessas aves. Ela fornece proteínas de alta qualidade, vitaminas e minerais essenciais para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
+            "valor": 138.00
+        },
+        {
+            "id": 59,
+            "nome": "Extrusada Papagaio/Arara 10KG",
+            "descricao": "A Extrusada Papagaio/Arara é uma ração completa para aves da família dos papagaios e araras, formulada para atender às necessidades nutricionais específicas dessas aves. Ela fornece proteínas de alta qualidade, vitaminas e minerais essenciais para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
+            "valor": 172.00
+        },
+        {
+            "id": 60,
+            "nome": "Extrusada pequeno porte mix 20KG",
+            "descricao": "A Extrusada Pequeno Porte Mix é uma ração completa para aves de pequeno porte, formulada para atender às necessidades nutricionais específicas dessas aves. Ela fornece proteínas de alta qualidade, vitaminas e minerais essenciais para uma saúde ótima.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
+            "valor": 220.00
+        },
+        {
+            "id": 61,
+            "nome": "Farinha de Ostra N.0 FINA 25KG",
+            "descricao": "A Farinha de Ostra N.0 Fina é um suplemento mineral para aves, especialmente formulado para fornecer cálcio e outros minerais essenciais para a saúde das aves. O cálcio é fundamental para a formação e manutenção de ossos saudáveis e cascas de ovos fortes.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f52789df-0580-4f4e-8b56-5a0d312a7280",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f52789df-0580-4f4e-8b56-5a0d312a7280",
+            "valor": 80.00
+        },
+        {
+            "id": 62,
+            "nome": "Farinha de Ostra N.2 Grossa 25KG",
+            "descricao": "A Farinha de Ostra N.2 Grossa é um suplemento mineral para aves, especialmente formulado para fornecer cálcio e outros minerais essenciais para a saúde das aves. O cálcio é fundamental para a formação e manutenção de ossos saudáveis e cascas de ovos fortes.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f52789df-0580-4f4e-8b56-5a0d312a7280",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f52789df-0580-4f4e-8b56-5a0d312a7280",
+            "valor": 80.00
+        },
+        {
+            "id": 63,
+            "nome": "Gran mix 20 1KG",
+            "descricao": "O Gran Mix 20 é uma mistura de grãos e sementes especialmente formulada para fornecer energia e nutrientes essenciais para aves de pequeno e médio porte. Esta mistura é uma fonte de proteínas e fibras que contribuem para a saúde das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/283a8e27-6ce9-4f7c-ab7e-6e2b3274e63a",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/283a8e27-6ce9-4f7c-ab7e-6e2b3274e63a",
+            "valor": 19.00
+        },
+        {
+            "id": 64,
+            "nome": "Gran mix 20 5KG",
+            "descricao": "O Gran Mix 20 é uma mistura de grãos e sementes especialmente formulada para fornecer energia e nutrientes essenciais para aves de pequeno e médio porte. Esta mistura é uma fonte de proteínas e fibras que contribuem para a saúde das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/283a8e27-6ce9-4f7c-ab7e-6e2b3274e63a",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/283a8e27-6ce9-4f7c-ab7e-6e2b3274e63a",
+            "valor": 89.00
+        },
+        {
+            "id": 65,
+            "nome": "Gran mix 22 1KG",
+            "descricao": "O Gran Mix 22 é uma mistura de grãos e sementes especialmente formulada para fornecer energia e nutrientes essenciais para aves de pequeno e médio porte. Esta mistura é uma fonte de proteínas e fibras que contribuem para a saúde das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/489df3d7-1ca4-47eb-a118-bcc6c5a1a01f",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/67b121f4-6ec1-47ce-a701-4ba8d92cab94",
+            "valor": 21.00
+        },
+        {
+            "id": 66,
+            "nome": "Gran mix 22 5KG",
+            "descricao": "O Gran Mix 22 é uma mistura de grãos e sementes especialmente formulada para fornecer energia e nutrientes essenciais para aves de pequeno e médio porte. Esta mistura é uma fonte de proteínas e fibras que contribuem para a saúde das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/489df3d7-1ca4-47eb-a118-bcc6c5a1a01f",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/67b121f4-6ec1-47ce-a701-4ba8d92cab94",
+            "valor": 99.00
+        },
+        {
+            "id": 67,
+            "nome": "Milheto 50KG",
+            "descricao": "O Milheto é um tipo de grão que é amplamente utilizado na alimentação de aves. Ele é rico em nutrientes e fornece energia e nutrientes essenciais para manter as aves saudáveis e ativas. O Milheto é uma excelente fonte de carboidratos, proteínas e fibras.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c1cccfcd-1a5d-40af-80e6-e624f6f7c7c6",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c1cccfcd-1a5d-40af-80e6-e624f6f7c7c6",
+            "valor": 90.00
+        },
+        {
+            "id": 68,
+            "nome": "Nativus 5KG",
+            "descricao": "O Nativus é uma mistura de sementes e grãos especialmente formulada para fornecer nutrientes essenciais para aves de pequeno e médio porte. Esta mistura é rica em proteínas, vitaminas e minerais que contribuem para a saúde das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5707c089-67d1-4305-be08-26cff13a8818",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/16f56493-aa04-4769-9a2f-397bb22002a5",
+            "valor": 78.00
+        },
+        {
+            "id": 69,
+            "nome": "Nativus 500GR",
+            "descricao": "O Nativus é uma mistura de sementes e grãos especialmente formulada para fornecer nutrientes essenciais para aves de pequeno e médio porte. Esta mistura é rica em proteínas, vitaminas e minerais que contribuem para a saúde das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5707c089-67d1-4305-be08-26cff13a8818",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/16f56493-aa04-4769-9a2f-397bb22002a5",
+            "valor": 10.00
+        },
+        {
+            "id": 70,
+            "nome": "Painço 50KG",
+            "descricao": "O Painço é um tipo de grão que é amplamente utilizado na alimentação de aves. Ele é rico em nutrientes e fornece energia e nutrientes essenciais para manter as aves saudáveis e ativas. O Painço é uma excelente fonte de carboidratos, proteínas e fibras.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5573e407-a04a-47f8-b982-75d8533e03d6",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "50KG",
+            "valor": 200.00
+        },
+        {
+            "id": 71,
+            "nome": "Painço 10KG",
+            "descricao": "O Painço é um tipo de grão que é amplamente utilizado na alimentação de aves. Ele é rico em nutrientes e fornece energia e nutrientes essenciais para manter as aves saudáveis e ativas. O Painço é uma excelente fonte de carboidratos, proteínas e fibras.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5573e407-a04a-47f8-b982-75d8533e03d6",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "10KG",
+            "valor": 42.00
+        },
+        {
+            "id": 72,
+            "nome": "Papa de ovo fortall 5KG",
+            "descricao": "A Papa de Ovo Fortall é um alimento enriquecido especialmente formulado para a alimentação de aves, proporcionando uma fonte de proteína de alta qualidade. É ideal para aves que necessitam de uma dieta rica em proteínas, como filhotes e aves em fase de reprodução.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/66434400-1aae-4b78-a40d-3f2e0519db0d",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7299cdb4-f5ca-4e65-81eb-40a5cc607e43",
+            "valor": 110.00
+        },
+        {
+            "id": 73,
+            "nome": "Papa de ovo ovobird 5KG",
+            "descricao": "A Papa de Ovo Ovobird é um alimento enriquecido especialmente formulado para a alimentação de aves, proporcionando uma fonte de proteína de alta qualidade. É ideal para aves que necessitam de uma dieta rica em proteínas, como filhotes e aves em fase de reprodução.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/50ee6d28-20ff-402e-812c-41cd1f1b407c",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7faac684-4387-482b-8392-3d0b0c1409f5",
+            "valor": 94.00
+        },
+        {
+            "id": 74,
+            "nome": "Papagaio Mix 5KG",
+            "descricao": "O Papagaio Mix é uma mistura de sementes e grãos especialmente formulada para atender às necessidades nutricionais das aves da família dos papagaios. Esta mistura é rica em nutrientes essenciais para manter seus papagaios saudáveis e ativos.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/214ec91e-ccb9-4dad-8335-cd4a4dcff644",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
+            "valor": 99.00
+        },
+        {
+            "id": 75,
+            "nome": "Peck 20 tucano 5KG",
+            "descricao": "O Peck 20 Tucano é uma ração especialmente formulada para atender às necessidades nutricionais dos tucanos e aves frugívoras. Esta ração fornece nutrientes essenciais para a saúde e bem-estar dessas aves, contribuindo para sua vitalidade e beleza.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c6933cf5-2fb4-44de-af43-6cc9bd9a3d91",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f0face30-73e3-46e8-afa2-f7c156b3e8d0",
+            "valor": 109.00
+        },
+        {
+            "id": 76,
+            "nome": "Roedores Coelho 0,500GR",
+            "descricao": "O Roedores Coelho é um alimento especialmente formulado para a alimentação de coelhos e roedores. Esta ração fornece nutrientes essenciais para a saúde e bem-estar dos coelhos, contribuindo para sua vitalidade e saúde dental.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/0b8749ff-2b2f-4b80-8d39-de285ed97487",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/505c68bd-3f70-43ad-8452-a63d913d91f2",
+            "valor": 14.00
+        },
+        {
+            "id": 77,
+            "nome": "Roedores Hamsters 0,500GR",
+            "descricao": "O Roedores Hamsters é um alimento especialmente formulado para a alimentação de hamsters e roedores. Esta ração fornece nutrientes essenciais para a saúde e bem-estar dos hamsters, contribuindo para sua vitalidade e saúde dental.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/cffac676-e169-4d3b-b88d-f13b634b9b5c",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/597933d7-7c78-4ae2-958a-931891b85472",
+            "valor": 14.00
+        },
+        {
+            "id": 78,
+            "nome": "Saporito insetos 0,400GR",
+            "descricao": "O Saporito Insetos é um suplemento alimentar especialmente formulado para a alimentação de aves insetívoras. Ele fornece uma fonte de proteína de alta qualidade, simulando insetos que são uma parte natural da dieta dessas aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/b7a5af97-f309-467e-b7a3-3a3869a5ad7e",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/68527665-59c3-49f4-9ce2-5d9c0fb69c3c",
+            "valor": 26.00
+        },
+        {
+            "id": 79,
+            "nome": "Saporito mamão 2,5KG",
+            "descricao": "O Saporito Mamão é um suplemento alimentar que fornece uma fonte de fibras e nutrientes essenciais para a saúde das aves. O mamão é rico em fibras que auxiliam na digestão das aves, contribuindo para seu bem-estar digestivo.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/03c0cc2f-768c-47aa-bc18-f4e3fe0e9862",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1ee2b555-0322-46a1-ace3-672560627cd9",
+            "valor": 55.00
+        },
+        {
+            "id": 80,
+            "nome": "Sporito mix 5KG",
+            "descricao": "O Sporito Mix é uma mistura de grãos, sementes e frutas especialmente formulada para fornecer nutrientes essenciais para a saúde das aves. Esta mistura é rica em proteínas, vitaminas e minerais que contribuem para o bem-estar das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/0a383b57-65df-4ad6-935c-b6f799077182",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1cd9bc43-a50e-440e-91da-73abc29827d3",
+            "mistura": "5KG",
+            "valor": 70.00
+        },
+        {
+            "id": 81,
+            "nome": "Saporito mix 0,500GR",
+            "descricao": "O Saporito Mix é uma mistura de grãos, sementes e frutas especialmente formulada para fornecer nutrientes essenciais para a saúde das aves. Esta mistura é rica em proteínas, vitaminas e minerais que contribuem para o bem-estar das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/0a383b57-65df-4ad6-935c-b6f799077182",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1cd9bc43-a50e-440e-91da-73abc29827d3",
+            "mistura": "0,500GR",
+            "valor": 9.50
+        },
+        {
+            "id": 82,
+            "nome": "Saporito pimenta 5KG",
+            "descricao": "O Saporito Pimenta é uma mistura de grãos e sementes especialmente formulada para fornecer nutrientes essenciais para a saúde das aves. Esta mistura é enriquecida com pimenta, que é uma fonte natural de antioxidantes e contribui para o bem-estar das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/93b6f893-3910-4a1b-9d42-eb1aa4c94c5f",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/03d5ada2-7be2-493b-a8ec-6915f130337c",
+            "valor": 91.00
+        },
+        {
+            "id": 83,
+            "nome": "Saporito pimenta 0,500GR",
+            "descricao": "O Saporito Pimenta é uma mistura de grãos e sementes especialmente formulada para fornecer nutrientes essenciais para a saúde das aves. Esta mistura é enriquecida com pimenta, que é uma fonte natural de antioxidantes e contribui para o bem-estar das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/93b6f893-3910-4a1b-9d42-eb1aa4c94c5f",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/03d5ada2-7be2-493b-a8ec-6915f130337c",
+            "valor": 12.00
+        },
+        {
+            "id": 84,
+            "nome": "Savor Cor 5KG",
+            "descricao": "O Savor Cor é uma mistura de grãos e sementes especialmente formulada para realçar a cor e a saúde das aves. Esta mistura é enriquecida com ingredientes que promovem a pigmentação natural das penas, contribuindo para a beleza das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/93d3e50e-5b70-4953-a40f-c45a4a272911",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/eb103ec0-10c7-4b13-8527-1696dd54ffae",
+            "valor": 105.00
+        },
+        {
+            "id": 85,
+            "nome": "Savor Porte 5KG",
+            "descricao": "O Savor Porte é uma mistura de grãos e sementes especialmente formulada para atender às necessidades nutricionais das aves de pequeno e médio porte. Esta mistura fornece nutrientes essenciais para a saúde e vitalidade das aves, garantindo que recebam uma dieta equilibrada.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/cbb300c6-2d88-4616-9e57-296e9a44a9bf",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/af23d78c-f9e4-4ca5-992e-876dfa1bb16d",
+            "valor": 110.00
+        },
+        {
+            "id": 86,
+            "nome": "Savor Pisittacus",
+            "descricao": "O Savor Pisittacus é uma mistura de grãos e sementes especialmente formulada para atender às necessidades nutricionais das aves da família dos Psitacídeos, como papagaios e araras. Esta mistura fornece nutrientes essenciais para a saúde e bem-estar dessas aves, contribuindo para sua vitalidade e beleza.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/99057fd6-983d-4df1-97e5-3b05ffd9cbe1",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "valor": 110.00,
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/ba63089f-20ae-4c0a-8ec3-fdfd5bd56ae2"
+        },
+        {
+            "id": 87,
+            "nome": "Tico-Tico Canário da terra 0,500GR",
+            "descricao": "O Tico-Tico Canário da Terra é uma mistura de sementes especialmente formulada para atender às necessidades nutricionais dos tico-ticos e canários da terra. Esta mistura fornece nutrientes essenciais para a saúde e vitalidade dessas aves, garantindo que recebam uma dieta equilibrada e saborosa.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/b584cf82-02b6-4a2a-813a-455e309b1dc5",
+            "marca": "Biotron",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/709e0b2b-12cb-4ae5-bfeb-86c66afd03c3",
+            "valor": 12.00
+        },
+        {
+            "id": 88,
+            "nome": "Arroz c/ casca agulha 5KG",
+            "descricao": "O Arroz com Casca Agulha é um alimento natural especialmente selecionado para a alimentação de aves. É uma fonte de carboidratos e fibras que auxiliam na digestão das aves, proporcionando uma dieta equilibrada e saudável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4a2c083f-acb5-4466-aac8-57404cb0cf6b",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4a2c083f-acb5-4466-aac8-57404cb0cf6b",
+            "valor": 21.00
+        },
+        {
+            "id": 89,
+            "nome": "Arroz c/ casca agulha 10KG",
+            "descricao": "O Arroz com Casca Agulha é um alimento natural especialmente selecionado para a alimentação de aves. É uma fonte de carboidratos e fibras que auxiliam na digestão das aves, proporcionando uma dieta equilibrada e saudável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4a2c083f-acb5-4466-aac8-57404cb0cf6b",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4a2c083f-acb5-4466-aac8-57404cb0cf6b",
+            "valor": 40.00
+        },
+        {
+            "id": 90,
+            "nome": "Arroz c/ casca cateto 5KG",
+            "descricao": "O Arroz com Casca Cateto é um alimento natural especialmente selecionado para a alimentação de aves. É uma fonte de carboidratos e fibras que auxiliam na digestão das aves, proporcionando uma dieta equilibrada e saudável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5c11b20c-1695-44f1-9a8e-dc3b837a6eeb",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5c11b20c-1695-44f1-9a8e-dc3b837a6eeb",
+            "valor": 31.00
+        },
+        {
+            "id": 91,
+            "nome": "Arroz c/ casca cateto 10KG",
+            "descricao": "O Arroz com Casca Cateto é um alimento natural especialmente selecionado para a alimentação de aves. É uma fonte de carboidratos e fibras que auxiliam na digestão das aves, proporcionando uma dieta equilibrada e saudável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5c11b20c-1695-44f1-9a8e-dc3b837a6eeb",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5c11b20c-1695-44f1-9a8e-dc3b837a6eeb",
+            "valor": 60.00
+        },
+        {
+            "id": 92,
+            "nome": "Arroz c/ casca pacholinha 5KG",
+            "descricao": "O Arroz com Casca Pacholinha é um alimento natural especialmente selecionado para a alimentação de aves. É uma fonte de carboidratos e fibras que auxiliam na digestão das aves, proporcionando uma dieta equilibrada e saudável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/66bc5e2b-f392-4398-8664-61e998b1c659",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/66bc5e2b-f392-4398-8664-61e998b1c659",
+            "valor": 55.00
+        },
+        {
+            "id": 93,
+            "nome": "Aveia c/ casca 10KG",
+            "descricao": "A Aveia com Casca é um alimento natural especialmente selecionado para a alimentação de aves. É uma fonte de carboidratos e fibras que auxiliam na digestão das aves, proporcionando uma dieta equilibrada e saudável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5be87829-7ece-419e-a66d-cf2c006363db",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5be87829-7ece-419e-a66d-cf2c006363db",
+            "valor": 30.00
+        },
+        {
+            "id": 94,
+            "nome": "Cartamo 5KG",
+            "descricao": "O Cartamo é uma semente oleaginosa especialmente selecionada para a alimentação de aves. É uma fonte de ácidos graxos essenciais que contribuem para a saúde e beleza das penas das aves, além de proporcionar energia para seu dia a dia.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/047cfbbf-6bee-4827-871c-d8cf1d6756c8",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/047cfbbf-6bee-4827-871c-d8cf1d6756c8",
+            "valor": 45.00
+        },
+        {
+            "id": 95,
+            "nome": "Couza 5KG",
+            "descricao": "A Couza é uma semente oleaginosa especialmente selecionada para a alimentação de aves. É uma fonte de ácidos graxos essenciais que contribuem para a saúde e beleza das penas das aves, além de proporcionar energia para seu dia a dia.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a176203d-b653-442a-8e8e-9893d8b3f377",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a176203d-b653-442a-8e8e-9893d8b3f377",
+            "valor": 31.00
+        },
+        {
+            "id": 96,
+            "nome": "Couza 10KG",
+            "descricao": "A Couza é uma semente oleaginosa especialmente selecionada para a alimentação de aves. É uma fonte de ácidos graxos essenciais que contribuem para a saúde e beleza das penas das aves, além de proporcionar energia para seu dia a dia.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a176203d-b653-442a-8e8e-9893d8b3f377",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a176203d-b653-442a-8e8e-9893d8b3f377",
+            "valor": 60.00
+        },
+        {
+            "id": 97,
+            "nome": "Girassol comum 10KG",
+            "descricao": "O Girassol Comum é uma semente oleaginosa especialmente selecionada para a alimentação de aves. É uma fonte de ácidos graxos essenciais que contribuem para a saúde e beleza das penas das aves, além de proporcionar energia para seu dia a dia.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/14e7a85d-12fd-4fe4-a127-79f457d8ca68",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/14e7a85d-12fd-4fe4-a127-79f457d8ca68",
+            "valor": 82.00
+        },
+        {
+            "id": 98,
+            "nome": "Girassol grande 10KG",
+            "descricao": "O Girassol Grande é uma semente oleaginosa especialmente selecionada para a alimentação de aves. É uma fonte de ácidos graxos essenciais que contribuem para a saúde e beleza das penas das aves, além de proporcionar energia para seu dia a dia.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/2c18b9c6-4068-439e-af61-72b41a6744be",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/2c18b9c6-4068-439e-af61-72b41a6744be",
+            "valor": 160.00
+        },
+        {
+            "id": 99,
+            "nome": "Linhaça 5KG",
+            "descricao": "A Linhaça é uma semente rica em ácidos graxos essenciais, fibras e antioxidantes naturais. É especialmente selecionada para a alimentação de aves, contribuindo para a saúde e beleza das penas, além de promover a digestão saudável das aves.",
+            "capa": "",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "5KG",
+            "valor": 65.00
+        },
+        {
+            "id": 100,
+            "nome": "Linhaça 10KG",
+            "descricao": "A Linhaça é uma semente rica em ácidos graxos essenciais, fibras e antioxidantes naturais. É especialmente selecionada para a alimentação de aves, contribuindo para a saúde e beleza das penas, além de promover a digestão saudável das aves.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/961caa64-7097-49a7-b677-1dff218629ff",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/961caa64-7097-49a7-b677-1dff218629ff",
+            "valor": 125.00
+        },
+        {
+            "id": 101,
+            "nome": "Milheto 10 KG",
+            "descricao": "O Milheto é um cereal rico em nutrientes, especialmente selecionado para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c1cccfcd-1a5d-40af-80e6-e624f6f7c7c6",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c1cccfcd-1a5d-40af-80e6-e624f6f7c7c6",
+            "valor": 28.00
+        },
+        {
+            "id": 102,
+            "nome": "Nabão 10KG",
+            "descricao": "O Nabão é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7d8fa4dc-16af-4957-a898-c7cf4cfb4853",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7d8fa4dc-16af-4957-a898-c7cf4cfb4853",
+            "valor": 65.00
+        },
+        {
+            "id": 103,
+            "nome": "Nabão 5KG",
+            "descricao": "O Nabão é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7d8fa4dc-16af-4957-a898-c7cf4cfb4853",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7d8fa4dc-16af-4957-a898-c7cf4cfb4853",
+            "valor": 33.00
+        },
+        {
+            "id": 104,
+            "nome": "Niger 5KG",
+            "descricao": "O Niger é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de proteínas, fibras e ácidos graxos essenciais que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8543e59a-eec5-47f5-ab86-0793a48e7bc5",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8543e59a-eec5-47f5-ab86-0793a48e7bc5",
+            "valor": 75.00
+        },
+        {
+            "id": 105,
+            "nome": "Niger 10KG",
+            "descricao": "O Niger é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de proteínas, fibras e ácidos graxos essenciais que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8543e59a-eec5-47f5-ab86-0793a48e7bc5",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8543e59a-eec5-47f5-ab86-0793a48e7bc5",
+            "valor": 150.00
+        },
+        {
+            "id": 106,
+            "nome": "Painço branco 5KG",
+            "descricao": "O Painço Branco é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d6e61cb2-5714-4807-8aeb-65685829ad7e",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d6e61cb2-5714-4807-8aeb-65685829ad7e",
+            "valor": 46.00
+        },
+        {
+            "id": 107,
+            "nome": "Painço branco 10KG",
+            "descricao": "O Painço Branco é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d6e61cb2-5714-4807-8aeb-65685829ad7e",
+            "marca": "Nutrari",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d6e61cb2-5714-4807-8aeb-65685829ad7e",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "valor": 90.00
+        },
+        {
+            "id": 108,
+            "nome": "Painço português 5KG",
+            "descricao": "O Painço Português é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dd4efb66-baff-4dc6-8785-310ff3699641",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dd4efb66-baff-4dc6-8785-310ff3699641",
+            "valor": 60.00
+        },
+        {
+            "id": 109,
+            "nome": "Painço português 10KG",
+            "descricao": "O Painço Português é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dd4efb66-baff-4dc6-8785-310ff3699641",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dd4efb66-baff-4dc6-8785-310ff3699641",
+            "valor": 120.00
+        },
+        {
+            "id": 110,
+            "nome": "Painço preto 5KG",
+            "descricao": "O Painço Preto é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c656ce1b-3fad-41d9-a8c1-7e9d78a61a21",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c656ce1b-3fad-41d9-a8c1-7e9d78a61a21",
+            "valor": 45.00
+        },
+        {
+            "id": 111,
+            "nome": "Painço preto 10KG",
+            "descricao": "O Painço Preto é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c656ce1b-3fad-41d9-a8c1-7e9d78a61a21",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c656ce1b-3fad-41d9-a8c1-7e9d78a61a21",
+            "valor": 85.00
+        },
+        {
+            "id": 112,
+            "nome": "Painço verde 5 KG",
+            "descricao": "O Painço Verde é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d89f20d0-9308-4f6f-b6e9-4c3a4074c9b8",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d89f20d0-9308-4f6f-b6e9-4c3a4074c9b8",
+            "valor": 45.00
+        },
+        {
+            "id": 113,
+            "nome": "Painço verde 10KG",
+            "descricao": "O Painço Verde é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d89f20d0-9308-4f6f-b6e9-4c3a4074c9b8",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d89f20d0-9308-4f6f-b6e9-4c3a4074c9b8",
+            "valor": 85.00
+        },
+        {
+            "id": 114,
+            "nome": "Painço vermelho 5KG",
+            "descricao": "O Painço Vermelho é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/029f24af-b8a8-4b17-a2f8-1c32b4d79c39",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/029f24af-b8a8-4b17-a2f8-1c32b4d79c39",
+            "valor": 45.00
+        },
+        {
+            "id": 115,
+            "nome": "Painço vermelho 10KG",
+            "descricao": "O Painço Vermelho é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/029f24af-b8a8-4b17-a2f8-1c32b4d79c39",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/029f24af-b8a8-4b17-a2f8-1c32b4d79c39",
+            "valor": 85.00
+        },
+        {
+            "id": 116,
+            "nome": "Perila branca 1KG",
+            "descricao": "A Perila Branca é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de ácidos graxos essenciais, fibras e proteínas que contribuem para a saúde e beleza das penas das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dff34a48-2182-452c-aab8-d7f6f3f1c525",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dff34a48-2182-452c-aab8-d7f6f3f1c525",
+            "valor": 90.00
+        },
+        {
+            "id": 117,
+            "nome": "PP12 pássaros (Bananada) 10KG",
+            "descricao": "O PP12 Pássaros é um alimento especialmente formulado para agradar o paladar das aves. Com sabor de bananada, é uma deliciosa opção para enriquecer a dieta das aves e proporcionar energia e vitalidade para o seu dia a dia.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8048f9e2-67b5-43d0-b319-57f07e7372aa",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8048f9e2-67b5-43d0-b319-57f07e7372aa",
+            "valor": 62.00
+        },
+        {
+            "id": 118,
+            "nome": "Quirera de milho N.1 10KG",
+            "descricao": "A Quirera de Milho N.1 é um alimento especialmente selecionado para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8ee3f4d6-2223-4bed-901b-de1d31c4e5c5",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8ee3f4d6-2223-4bed-901b-de1d31c4e5c5",
+            "valor": 30.00
+        },
+        {
+            "id": 119,
+            "nome": "Quirera de milho N.3 10KG",
+            "descricao": "A Quirera de Milho N.3 é um alimento especialmente selecionado para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8ee3f4d6-2223-4bed-901b-de1d31c4e5c5",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8ee3f4d6-2223-4bed-901b-de1d31c4e5c5",
+            "valor": 30.00
+        },
+        {
+            "id": 120,
+            "nome": "Senha 10KG",
+            "descricao": "A Senha é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável. Esta embalagem contém 10KG de produto.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1e4889db-4fc9-4efc-b2a2-20514e53881a",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1e4889db-4fc9-4efc-b2a2-20514e53881a",
+            "valor": 59.00
+        },
+        {
+            "id": 121,
+            "nome": "Senha 5KG",
+            "descricao": "A Senha é uma semente especialmente selecionada para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável. Esta embalagem contém 5KG de produto.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1e4889db-4fc9-4efc-b2a2-20514e53881a",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1e4889db-4fc9-4efc-b2a2-20514e53881a",
+            "valor": 35.00
+        },
+        {
+            "id": 122,
+            "nome": "Sorgo 10KG",
+            "descricao": "O Sorgo é um cereal especialmente selecionado para a alimentação de aves. É uma fonte de carboidratos, fibras e proteínas que contribuem para a saúde e energia das aves, além de ser altamente palatável. Esta embalagem contém 10KG de produto.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/113cae3e-f48f-48ec-b9a9-2e5cb72f0795",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/113cae3e-f48f-48ec-b9a9-2e5cb72f0795",
+            "valor": 35.00
+        },
+        {
+            "id": 123,
+            "nome": "CX COCCIDEX 30 caps",
+            "descricao": "O CX COCCIDEX é um suplemento em cápsulas especialmente desenvolvido para auxiliar na prevenção e controle da coccidiose em aves. Cada embalagem contém 30 cápsulas.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/377582f1-0460-4fbd-a0e4-19e32a68330f",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/377582f1-0460-4fbd-a0e4-19e32a68330f",
+            "valor": 62.00
+        },
+        {
+            "id": 124,
+            "nome": "CX COCCIDEX LÍQUIDO 10ML",
+            "descricao": "O CX COCCIDEX LÍQUIDO é um suplemento líquido especialmente desenvolvido para auxiliar na prevenção e controle da coccidiose em aves. Cada embalagem contém 10ML de produto.",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d704f3a1-2b86-4053-ad2c-438698560993",
+            "marca": "Nutrari",
+            "marca_logo": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7f5ef598-ac71-4962-911b-8b9989e42abf",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d704f3a1-2b86-4053-ad2c-438698560993",
+            "valor": 32.00
         }
     ]
 }

@@ -8,7 +8,8 @@ interface CardProps {
     embalagens_tamanho: string,
     description: string,
     id: any,
-    action?: any
+    action?: any,
+    valor?: any
 }
 
 const CardProductsConsult = (props: CardProps) => {
@@ -17,73 +18,89 @@ const CardProductsConsult = (props: CardProps) => {
 
     return (
         <View style={styles.container}>
-            <Image
-                style={styles.capa}
-                source={{ uri: props.capa }}
-            />
+            <Image style={styles.capa} source={{ uri: props.capa }} />
             <View style={styles.rightContent}>
-                <View style={styles.nomeEEmgalagensContainer}>
+                <View style={styles.nomeEEmbalagensContainer}>
                     <Text style={styles.title}>{props.name}</Text>
-                    <Text style={styles.embalagens}>{props.embalagens_tamanho}</Text>
                 </View>
                 <Text style={styles.descricao}>{props.description}</Text>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Detalhes" as never, { product } as never)}>
+                {
+                    props.valor !== '' ?
+                        <Text style={styles.value}><Text style={{ color: '#fff' }}>Por</Text> {props.valor.toFixed(2).replace('.', ',')} R$</Text>
+                        :
+                        <View style={{ marginTop: 15 }}></View>
+                }
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => {
+                        const route = ['Detalhes', { product }];
+                        navigation.navigate(...(route as never));
+                    }}
+                >
                     <Text style={styles.buttonText}>SABER MAIS</Text>
                 </TouchableOpacity>
             </View>
         </View>
-    )
-}
+    );
+};
 
-export default CardProductsConsult
+export default CardProductsConsult;
 
 const styles = StyleSheet.create({
     container: {
-        justifyContent: 'space-around',
         flexDirection: 'row',
-        backgroundColor: '#fff813',
-        borderRadius: 20,
-        padding: 15,
-        height: 240,
-        marginTop: 20
+        backgroundColor: '#fbff07', // Fundo amarelo
+        borderRadius: 15,
+        padding: 20,
+        marginVertical: 20,
+        height: 260,
+        alignItems: 'center',
     },
     capa: {
-        flex: 1
+        flex: 1,
+        height: '100%',
+        borderRadius: 15,
     },
     rightContent: {
-        width: '60%',
-        alignItems: 'center',
-        justifyContent: 'center'
+        flex: 1,
+        marginLeft: 20,
     },
-    nomeEEmgalagensContainer: {
-        backgroundColor: '#212121',
-        paddingHorizontal: 20,
+    nomeEEmbalagensContainer: {
+        backgroundColor: 'rgba(0, 0, 0, 0.6)', // Fundo preto com transparência
         paddingVertical: 10,
-        borderRadius: 10
+        paddingHorizontal: 20,
+        borderRadius: 10,
+        marginBottom: 10,
     },
     title: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: "#fff813"
-    },
-    embalagens: {
-        marginTop: 5,
-        color: "#fff813"
+        color: '#fff', // Texto branco
     },
     descricao: {
-        marginTop: 15
+        fontSize: 14,
+        color: '#000',
+        textTransform: 'lowercase'
+    },
+    value: {
+        fontSize: 17,
+        color: '#79ff44',
+        fontWeight: 'bold',
+        marginBottom: 10,
+        padding: 5,
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        borderRadius: 10
     },
     button: {
-        backgroundColor: "#212121",
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
         paddingVertical: 10,
         paddingHorizontal: 20,
-        marginTop: 15,
-        justifyContent: 'flex-end',
-        borderRadius: 5
+        borderRadius: 5,
+        alignSelf: 'flex-start',
     },
     buttonText: {
         fontWeight: 'bold',
         fontSize: 16,
-        color: "#fff813"
-    }
-})
+        color: '#fff',
+    },
+});

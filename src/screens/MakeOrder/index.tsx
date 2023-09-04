@@ -7,6 +7,8 @@ import RNPickerSelect from 'react-native-picker-select';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import * as SQLite from 'expo-sqlite';
 import { useRoute } from '@react-navigation/native';
+import Toast from 'react-native-toast-message';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SQLError } from 'expo-sqlite';
 import * as FileSystem from 'expo-file-system';
 
@@ -209,7 +211,11 @@ const MakeOrder = () => {
         setInputFantasyName(data.estabelecimento.nome_fantasia)
       })
       .catch(error => {
-        Alert.alert('Erro', "CNPJ inválido");
+        Toast.show({
+          type: 'info',
+          text1: 'CNPJ inválido!',
+          visibilityTime: 1000,
+        });
         console.log(error)
         return;
       });

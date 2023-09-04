@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, Modal, Button, ScrollView, TextInput } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome'; // ou outra biblioteca de ícones que você preferir
 import * as SQLite from 'expo-sqlite';
 import { useNavigation } from '@react-navigation/native';
 import RNPickerSelect from 'react-native-picker-select';
+import Toast from 'react-native-toast-message';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const db = SQLite.openDatabase('pedidos.db');
 
 import LoadingIndicator from '../../components/LoadingIndicator';
+import CardProductsConsultSimple from '../../components/CardProductsConsultSimple';
 
 const AllOrders: React.FC = () => {
+    const backgroundColor = '#F5F5F5';
+    const textColor = '#333';
     const [pedidos, setPedidos] = useState<any[]>([]);
     const [modalVisible, setModalVisible] = useState(false);
     const [pedidoToDelete, setPedidoToDelete] = useState<any | null>(null);
@@ -28,6 +34,7 @@ const AllOrders: React.FC = () => {
         { label: 'Cheque', value: 'Cheque' },
     ];
     const [originalPedidos, setOriginalPedidos] = useState<any[]>([]);
+    const [comissionReceived, setComissionReceived] = useState(false);
     const monthOptions = [
         { label: 'Todos', value: 'Todos' },
         { label: 'Janeiro (01)', value: '01' },
@@ -121,16 +128,24 @@ const AllOrders: React.FC = () => {
 
     const calculateTotalValue = (produtos: any) => {
         let total = 0;
-        const produtosArray = JSON.parse(produtos);
+        try {
+            const produtosArray = JSON.parse(produtos);
 
-        produtosArray.forEach((produto: any) => {
-            total += parseFloat(produto.value) * parseFloat(produto.inputQuantity);
-        });
-        return total.toFixed(2); // Arredonda para 2 casas decimais
+            produtosArray.forEach((produto: any) => {
+                total += parseFloat(produto.value) * parseFloat(produto.inputQuantity);
+            });
+
+            return total.toFixed(2); // Arredonda para 2 casas decimais
+        } catch (error) {
+            // Trate o erro de análise JSON aqui, por exemplo, log ou retorne um valor padrão.
+            console.error('Erro ao analisar a string JSON:', error);
+            return 'Erro ao calcular o valor';
+        }
     }
 
     const handleEdit = (pedidoId: number) => {
-        navigation.navigate('Tirar pedido' as never, { pedidoId });
+        const route = ["Tirar pedido", { pedidoId }];
+        navigation.navigate(...(route as never));
     };
 
     const showFilterModal = () => {
@@ -167,7 +182,7 @@ const AllOrders: React.FC = () => {
                 return false;
             }
 
-            if (!pedido.city.toLowerCase().includes(districtFilter) || !pedido.district.toLowerCase().includes(districtFilter)) {
+            if (!pedido.city.toLowerCase().includes(districtFilter) || !pedido.district.toLowerCase().includes(districtFilter) || !pedido.adress.toLowerCase().includes(districtFilter)) {
                 return false
             }
 
@@ -198,6 +213,41 @@ const AllOrders: React.FC = () => {
         setPedidos(originalPedidos);
     };
 
+    const handleToggleComissionReceived = (item: any) => {
+        // Crie uma cópia dos pedidos
+        const updatedPedidos = [...pedidos];
+
+        // Encontre o pedido correspondente pelo ID
+        const pedidoToUpdate = updatedPedidos.find(pedido => pedido.id === item.id);
+
+        if (pedidoToUpdate) {
+            // Inverta o valor de commissionPaid (true para false e vice-versa)
+            pedidoToUpdate.commissionPaid = !pedidoToUpdate.commissionPaid;
+
+            // Atualize o estado com os pedidos atualizados
+            setPedidos(updatedPedidos);
+
+            // Atualize o SQLite
+            db.transaction(tx => {
+                tx.executeSql(
+                    'UPDATE pedidos SET commissionPaid = ? WHERE id = ?',
+                    [pedidoToUpdate.commissionPaid ? 1 : 0, pedidoToUpdate.id],
+                    (_, resultSet) => {
+                        Toast.show({
+                            type: 'success',
+                            text1: 'Pedido atualizado',
+                            visibilityTime: 500,
+                        });
+                    },
+                    (_, error) => {
+                        console.error('Erro ao atualizar no SQLite:', error);
+                        return true; // Retorne true para indicar que ocorreu um erro
+                    }
+                );
+            });
+        }
+    };
+
     const renderPedidoItem = ({ item }: { item: any }) => {
         let prazoFormatted = '';
         if (item.prazo) {
@@ -216,7 +266,17 @@ const AllOrders: React.FC = () => {
                 </View>
                 <View style={styles.prazoContainer}>
                     <View style={styles.commissionContainer}>
-
+                        <Text>Comissão recebida:</Text>
+                        <TouchableOpacity
+                            style={styles.checkbox}
+                            onPress={() => handleToggleComissionReceived(item)}
+                        >
+                            {item.commissionPaid ? (
+                                <Icon name="check-square" size={20} color="green" />
+                            ) : (
+                                <Icon name="square" size={20} color="gray" />
+                            )}
+                        </TouchableOpacity>
                     </View>
                     <Text style={styles.prazoText}>Prazo: {prazoFormatted}</Text>
                     <Text style={styles.dateText}>Data: {item.date}</Text>
@@ -235,62 +295,20 @@ const AllOrders: React.FC = () => {
     };
 
     const totalValueOfAllOrders = pedidos.reduce((acc, pedido) => {
-        const totalValue = parseFloat(calculateTotalValue(pedido.produtos));
+        const totalValue = !pedido.commissionPaid ? parseFloat(calculateTotalValue(pedido.produtos)) : 0;
         return acc + totalValue;
     }, 0).toFixed(2);
-
-    const apagarBancoDeDados = () => {
-        db.transaction(tx => {
-            // Execute a instrução SQL para apagar a tabela
-            tx.executeSql(
-                `DROP TABLE IF EXISTS pedidos`,
-                [],
-                (_, resultSet) => {
-                    // Tabela apagada com sucesso
-                    console.log(`Tabela pedidos apagada com sucesso.`);
-                },
-                (_, error) => {
-                    // Ocorreu um erro ao apagar a tabela
-                    console.error(`Erro ao apagar a tabela pedidos:`, error);
-                    return true
-                }
-            );
-        });
-
-    }
-
-    const criarBancoDeDados = () => {
-        db.transaction(tx => {
-            tx.executeSql(
-                'CREATE TABLE pedidos (id INTEGER PRIMARY KEY AUTOINCREMENT, client TEXT, date TEXT NOT NULL, fantasyName TEXT, cnpj TEXT, city TEXT, district TEXT, contactName TEXT, condiPG TEXT, prazo TEXT, adress TEXT, observation TEXT, produtos TEXT, commissionPaid BOOLEAN DEFAULT 0)',
-                [],
-                () => {
-                    console.log('Tabela "pedidos" criada com a estrutura correta.');
-                },
-                (_, error) => {
-                    console.log('Erro ao criar a tabela pedidos:', error);
-                    return true;
-                }
-            );
-        });
-    }
 
     return (
         <View style={styles.container}>
             <View style={styles.totalContainer}>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
                     <TextInput
                         style={styles.searchInput}
                         placeholder="Pesquisar pedidos"
                         onChangeText={setSearchText}
                         value={searchText}
                     />
-                    <TouchableOpacity onPress={apagarBancoDeDados} style={styles.filterButton}>
-                        <Text style={styles.filterButtonText}>Apagar tabela</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={criarBancoDeDados} style={styles.filterButton}>
-                        <Text style={styles.filterButtonText}>Criar tabela</Text>
-                    </TouchableOpacity>
                     <TouchableOpacity onPress={showFilterModal} style={styles.filterButton}>
                         <Text style={styles.filterButtonText}>Filtrar</Text>
                         <Modal
@@ -356,7 +374,7 @@ const AllOrders: React.FC = () => {
                                     onValueChange={value => setPaymentFilter(value)}
                                     value={paymentFilter}
                                     items={paymentOptions}
-                                    placeholder={{ label: 'Selecione', color: '#000', value: null }}
+                                    placeholder={{ label: 'Tipo de pagamento', color: '#000', value: null }}
                                     style={{
                                         inputAndroid: { color: 'black', width: 300, height: 20, marginHorizontal: '11.7%', backgroundColor: '#ffff', marginBottom: 40 },
                                         inputIOS: { color: 'white' },
@@ -384,7 +402,7 @@ const AllOrders: React.FC = () => {
                         </Modal>
                     </TouchableOpacity>
                 </View>
-                <View style={{ flexDirection: 'row' }}>
+                <View style={{ flexDirection: 'row', marginTop: 10 }}>
                     <Text style={styles.totalLabel}>Total de Pedidos:</Text>
                     <Text style={styles.totalValue}>R$ {totalValueOfAllOrders}</Text>
                 </View>
@@ -397,6 +415,7 @@ const AllOrders: React.FC = () => {
 
                 <FlatList
                     data={filteredPedidos}
+                    style={{ marginTop: 10 }}
                     renderItem={renderPedidoItem}
                     keyExtractor={item => item.id.toString()}
                 />
@@ -424,15 +443,21 @@ const AllOrders: React.FC = () => {
 
 const styles = StyleSheet.create({
     totalContainer: {
-        backgroundColor: 'lightgray',
+        backgroundColor: '#fffaff',
         padding: 10,
         flexDirection: 'column',
         justifyContent: 'space-between',
         alignItems: 'center',
+        borderRadius: 15,
+        borderRightWidth: 5,
+        borderRightColor: "#fff813",
+        borderLeftWidth: 5,
+        borderLeftColor: "#fff813"
     },
     totalLabel: {
         fontSize: 18,
         fontWeight: 'bold',
+        marginRight: 7
     },
     totalValue: {
         fontSize: 18,
@@ -441,13 +466,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 16,
-        backgroundColor: '#F5F5F5',
+        backgroundColor: '#212121',
     },
     searchInput: {
         justifyContent: 'flex-start',
         height: 40,
-        borderBottomColor: '#fff813',
-        borderBottomWidth: 2
+        borderBottomColor: '#000000',
+        borderBottomWidth: 2,
+        width: '50%'
 
     },
     filterModal: {
@@ -459,7 +485,8 @@ const styles = StyleSheet.create({
     filterTitle: {
         fontSize: 24,
         marginBottom: 20,
-        color: 'red'
+        color: '#fff813',
+        fontWeight: 'bold'
     },
     filterInput: {
         width: 300,
@@ -474,45 +501,70 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
     },
+    checkbox: {
+        width: 24,
+        height: 24,
+        borderWidth: 1,
+        borderColor: 'gray',
+        borderRadius: 4,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: 8,
+    },
+    checkboxIcon: {
+        fontSize: 18,
+        color: 'green', // Cor da marca de seleção quando marcado
+    },
     commissionText: {
         fontSize: 16,
         marginLeft: 5,
     },
     applyButton: {
-        backgroundColor: 'blue',
+        backgroundColor: '#fff700',
         padding: 10,
         borderRadius: 5,
-        marginTop: 10,
+        marginTop: 15,
+        width: 150
     },
     applyButtonText: {
-        color: 'white',
+        color: '#000',
         textAlign: 'center',
+        fontWeight: 'bold'
     },
     closeButton: {
-        backgroundColor: 'green',
+        backgroundColor: '#ff8f8f',
         padding: 10,
         borderRadius: 5,
-        marginTop: 10,
+        marginTop: 15,
+        width: 150
     },
     closeButtonText: {
-        color: 'white',
+        color: '#000',
         textAlign: 'center',
+        fontWeight: 'bold'
     },
     filterButton: {
-
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff700',
+        paddingHorizontal: 15,
+        paddingVertical: 7,
+        borderRadius: 10,
     },
     filterButtonText: {
-
+        fontWeight: '600'
     },
     clearButton: {
-        backgroundColor: 'red',
+        backgroundColor: '#8f8f8f',
         padding: 10,
         borderRadius: 5,
-        marginTop: 10,
+        marginTop: 15,
+        width: 150
     },
     clearButtonText: {
-        color: 'white',
+        color: '#000',
         textAlign: 'center',
+        fontWeight: 'bold'
     },
     pedidoItemContainer: {
         flexDirection: 'row',

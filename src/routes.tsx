@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import Toast from 'react-native-toast-message';
 import { Feather } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 
@@ -11,6 +12,7 @@ import Details from './screens/Details';
 import VisualizarPedido from './screens/VisualizarPedido';
 import ChangeOrder from './screens/ChangeOrder';
 import AllOrders from './screens/AllOrders';
+import Configuration from './screens/Configurations';
 
 import { Provider } from 'react-redux';
 import { store } from './store';
@@ -46,6 +48,11 @@ function Routes() {
           />
 
           <Stack.Screen
+            name='Configuração'
+            component={Configuration}
+          />
+
+          <Stack.Screen
             name='Detalhes'
             component={Details}
           />
@@ -60,6 +67,7 @@ function Routes() {
             component={ChangeOrder}
           />
         </Stack.Navigator>
+        <Toast />
       </NavigationContainer>
     </Provider>
   )
