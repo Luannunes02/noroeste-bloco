@@ -28,10 +28,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/noroeste-logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.noroeste"
     },
     "web": {
       "favicon": "./assets/noroeste-logo.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d30a8b00-c1ce-4aa4-80f3-55e1a109a77d"
+      }
     }
   }
 }
