@@ -11,10 +11,10 @@
       "FILE_SYSTEM"
     ],
     "orientation": "portrait",
-    "icon": "./assets/noroeste-logo.png",
+    "icon": "./src/assets/noroeste-logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/noroeste-logo.png",
+      "image": "./src/assets/noroeste-logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -26,13 +26,13 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/noroeste-logo.png",
+        "foregroundImage": "./src/assets/noroeste-logo.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.noroeste"
     },
     "web": {
-      "favicon": "./assets/noroeste-logo.png"
+      "favicon": "./src/assets/noroeste-logo.png"
     },
     "extra": {
       "eas": {
