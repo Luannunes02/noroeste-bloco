@@ -1,10 +1,13 @@
-import React, { useState, useRef } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { Table, Row, Rows } from 'react-native-table-component';
+import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
+import { StyleSheet, Text, View, Image, Dimensions } from 'react-native';
+import { Table, TableWrapper, Row, Rows, Cell } from 'react-native-table-component';
 import { useNavigation } from '@react-navigation/native';
 import { captureRef } from 'react-native-view-shot';
 import * as Sharing from 'expo-sharing';
 import { ScrollView } from 'react-native-gesture-handler';
+import ViewShot from 'react-native-view-shot';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Toast from 'react-native-toast-message';
 
 import {
     updateTodosPedidos,
@@ -18,24 +21,55 @@ export default function VisualizarPedido() {
     const pedidoSelector = useSelector((state: any) => state.pedido);
     const [scrollViewHeight, setScrollViewHeight] = useState(0);
     const [haveData, setHaveData] = useState(false);
+    const [sellerName, setSellerName] = useState<string>('');
+    const [textSize, setTextSize] = useState(10.5);
+    const screenHeight = Dimensions.get('window').height;
+    const tableRef = useRef(null);
 
     const [tableData, setTableData] = useState([
-        ['Razão Social', `${pedidoSelector.inputClient}`],
-        ['Nome Fantasia', `${pedidoSelector.inputFantasyName}`],
-        ['CNPJ', `${pedidoSelector.inputCNPJ}`],
-        ['Cidade', `${pedidoSelector.inputCity}`],
-        ['Bairro', `${pedidoSelector.inputDistrict}`],
-        ['Endereço', `${pedidoSelector.inputAdress}`],
-        ['Nome do Contato', `${pedidoSelector.inputContactName}`],
-        ['Condição de Pagamento', `${pedidoSelector.inputCondiPG}`],
-        ['Prazo de Pagamento', `${pedidoSelector.inputPrazo}`]
+        [`Razão Social: \n${pedidoSelector.inputClient}`, `Nome Fantasia: \n${pedidoSelector.inputFantasyName}`],
+        [`CNPJ: \n${formatCnpj(pedidoSelector.inputCNPJ)}`, `Cidade: \n${pedidoSelector.inputCity}`, `Nome do Contato: \n${pedidoSelector.inputContactName}`],
+        [`Bairro: \n${pedidoSelector.inputDistrict}`, `Endereço: \n${pedidoSelector.inputAdress}`],
+        [`Condição de Pg: ${pedidoSelector.inputCondiPG}`, `Prazo: ${pedidoSelector.inputPrazo}`],
     ]);
 
-    const tableHeader = ['Produto', 'Quantidade', 'Valor'];
+    useEffect(() => {
+        getData('vendedor');
+    }, []);
+
+    const getData = async (key: string) => {
+        try {
+            const value = await AsyncStorage.getItem(key);
+            if (value !== null) {
+                setSellerName(value);
+            } else {
+                console.log(`Nenhum valor encontrado para ${key}`);
+            }
+        } catch (error) {
+            Toast.show({
+                type: 'info',
+                text1: `Salve seu nome de vendedor,` + error,
+                visibilityTime: 2000,
+            });
+        }
+    };
+
+    function formatCnpj(cnpj: string) {
+        // Remove todos os caracteres não numéricos
+        cnpj = cnpj.replace(/\D/g, '');
+
+        // Aplica a formatação desejada
+        cnpj = cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5');
+
+        return cnpj;
+    }
+
+    const tableHeader = ['Produto', 'Qnt.', 'Un.', 'Total'];
 
     const renderTableRows = () => {
         const rows = pedidoSelector.produtos.map((product: any, index: any) => {
-            return [`${product.product}`, `${product.inputQuantity}`, `R$ ${product.value.toFixed(2).replace('.', ',')}`,]
+            const total = (parseInt(product.inputQuantity) * parseFloat(product.value)).toFixed(2).replace('.', '.');
+            return [`${product.product}`, `${product.inputQuantity}`, `R$ ${product.value.toFixed(2).replace('.', ',')}`, `${total}`]
         });
         return rows;
     };
@@ -47,22 +81,19 @@ export default function VisualizarPedido() {
         return `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
     };
 
-    const tableRef = useRef(null);
-
-    const handleLayout = (event: any) => {
-        const { height } = event.nativeEvent.layout;
-        setScrollViewHeight(height);
-    };
-
     const handleShare = async () => {
         try {
-            const uri = await captureRef(tableRef, {
-                format: 'png',
-                quality: 0.9,
-                height: scrollViewHeight,
-            });
+            if (tableRef.current) {
+                // Capture a screenshot of the ScrollView
+                const uri = await captureRef(tableRef, {
+                    format: 'jpg', // Use 'jpg' ou 'png', dependendo da sua preferência
+                    quality: 1, // Qualidade da imagem (0 a 1)
+                    snapshotContentContainer: true,
+                });
 
-            await Sharing.shareAsync(uri);
+                // Compartilhe a imagem capturada
+                await Sharing.shareAsync(uri);
+            }
         } catch (error) {
             console.log(error);
         }
@@ -70,27 +101,47 @@ export default function VisualizarPedido() {
 
     return (
         <View style={styles.container}>
-            <ScrollView ref={tableRef} onLayout={handleLayout} style={styles.scrollViewContainer}>
+            <ScrollView
+                ref={tableRef}
+                style={styles.scrollViewContainer}
+            >
                 <View style={styles.header}>
                     <Image
                         style={styles.logo}
                         source={require('../../assets/noroeste-logo.png')}
+                        resizeMode='contain'
                     />
-                    <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-                        <Text style={styles.headText}>Noroeste Nutrição Animal LTDA</Text>
-                        <Text style={styles.headText}>SHVP - Rua 10 CH 147 LT 19</Text>
-                        <Text style={styles.headText}>Brasília - DF</Text>
-                        <Text style={styles.headText}>(61) 3597-6322</Text>
+                    <View>
+                        <Text style={{ ...styles.headText, fontSize: 10.5 }}>Noroeste Nutrição Animal LTDA</Text>
+                        <Text style={{ ...styles.headText, fontSize: 10.5 }}>SHVP, Rua 10 CH 147 LT 19, Brasília - DF</Text>
+                        <Text style={{ ...styles.headText, fontSize: 10.5 }}>Telefone: (61) 3597-6322</Text>
                     </View>
                 </View>
-                <Table borderStyle={{ borderWidth: 1, borderColor: '#C1C0B9' }}>
-                    <Rows data={tableData} textStyle={{ ...styles.text }} flexArr={[1, 2]} />
+                <Table borderStyle={styles.tableBorder}>
+                    {tableData.map((rowData, index) => (
+                        <TableWrapper key={index} style={styles.tableWrapper}>
+                            {rowData.map((cellData, cellIndex) => (
+                                <Cell
+                                    key={cellIndex}
+                                    data={cellData}
+                                    textStyle={{ ...styles.text, fontSize: 10.5 }}
+                                />
+                            ))}
+                        </TableWrapper>
+                    ))}
                 </Table>
-                <Table style={{ marginTop: 50, marginBottom: 50 }} borderStyle={{ borderWidth: 1, borderColor: '#C1C0B9' }}>
-                    <Row data={tableHeader} textStyle={[{ ...styles.text }, { fontWeight: 'bold' }]} flexArr={[1, 2]} />
-                    <Rows data={renderTableRows()} textStyle={{ ...styles.text }} flexArr={[1, 2]} />
-                    <Row data={[calculateTotal()]} textStyle={[{ ...styles.text }, { fontWeight: 'bold' }]} flexArr={[1, 2]} />
+                <Table style={{ marginTop: 10, marginBottom: 10 }} borderStyle={{ borderWidth: 1, borderColor: '#C1C0B9' }}>
+                    <Row data={tableHeader} textStyle={[{ ...styles.textInfoCompany }, { fontWeight: 'bold' }]} flexArr={[2, 0.45, 0.6, 0.7]} />
+                    <Rows data={renderTableRows()} textStyle={{ ...styles.text, fontSize: 10.5 }} flexArr={[2, 0.45, 0.6, 0.7]} />
+                    <Row data={[calculateTotal()]} textStyle={[{ ...styles.totalText }]} flexArr={[1, 2]} />
                 </Table>
+                {
+                    pedidoSelector.observacao !== null ?
+                        <Text style={{ fontSize: 10.5 }}>Observação: {pedidoSelector.observacao}</Text>
+                        :
+                        <View></View>
+                }
+                <Text style={{ fontSize: 10.5, marginBottom: 30 }}>Vendedor: {sellerName}</Text>
             </ScrollView>
             <ButtonDefault
                 text="Compartilhar Pedido"
@@ -102,26 +153,24 @@ export default function VisualizarPedido() {
 
 const styles = StyleSheet.create({
     container: { flex: 1, backgroundColor: '#fff' },
-    scrollViewContainer: { flex: 1, padding: 16 },
+    scrollViewContainer: { padding: 16, backgroundColor: '#fff' },
     header: {
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderColor: '#000',
-        borderWidth: 1,
-        paddingVertical: 10,
-        marginBottom: 30,
-        marginTop: 20
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        marginBottom: 10,
     },
     headText: {
-        fontSize: 13,
         fontWeight: 'bold',
-        opacity: 0.8
+        opacity: 0.8,
     },
     logo: {
-        width: 190,
-        height: 100
+        width: 100,
+        height: 50,
     },
-    text: { margin: 6, textAlign: 'center', backgroundColor: '#fff' },
-    total: { alignSelf: 'flex-end', marginTop: 20, fontSize: 16, fontWeight: 'bold', color: 'green', paddingBottom: 200 }
+    text: { paddingVertical: 0.5, marginLeft: 4, textAlign: 'left', backgroundColor: '#fff', textTransform: 'capitalize' },
+    textInfoCompany: { paddingVertical: 1, marginLeft: 4, textAlign: 'left', backgroundColor: '#fff' },
+    headerText: { fontWeight: 'bold', backgroundColor: '#f0f0f0' },
+    totalText: { textAlign: 'center', paddingVertical: 3, backgroundColor: '#e0e0e0', fontWeight: 'bold' },
+    tableBorder: { borderWidth: 1, borderColor: '#C1C0B9', backgroundColor: "#fff" },
+    tableWrapper: { flexDirection: 'row' },
 });

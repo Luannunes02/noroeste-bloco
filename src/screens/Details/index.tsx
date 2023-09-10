@@ -1,5 +1,10 @@
-import { StyleSheet, Text, View, Image, Dimensions, ScrollView } from 'react-native';
-import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Image, Dimensions, ScrollView, TouchableOpacity, Share } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import ViewShot, { captureRef } from 'react-native-view-shot';
+import * as Sharing from 'expo-sharing';
+import { FontAwesome } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Toast from 'react-native-toast-message';
 
 import LoadingIndicator from '../../components/LoadingIndicator';
 
@@ -7,10 +12,38 @@ const Details = ({ route }: any) => {
     const { product } = route.params;
     const [produto, setProduto] = useState<any>();
     const [loading, setLoading] = useState<boolean>(true);
+    const [mostrarValor, setMostrarValor] = useState<any>();
+    const viewShotRef = useRef(null);
 
     useEffect(() => {
         fetchData();
-    }, [])
+        getData('mostrarValor');
+    }, []);
+
+    const getData = async (key: string) => {
+        switch (key) {
+            case 'mostrarValor':
+                try {
+                    const value = await AsyncStorage.getItem(key);
+                    if (value !== null) {
+                        setMostrarValor(value);
+                    } else {
+                        Toast.show({
+                            type: 'info',
+                            text1: `Nenhum valor encontrado para ${key}`,
+                            visibilityTime: 2000,
+                        });
+                    }
+                } catch (error) {
+                    Toast.show({
+                        type: 'info',
+                        text1: `Erro ao obter informação de ${key},` + error,
+                        visibilityTime: 2000,
+                    });
+                }
+                break
+        }
+    };
 
     const fetchData = async () => {
         try {
@@ -23,7 +56,6 @@ const Details = ({ route }: any) => {
             });
 
             if (response.status === 200) {
-                console.log('zerou')
                 const jsonData = await response.json();
                 setProduto(jsonData.record.Products[product]);
                 setLoading(false);
@@ -32,6 +64,24 @@ const Details = ({ route }: any) => {
             }
         } catch (error) {
             console.error('Erro ao buscar dados da API:', error);
+        }
+    };
+
+    const shareImage = async () => {
+        try {
+            if (viewShotRef.current) {
+                // Capture a screenshot of the ScrollView
+                const uri = await captureRef(viewShotRef, {
+                    format: 'jpg', // Use 'jpg' ou 'png', dependendo da sua preferência
+                    quality: 1, // Qualidade da imagem (0 a 1)
+                    snapshotContentContainer: true,
+                });
+
+                // Compartilhe a imagem capturada
+                await Sharing.shareAsync(uri);
+            }
+        } catch (error) {
+            console.log(error);
         }
     };
 
@@ -49,8 +99,19 @@ const Details = ({ route }: any) => {
                     </View>
                     <View style={{ backgroundColor: "#212121", borderRadius: 20, paddingHorizontal: 15, paddingVertical: 10 }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-                            <Text style={styles.valorText}>Preço: R$ {produto.valor.toFixed(2).replace('.', ',')}</Text>
-                            <Image style={styles.marcaLogoSmall} source={{ uri: produto.marca_logo }} resizeMode='contain' />
+                            {
+                                mostrarValor == 'false' ?
+                                    <></>
+                                    :
+                                    <Text style={styles.valorText}>Preço: R$ {produto.valor.toFixed(2).replace('.', ',')}</Text>
+                            }
+
+                            {
+                                produto.marca === 'Biotron' ?
+                                    <Image style={styles.marcaLogoSmall} source={require('../../assets/biotron_logo.png')} resizeMode='contain' />
+                                    :
+                                    <Image style={styles.marcaLogoSmall} source={require('../../assets/nutrari_logo.png')} resizeMode='contain' />
+                            }
                         </View>
 
                         <Text style={styles.descricao}>{produto.descricao}</Text>
@@ -58,10 +119,21 @@ const Details = ({ route }: any) => {
                     <Text style={{ color: '#000', fontSize: 20, fontWeight: 'bold', marginTop: 20 }}>Foto do Produto:</Text>
                     {
                         produto.marca === 'Biotron' ?
-                            <Image style={styles.misturaImageBiotron} source={{ uri: produto.mistura }} />
+                            <ScrollView ref={viewShotRef} style={{ backgroundColor: "#fff" }}>
+                                <Image style={styles.misturaImageBiotron} source={{ uri: produto.mistura }} resizeMode='contain' />
+                            </ScrollView>
                             :
-                            <Image style={styles.misturaImage} source={{ uri: produto.mistura }} resizeMode='contain' />
+                            <ScrollView ref={viewShotRef} style={{ backgroundColor: "#fff" }}>
+                                <Image style={styles.misturaImage} source={{ uri: produto.mistura }} resizeMode='cover' />
+                            </ScrollView>
+
                     }
+                    <TouchableOpacity
+                        style={styles.shareButton}
+                        onPress={shareImage}
+                    >
+                        <FontAwesome name="share-alt-square" size={50} color="#212121" />
+                    </TouchableOpacity>
                 </ScrollView>
             )}
         </View>
@@ -158,5 +230,16 @@ const styles = StyleSheet.create({
         height: 250,
         marginTop: 20,
         borderRadius: 200
+    },
+    shareButton: {
+        backgroundColor: '#ffffff', // Cor de destaque
+        borderRadius: 5,
+        alignItems: 'center',
+        margin: 10,
+    },
+    shareButtonText: {
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold',
     },
 });

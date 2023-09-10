@@ -34,6 +34,7 @@ const MakeOrder = () => {
   const [inputQuantity, setInputQuantity] = useState('');
   const [inputValue, setInputValue] = useState('');
   const [produtos, setProdutos] = useState<any>([]);
+  const [observacao, setObservacao] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
   const [produtoEmEdicao, setProdutoEmEdicao] = useState<any>(null);
   const [editProductFields, setEditProductFields] = useState({
@@ -124,10 +125,18 @@ const MakeOrder = () => {
         setFilteredProducts(jsonData.record.Products);
         setPedidoCarregado(true);
       } else {
-        console.error('Erro ao buscar dados da API:', response.status);
+        Toast.show({
+          type: 'info',
+          text1: 'Erro ao buscar dados da API: ' + response.status,
+          visibilityTime: 2000,
+        });
       }
     } catch (error) {
-      console.error('Erro ao buscar dados da API:', error);
+      Toast.show({
+        type: 'info',
+        text1: 'Erro ao buscar dados da API: ' + error,
+        visibilityTime: 2000,
+      });
     }
   };
 
@@ -151,6 +160,7 @@ const MakeOrder = () => {
             setInputPrazo(pedido.prazo);
             setInputAdress(pedido.adress);
             setPedidoData(pedido.date);
+            setObservacao(pedido.observation);
 
             // Converte a string de produtos em um array de objetos
             const produtosArray = JSON.parse(pedido.produtos);
@@ -159,7 +169,11 @@ const MakeOrder = () => {
           }
         },
         (_, error) => {
-          console.log('Erro ao buscar pedido pelo ID:', error);
+          Toast.show({
+            type: 'info',
+            text1: 'Erro ao buscar pedido pelo ID:: ' + error,
+            visibilityTime: 2000,
+          });
           return true
         }
       );
@@ -201,6 +215,31 @@ const MakeOrder = () => {
   ];
 
   const pesquisarCnpj = () => {
+    if (inputCNPJ === '') {
+      Toast.show({
+        type: 'info',
+        text1: 'Preencha o campo do CNPJ!',
+        visibilityTime: 1500,
+      });
+      return;
+    }
+
+    if (inputCNPJ.length < 14) {
+      Toast.show({
+        type: 'info',
+        text1: 'Está faltando número, CNPJ inválido!',
+        visibilityTime: 1500,
+      });
+      return;
+    }
+
+
+    Toast.show({
+      type: 'info',
+      text1: 'Buscando dados do cliente!',
+      visibilityTime: 2500,
+    });
+
     fetch(`https://publica.cnpj.ws/cnpj/${inputCNPJ.replace(/\D/g, '')}`)
       .then(response => response.json())
       .then(data => {
@@ -208,7 +247,12 @@ const MakeOrder = () => {
         setInputCity(`${data.estabelecimento.cidade.nome} - ${data.estabelecimento.estado.sigla}`);
         setInputDistrict(data.estabelecimento.bairro);
         setInputAdress(`${data.estabelecimento.logradouro} ${data.estabelecimento.numero}`);
-        setInputFantasyName(data.estabelecimento.nome_fantasia)
+        setInputFantasyName(data.estabelecimento.nome_fantasia);
+        Toast.show({
+          type: 'success',
+          text1: 'Dados encontrados com sucesso!',
+          visibilityTime: 1500,
+        });
       })
       .catch(error => {
         Toast.show({
@@ -224,6 +268,11 @@ const MakeOrder = () => {
 
   const adicionarProduto = () => {
     if (inputProduct === '' || inputQuantity === '') {
+      Toast.show({
+        type: 'info',
+        text1: 'Preencha nome e quantidade do produto!',
+        visibilityTime: 2000,
+      });
       return
     }
 
@@ -322,7 +371,7 @@ const MakeOrder = () => {
     setFilteredProducts(filtered);
   };
 
-  function CriarPedido(ApenasVerPedido = false) {
+  function CriarPedido() {
     let date = '';
 
     if (pedidoId !== 0) {
@@ -351,26 +400,34 @@ const MakeOrder = () => {
       inputPrazo,
       inputAdress,
       produtos,
+      observacao
     };
 
     dispatch(updatePedido(novoPedido));
-    if (ApenasVerPedido === true) {
-      return
-    }
 
     if (pedidoId !== 0) {
       // Atualizar um pedido existente no banco de dados
       db.transaction(tx => {
         tx.executeSql(
-          'UPDATE pedidos SET client=?, date=?, fantasyName=?, cnpj=?, city=?, district=?, contactName=?, condiPG=?, prazo=?, adress=?, produtos=? WHERE id=?',
-          [novoPedido.inputClient, novoPedido.date, novoPedido.inputFantasyName, novoPedido.inputCNPJ, novoPedido.inputCity, novoPedido.inputDistrict, novoPedido.inputContactName, novoPedido.inputCondiPG, novoPedido.inputPrazo, novoPedido.inputAdress, JSON.stringify(novoPedido.produtos), pedidoId!.toString()],
+          'UPDATE pedidos SET client=?, observation=?, date=?, fantasyName=?, cnpj=?, city=?, district=?, contactName=?, condiPG=?, prazo=?, adress=?, produtos=? WHERE id=?',
+          [novoPedido.inputClient, novoPedido.observacao, novoPedido.date, novoPedido.inputFantasyName, novoPedido.inputCNPJ, novoPedido.inputCity, novoPedido.inputDistrict, novoPedido.inputContactName, novoPedido.inputCondiPG, novoPedido.inputPrazo, novoPedido.inputAdress, JSON.stringify(novoPedido.produtos), pedidoId!.toString()],
           (_, resultSet) => {
+            Toast.show({
+              type: 'success',
+              text1: 'Pedido atualizado com sucesso!',
+              visibilityTime: 1500,
+            });
             // Pedido atualizado com sucesso
             const updatedPedido = { ...novoPedido, id: pedidoId };
             dispatch(updatePedido(updatedPedido));
           },
           (_, error) => {
             console.log('Erro ao atualizar pedido no SQLite:', error);
+            Toast.show({
+              type: 'info',
+              text1: 'Erro ao atualizar pedido no SQLite: ' + error,
+              visibilityTime: 1500,
+            });
             return true; // Retorne true para indicar que ocorreu um erro
           }
         );
@@ -379,16 +436,39 @@ const MakeOrder = () => {
       // Criar um novo pedido no banco de dados
       db.transaction(tx => {
         tx.executeSql(
-          'INSERT INTO pedidos (client, date, fantasyName, cnpj, city, district, contactName, condiPG, prazo, adress, produtos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-          [novoPedido.inputClient, novoPedido.date, novoPedido.inputFantasyName, novoPedido.inputCNPJ, novoPedido.inputCity, novoPedido.inputDistrict, novoPedido.inputContactName, novoPedido.inputCondiPG, novoPedido.inputPrazo, novoPedido.inputAdress, JSON.stringify(novoPedido.produtos)],
+          'INSERT INTO pedidos (client, observation, date, fantasyName, cnpj, city, district, contactName, condiPG, prazo, adress, produtos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+          [
+            novoPedido.inputClient,
+            novoPedido.observacao,
+            novoPedido.date,
+            novoPedido.inputFantasyName,
+            novoPedido.inputCNPJ,
+            novoPedido.inputCity,
+            novoPedido.inputDistrict,
+            novoPedido.inputContactName,
+            novoPedido.inputCondiPG,
+            novoPedido.inputPrazo,
+            novoPedido.inputAdress,
+            JSON.stringify(novoPedido.produtos),
+          ],
           (_, resultSet) => {
             const { insertId } = resultSet;
 
             // Atualizar o estado Redux com o novo pedido
             const novoPedidoBD = { ...novoPedido, id: insertId };
             dispatch(updateTodosPedidos(novoPedidoBD));
+            Toast.show({
+              type: 'success',
+              text1: 'Pedido criado com sucesso!',
+              visibilityTime: 1500,
+            });
           },
           (_, error) => {
+            Toast.show({
+              type: 'info',
+              text1: 'Erro ao salvar pedido no SQLite: ' + error,
+              visibilityTime: 1500,
+            });
             console.log('Erro ao salvar pedido no SQLite:', error);
             return true; // Retorne true para indicar que ocorreu um erro
           }
@@ -396,12 +476,6 @@ const MakeOrder = () => {
       });
     }
   }
-
-  function visualizarPedido() {
-    CriarPedido();
-
-    navigation.navigate("Visualizar pedido" as never);
-  };
 
   function LimparInputs() {
     setInputClient('');
@@ -414,12 +488,17 @@ const MakeOrder = () => {
     setInputPrazo('');
     setInputAdress('');
     setProdutos([]);
+    setObservacao('');
   }
 
 
   function salvarEVisualizarPedido() {
     if (inputClient === '' || inputCity === '' || produtos.length === 0) {
-      Alert.alert('Preencha razão social, cidade e produtos');
+      Toast.show({
+        type: 'info',
+        text1: 'Preencha razão social, cidade e produtos!',
+        visibilityTime: 1500,
+      });
       return
     }
 
@@ -452,6 +531,7 @@ const MakeOrder = () => {
   const editarProduto = (index: any) => {
     // Obter o produto com base no índice
     const produtoSelecionado = produtos[index];
+    produtoSelecionado.index = index;
 
     // Definir o produto selecionado como produto em edição
     setProdutoEmEdicao(produtoSelecionado);
@@ -470,14 +550,22 @@ const MakeOrder = () => {
   const salvarProdutoEditado = () => {
     // Verificar se algum campo está vazio
     if (!editProductFields.product || !editProductFields.inputQuantity || !editProductFields.value) {
-      Alert.alert('Erro', 'Por favor, preencha todos os campos');
+      Toast.show({
+        type: 'info',
+        text1: 'Por favor, preencha todos os campos!',
+        visibilityTime: 1500,
+      });
       return;
     }
 
     // Atualizar o produto no estado
     setProdutos((prevState: any) => {
       const newProducts = [...prevState];
-      const index = newProducts.findIndex((produto) => produto.id === produtoEmEdicao.id);
+      const index = newProducts.findIndex((produto, index) => {
+        if (index == produtoEmEdicao.index) {
+          return true;
+        }
+      });
       const updateValue = parseFloat(editProductFields.value.replace(',', '.'));
 
       if (index !== -1) {
@@ -509,7 +597,12 @@ const MakeOrder = () => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button} onPress={() => {
           LimparInputs();
-          navigation.navigate("Tirar pedido" as never)
+          navigation.navigate("Tirar pedido" as never);
+          Toast.show({
+            type: 'success',
+            text1: 'Faturando um novo pedido!',
+            visibilityTime: 2000,
+          });
         }}>
           <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
@@ -783,9 +876,20 @@ const MakeOrder = () => {
               />
             </Table>
 
+            <View style={styles.observationContainer}>
+              <Text style={styles.observationLabel}>Observação:</Text>
+              <TextInput
+                style={styles.observationInput}
+                value={observacao}
+                onChangeText={setObservacao}
+                placeholder="Adicione uma observação"
+                placeholderTextColor="#BDBDBD"
+                multiline
+              />
+            </View>
 
             <ButtonDefault text="Salvar e visualizar pedido" action={salvarEVisualizarPedido} />
-            <ButtonDefault text="Visualizar pedido" action={visualizarPedido} />
+            <View style={{ marginTop: 20 }}></View>
           </ScrollView>
       }
     </View>
@@ -1059,5 +1163,23 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 10,
     paddingHorizontal: 10,
+  },
+  observationContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: '#fff813',
+    paddingBottom: 10,
+    marginBottom: 20,
+  },
+  observationLabel: {
+    color: 'white',
+    fontSize: 16,
+    marginRight: 10,
+  },
+  observationInput: {
+    flex: 1,
+    color: 'white',
+    fontSize: 16,
   },
 })

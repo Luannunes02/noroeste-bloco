@@ -10,7 +10,6 @@ import MakeOrder from './screens/MakeOrder';
 import ProductsConsult from './screens/ProductsConsult';
 import Details from './screens/Details';
 import VisualizarPedido from './screens/VisualizarPedido';
-import ChangeOrder from './screens/ChangeOrder';
 import AllOrders from './screens/AllOrders';
 import Configuration from './screens/Configurations';
 
@@ -39,7 +38,7 @@ function Routes() {
           <Stack.Screen
             name='Visualizar pedido'
             component={VisualizarPedido}
-            options={{ headerShown: false }}
+            options={{ headerShown: true }}
           />
 
           <Stack.Screen
@@ -60,11 +59,6 @@ function Routes() {
           <Stack.Screen
             name='Todos os pedidos'
             component={AllOrders}
-          />
-
-          <Stack.Screen
-            name='Alterar pedido'
-            component={ChangeOrder}
           />
         </Stack.Navigator>
         <Toast />

@@ -9,7 +9,8 @@ interface CardProps {
     description: string,
     id: any,
     action?: any,
-    valor?: any
+    valor?: any,
+    marca?: string
 }
 
 const CardProductsConsult = (props: CardProps) => {
@@ -18,7 +19,12 @@ const CardProductsConsult = (props: CardProps) => {
 
     return (
         <View style={styles.container}>
-            <Image style={styles.capa} source={{ uri: props.capa }} />
+            {
+                props.marca === "Biotron" ?
+                    <Image style={styles.capa} source={{ uri: props.capa }} resizeMode='contain' resizeMethod='auto' />
+                    :
+                    <Image style={styles.capa} source={{ uri: props.capa }} resizeMode='cover' resizeMethod='auto' />
+            }
             <View style={styles.rightContent}>
                 <View style={styles.nomeEEmbalagensContainer}>
                     <Text style={styles.title}>{props.name}</Text>
@@ -60,6 +66,7 @@ const styles = StyleSheet.create({
         flex: 1,
         height: '100%',
         borderRadius: 15,
+        backgroundColor: 'white',
     },
     rightContent: {
         flex: 1,
@@ -67,13 +74,13 @@ const styles = StyleSheet.create({
     },
     nomeEEmbalagensContainer: {
         backgroundColor: 'rgba(0, 0, 0, 0.6)', // Fundo preto com transparência
-        paddingVertical: 10,
+        paddingVertical: 2,
         paddingHorizontal: 20,
         borderRadius: 10,
         marginBottom: 10,
     },
     title: {
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: 'bold',
         color: '#fff', // Texto branco
     },

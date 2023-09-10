@@ -167,11 +167,12 @@ const ProductsConsult = () => {
               <CardProductsConsult
                 key={produto.id}
                 capa={produto.capa}
-                name={produto.nome}
+                name={`${produto.nome.slice(0, 50)}`}
                 embalagens_tamanho={produto.embalagens_tamanho}
                 description={`${produto.descricao.slice(0, 70)}...`}
                 id={produto.id}
                 valor={mostrarValor === 'true' ? produto.valor : ''}
+                marca={produto.marca}
               />
             ) : (
               <CardProductsConsultSimple
