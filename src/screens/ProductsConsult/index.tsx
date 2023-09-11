@@ -137,6 +137,11 @@ const ProductsConsult = () => {
                 {cardSimples === 'true' ? 'Card simples' : 'Card completo'}
               </Text>
               <TouchableOpacity style={styles.cardTypeButton} onPress={toggleCardType} >
+                <Image
+                  style={{ width: '100%', height: '100%', marginVertical: 'auto' }}
+                  source={require('../../assets/icons/trocar.png')}
+                  resizeMode='contain'
+                />
                 <FontAwesome name="exchange" size={18} color="#000" />
               </TouchableOpacity>
             </View>
@@ -234,6 +239,8 @@ const styles = StyleSheet.create({
   cardTypeButton: {
     marginLeft: 10,
     padding: 5,
+    height: 35,
+    width: 35,
     borderRadius: 20,
     backgroundColor: '#fff813', // Cor de fundo do botão "Trocar"
   },

@@ -136,7 +136,7 @@ export default function VisualizarPedido() {
                     <Row data={[calculateTotal()]} textStyle={[{ ...styles.totalText }]} flexArr={[1, 2]} />
                 </Table>
                 {
-                    pedidoSelector.observacao !== null ?
+                    pedidoSelector.observacao !== null && pedidoSelector.observacao !== '' ?
                         <Text style={{ fontSize: 10.5 }}>Observação: {pedidoSelector.observacao}</Text>
                         :
                         <View></View>

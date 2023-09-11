@@ -23,16 +23,26 @@ export default function Home() {
                 'CREATE TABLE IF NOT EXISTS pedidos (id INTEGER PRIMARY KEY AUTOINCREMENT, client TEXT, fantasyName TEXT, cnpj TEXT, city TEXT, district TEXT, contactName TEXT, condiPG TEXT, prazo TEXT, adress TEXT, produtos TEXT)',
                 [],
                 (_, resultSet) => {
-                    // A tabela foi criada com sucesso ou já existe
+                    Toast.show({
+                        type: 'success',
+                        text1: `Tabela de pedidos criada com sucesso!`,
+                        visibilityTime: 2000,
+                    });
                 },
                 (_, error) => {
-                    console.log('Erro criar a tabela todosPedidos no SQLite:', error);
+                    Toast.show({
+                        type: 'info',
+                        text1: `Erro ao obter informação de ` + error,
+                        visibilityTime: 2000,
+                    });
                     return true; // Retorne true para indicar que ocorreu um erro
                 }
             );
         });
 
-
+        getData('vendedor');
+        getData('cardSimples');
+        getData('mostrarValor');
     }, []);
 
     async function saveData(key: string, value: any) {
