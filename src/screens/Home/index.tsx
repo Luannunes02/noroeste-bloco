@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import * as MediaLibrary from 'expo-media-library';
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import * as SQLite from 'expo-sqlite';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -18,21 +18,39 @@ export default function Home() {
     useEffect(() => {
         checkPermissions();
         // Código para criar a tabela "pedidos" se ela não existir
+        // Verifique se a tabela "pedidos" existe antes de criar
         db.transaction(tx => {
             tx.executeSql(
-                'CREATE TABLE IF NOT EXISTS pedidos (id INTEGER PRIMARY KEY AUTOINCREMENT, client TEXT, fantasyName TEXT, cnpj TEXT, city TEXT, district TEXT, contactName TEXT, condiPG TEXT, prazo TEXT, adress TEXT, produtos TEXT)',
+                'SELECT name FROM sqlite_master WHERE type="table" AND name="pedidos"',
                 [],
                 (_, resultSet) => {
-                    Toast.show({
-                        type: 'success',
-                        text1: `Tabela de pedidos criada com sucesso!`,
-                        visibilityTime: 2000,
-                    });
+                    if (resultSet.rows.length === 0) {
+                        // A tabela "pedidos" não existe, então crie-a
+                        tx.executeSql(
+                            'CREATE TABLE pedidos (id INTEGER PRIMARY KEY AUTOINCREMENT, client TEXT, date TEXT NOT NULL, fantasyName TEXT, cnpj TEXT, city TEXT, district TEXT, contactName TEXT, condiPG TEXT, prazo TEXT, adress TEXT, observation TEXT, produtos TEXT, commissionPaid BOOLEAN DEFAULT 0)',
+                            [],
+                            () => {
+                                Toast.show({
+                                    type: 'success',
+                                    text1: `Tabela de pedidos criada com sucesso!`,
+                                    visibilityTime: 2000,
+                                });
+                            },
+                            (_, error) => {
+                                Toast.show({
+                                    type: 'info',
+                                    text1: `Erro ao criar a tabela de pedidos: ` + error,
+                                    visibilityTime: 2000,
+                                });
+                                return true; // Retorne true para indicar que ocorreu um erro
+                            }
+                        );
+                    }
                 },
                 (_, error) => {
                     Toast.show({
                         type: 'info',
-                        text1: `Erro ao obter informação de ` + error,
+                        text1: `Erro ao verificar a existência da tabela de pedidos: ` + error,
                         visibilityTime: 2000,
                     });
                     return true; // Retorne true para indicar que ocorreu um erro

@@ -138,7 +138,11 @@ const AllOrders: React.FC = () => {
             return total.toFixed(2); // Arredonda para 2 casas decimais
         } catch (error) {
             // Trate o erro de análise JSON aqui, por exemplo, log ou retorne um valor padrão.
-            console.error('Erro ao analisar a string JSON:', error);
+            Toast.show({
+                type: 'info',
+                text1: `Erro ao somar os valores dos pedidos, reinicie o aplicativo para visualizar, erro recebido: ` + error,
+                visibilityTime: 2000,
+            });
             return 'Erro ao calcular o valor';
         }
     }

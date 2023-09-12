@@ -2,10 +2,8 @@ import { StyleSheet, Text, View, TouchableOpacity, TextInput, Modal } from 'reac
 import React from 'react';
 import { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useNavigation } from '@react-navigation/native';
 import * as SQLite from 'expo-sqlite';
 import Toast from 'react-native-toast-message';
-import { ScrollView } from 'react-native-gesture-handler';
 
 const Configurations = () => {
     const db = SQLite.openDatabase('pedidos.db');

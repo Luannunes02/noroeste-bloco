@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TextInput, ScrollView, FlatList, Modal, TouchableOpacity, Alert, Image, Button } from 'react-native'
 import React, { useState, useEffect, useRef } from 'react';
-import { Table, Row, Cell, TableWrapper } from 'react-native-table-component';
+import { Table, Row, Rows } from 'react-native-reanimated-table';
 import { Feather } from '@expo/vector-icons';;
 import ButtonDefault from '../../components/ButtonDefault';
 import RNPickerSelect from 'react-native-picker-select';
@@ -8,9 +8,6 @@ import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import * as SQLite from 'expo-sqlite';
 import { useRoute } from '@react-navigation/native';
 import Toast from 'react-native-toast-message';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { SQLError } from 'expo-sqlite';
-import * as FileSystem from 'expo-file-system';
 
 import {
   updateTodosPedidos,
@@ -513,7 +510,7 @@ const MakeOrder = () => {
   const tableData = produtos.map((item: any, index: any) => [
     item.product,
     item.inputQuantity,
-    parseFloat(item.value).toFixed(2),
+    parseFloat(item.value).toFixed(2).replace('.', ','),
     // Calcula o total multiplicando a quantidade pelo valor unitário    
     parseFloat(item.inputQuantity) * parseFloat(item.value),
     <TouchableOpacity onPress={() => editarProduto(index)}>
@@ -859,20 +856,17 @@ const MakeOrder = () => {
               </View>
             </Modal>
 
-
-
-
             <View style={styles.line}></View>
 
             <Table borderStyle={styles.tableBorder}>
-              <Row data={tableHead} style={styles.tableHeader} textStyle={{ ...styles.tableHeaderText }} flexArr={columnWidthsHeader} />
+              <Row data={tableHead} style={styles.tableHeader} textStyle={styles.tableHeaderText} flexArr={columnWidthsHeader} />
               {tableData.map((rowData: any, index: any) => (
-                <Row key={index} data={rowData} style={styles.tableRow} textStyle={{ ...styles.tableRowText }} flexArr={columnWidths} />
+                <Row key={index} data={rowData} style={styles.tableRow} textStyle={styles.tableRowText} flexArr={columnWidths} />
               ))}
               <Row
-                data={['TOTAL', tableData.reduce((sum: any, row: any) => sum + row[3], 0).toFixed(2)]}
+                data={['TOTAL', tableData.reduce((sum: any, row: any) => sum + row[3], 0)]}
                 style={styles.tableTotalRow}
-                textStyle={{ ...styles.tableTotalRowText }}
+                textStyle={styles.tableTotalRowText}
               />
             </Table>
 

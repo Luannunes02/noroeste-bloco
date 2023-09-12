@@ -1,19 +1,13 @@
-import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { StyleSheet, Text, View, Image, Dimensions } from 'react-native';
-import { Table, TableWrapper, Row, Rows, Cell } from 'react-native-table-component';
-import { useNavigation } from '@react-navigation/native';
+import { Table, Row, Rows, TableWrapper, Cell } from 'react-native-reanimated-table';
 import { captureRef } from 'react-native-view-shot';
 import * as Sharing from 'expo-sharing';
 import { ScrollView } from 'react-native-gesture-handler';
-import ViewShot from 'react-native-view-shot';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Toast from 'react-native-toast-message';
 
-import {
-    updateTodosPedidos,
-    updatePedido,
-} from "../../store/slices/localizationSlice";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 import ButtonDefault from '../../components/ButtonDefault';
 
