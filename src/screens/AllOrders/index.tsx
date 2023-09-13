@@ -3,14 +3,12 @@ import { View, Text, FlatList, StyleSheet, TouchableOpacity, Modal, Button, Scro
 import Icon from 'react-native-vector-icons/FontAwesome'; // ou outra biblioteca de ícones que você preferir
 import * as SQLite from 'expo-sqlite';
 import { useNavigation } from '@react-navigation/native';
-import RNPickerSelect from 'react-native-picker-select';
 import Toast from 'react-native-toast-message';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import ModalSelector from 'react-native-modal-selector';
 
 const db = SQLite.openDatabase('pedidos.db');
 
 import LoadingIndicator from '../../components/LoadingIndicator';
-import CardProductsConsultSimple from '../../components/CardProductsConsultSimple';
 
 const AllOrders: React.FC = () => {
     const backgroundColor = '#F5F5F5';
@@ -22,33 +20,33 @@ const AllOrders: React.FC = () => {
     const [searchText, setSearchText] = useState('');
     const navigation = useNavigation();
     const [filterModalVisible, setFilterModalVisible] = useState(false);
-    const [selectedMonthFilter, setSelectedMonthFilter] = useState<string | null>(null);
+    const [selectedMonthFilter, setSelectedMonthFilter] = useState<string>('');
     const [minValue, setMinValue] = useState('');
     const [maxValue, setMaxValue] = useState('');
-    const [commissionPaidFilter, setCommissionPaidFilter] = useState<string | null>('Todos'); // Valor padrão 'Todos'
+    const [commissionPaidFilter, setCommissionPaidFilter] = useState<string>('Todos'); // Valor padrão 'Todos'
     const [districtFilter, setDistrictFilter] = useState('');
     const [paymentFilter, setPaymentFilter] = useState('');
     const paymentOptions = [
-        { label: 'Boleto', value: 'Boleto' },
-        { label: 'Dinheiro/Pix', value: 'Dinheiro/Pix' },
-        { label: 'Cheque', value: 'Cheque' },
+        { key: 'Boleto', label: 'Boleto', value: 'Boleto' },
+        { key: 'Dinheiro/Pix', label: 'Dinheiro/Pix', value: 'Dinheiro/Pix' },
+        { key: 'Cheque', label: 'Cheque', value: 'Cheque' },
     ];
     const [originalPedidos, setOriginalPedidos] = useState<any[]>([]);
     const [comissionReceived, setComissionReceived] = useState(false);
     const monthOptions = [
-        { label: 'Todos', value: 'Todos' },
-        { label: 'Janeiro (01)', value: '01' },
-        { label: 'Fevereiro (02)', value: '02' },
-        { label: 'Março (03)', value: '03' },
-        { label: 'Abril (04)', value: '04' },
-        { label: 'Maio (05)', value: '05' },
-        { label: 'Junho (06)', value: '06' },
-        { label: 'Julho (07)', value: '07' },
-        { label: 'Agosto (08)', value: '08' },
-        { label: 'Setembro (09)', value: '09' },
-        { label: 'Outubro (10)', value: '10' },
-        { label: 'Novembro (11)', value: '11' },
-        { label: 'Dezembro (12)', value: '12' },
+        { key: 'Todos', label: 'Todos', value: 'Todos' },
+        { key: '01', label: 'Janeiro (01)', value: '01' },
+        { key: '02', label: 'Fevereiro (02)', value: '02' },
+        { key: '03', label: 'Março (03)', value: '03' },
+        { key: '04', label: 'Abril (04)', value: '04' },
+        { key: '05', label: 'Maio (05)', value: '05' },
+        { key: '06', label: 'Junho (06)', value: '06' },
+        { key: '07', label: 'Julho (07)', value: '07' },
+        { key: '08', label: 'Agosto (08)', value: '08' },
+        { key: '09', label: 'Setembro (09)', value: '09' },
+        { key: '10', label: 'Outubro (10)', value: '10' },
+        { key: '11', label: 'Novembro (11)', value: '11' },
+        { key: '12', label: 'Dezembro (12)', value: '12' },
     ];
 
     useEffect(() => {
@@ -159,8 +157,10 @@ const AllOrders: React.FC = () => {
     const applyFilters = () => {
         const filtered = originalPedidos.filter((pedido) => {
             if (selectedMonthFilter && selectedMonthFilter !== 'Todos') {
-                const month = selectedMonthFilter; // Mês selecionado (por exemplo, '08')
-                const pedidoMonth = pedido.date.split('/')[1]; // Extrai o mês da data do pedido
+                const regex = /\((\d+)\)/;
+                const match = selectedMonthFilter.match(regex);
+                const month = match ? match[1] : null;
+                const pedidoMonth = pedido.date.split('/')[1];
                 if (pedidoMonth !== month) {
                     return false;
                 }
@@ -323,16 +323,39 @@ const AllOrders: React.FC = () => {
                         >
                             <View style={styles.filterModal}>
                                 <Text style={styles.filterTitle}>Filtros</Text>
-                                <RNPickerSelect
-                                    onValueChange={value => setSelectedMonthFilter(value)}
-                                    value={selectedMonthFilter}
-                                    items={monthOptions}
-                                    placeholder={{ label: 'Selecione o Mês', color: '#000', value: null }}
-                                    style={{
-                                        inputAndroid: { color: 'black', width: 300, height: 20, marginHorizontal: '11.7%', backgroundColor: '#ffff', marginBottom: 40 },
-                                        inputIOS: { color: 'white' },
+                                <ModalSelector
+                                    data={monthOptions}
+                                    initValue="Selecione o Mês"
+                                    onChange={(option) => {
+                                        setSelectedMonthFilter(option.label);
                                     }}
-                                />
+                                    selectStyle={{
+                                        backgroundColor: '#ffff',
+                                        marginBottom: 8,
+                                        width: 300,
+                                        height: 40,
+                                        marginHorizontal: '11.7%',
+                                    }}
+                                    cancelText="Cancelar"
+                                    cancelStyle={{ backgroundColor: '#ffff' }}
+                                    cancelTextStyle={{ color: 'black' }}
+                                    selectTextStyle={{ color: 'black' }}
+                                >
+                                    <TextInput
+                                        style={{
+                                            backgroundColor: '#ffff',
+                                            marginBottom: 8,
+                                            width: 300,
+                                            height: 40,
+                                            marginHorizontal: '11.7%',
+                                            paddingStart: 10,
+                                            color: '#000'
+                                        }}
+                                        editable={false}
+                                        placeholder="Selecione o Mês"
+                                        value={selectedMonthFilter} // Use o estado diretamente aqui
+                                    />
+                                </ModalSelector>
                                 <TextInput
                                     style={styles.filterInput}
                                     placeholder="Valor Mínimo"
@@ -355,35 +378,67 @@ const AllOrders: React.FC = () => {
                                     value={maxValue}
                                     keyboardType="numeric"
                                 />
-                                <RNPickerSelect
-                                    onValueChange={value => setCommissionPaidFilter(value)}
-                                    value={commissionPaidFilter}
-                                    items={[
-                                        { label: 'Todos', value: 'Todos' },
-                                        { label: 'Comissão paga', value: 'Comissão paga' },
-                                        { label: 'Comissão a receber', value: 'Comissão a receber' },
+                                <ModalSelector
+                                    data={[
+                                        { key: 'Todos', label: 'Todos', value: 'Todos' },
+                                        { key: 'Comissão paga', label: 'Comissão paga', value: 'Comissão paga' },
+                                        { key: 'Comissão a receber', label: 'Comissão a receber', value: 'Comissão a receber' },
                                     ]}
-                                    style={{
-                                        inputAndroid: { color: 'black', width: 300, height: 20, marginHorizontal: '11.7%', backgroundColor: '#ffff', marginBottom: 40 },
-                                        inputIOS: { color: 'white' },
-                                    }}
-                                />
+                                    initValue="Todos"
+                                    onChange={(option) => setCommissionPaidFilter(option.label)}
+                                    selectStyle={{ backgroundColor: '#ffff', marginBottom: 7, width: 300, height: 40, marginHorizontal: '11.7%' }}
+                                    cancelText="Cancelar"
+                                    cancelStyle={{ backgroundColor: '#ffff' }}
+                                    cancelTextStyle={{ color: 'black' }}
+                                    selectTextStyle={{ color: 'black' }}
+                                ><TextInput
+                                        style={{
+                                            backgroundColor: '#ffff',
+                                            marginBottom: 8,
+                                            width: 300,
+                                            height: 40,
+                                            marginHorizontal: '11.7%',
+                                            paddingStart: 10,
+                                            color: '#000'
+                                        }}
+                                        editable={false}
+                                        placeholder="Selecione"
+                                        value={commissionPaidFilter}
+                                    />
+                                </ModalSelector>
                                 <TextInput
                                     style={styles.filterInput}
                                     placeholder="Bairro"
                                     onChangeText={text => setDistrictFilter(text)}
                                     value={districtFilter}
                                 />
-                                <RNPickerSelect
-                                    onValueChange={value => setPaymentFilter(value)}
-                                    value={paymentFilter}
-                                    items={paymentOptions}
-                                    placeholder={{ label: 'Tipo de pagamento', color: '#000', value: null }}
-                                    style={{
-                                        inputAndroid: { color: 'black', width: 300, height: 20, marginHorizontal: '11.7%', backgroundColor: '#ffff', marginBottom: 40 },
-                                        inputIOS: { color: 'white' },
+                                <ModalSelector
+                                    data={paymentOptions}
+                                    initValue="Selecione"
+                                    supportedOrientations={['landscape']}
+                                    accessible={true}
+                                    scrollViewAccessibilityLabel={'Scrollable options'}
+                                    cancelButtonAccessibilityLabel={'Cancel Button'}
+                                    cancelText="Cancelar"
+                                    onChange={(option) => {
+                                        setPaymentFilter(option.label);
                                     }}
-                                />
+                                >
+                                    <TextInput
+                                        style={{
+                                            backgroundColor: '#ffff',
+                                            marginBottom: 8,
+                                            width: 300,
+                                            height: 40,
+                                            marginHorizontal: '11.7%',
+                                            paddingStart: 10,
+                                            color: '#000'
+                                        }}
+                                        editable={false}
+                                        placeholder="Selecione"
+                                        value={paymentFilter}
+                                    />
+                                </ModalSelector>
                                 <TouchableOpacity
                                     style={styles.applyButton}
                                     onPress={applyFilters}

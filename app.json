@@ -11,7 +11,7 @@
       "FILE_SYSTEM"
     ],
     "orientation": "portrait",
-    "icon": "./src/assets/noroeste-logo.png",
+    "icon": "./src/assets/nutrari_logo.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./src/assets/noroeste-logo.png",
@@ -32,7 +32,7 @@
       "package": "com.noroeste"
     },
     "web": {
-      "favicon": "./src/assets/noroeste-logo.png"
+      "favicon": "./src/assets/nutrari_logo.png"
     },
     "extra": {
       "eas": {

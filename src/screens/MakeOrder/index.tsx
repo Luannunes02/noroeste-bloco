@@ -3,11 +3,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Table, Row, Rows } from 'react-native-reanimated-table';
 import { Feather } from '@expo/vector-icons';;
 import ButtonDefault from '../../components/ButtonDefault';
-import RNPickerSelect from 'react-native-picker-select';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import * as SQLite from 'expo-sqlite';
 import { useRoute } from '@react-navigation/native';
 import Toast from 'react-native-toast-message';
+import ModalSelector from 'react-native-modal-selector';
 
 import {
   updateTodosPedidos,
@@ -206,9 +206,9 @@ const MakeOrder = () => {
   const [filteredProducts, setFilteredProducts] = useState<any>();
 
   const paymentOptions = [
-    { label: 'Boleto', value: 'Boleto' },
-    { label: 'Dinheiro/Pix', value: 'Dinheiro/Pix' },
-    { label: 'Cheque', value: 'Cheque' },
+    { key: 'Boleto', label: 'Boleto', value: 'Boleto' },
+    { key: 'Dinheiro/Pix', label: 'Dinheiro/Pix', value: 'Dinheiro/Pix' },
+    { key: 'Cheque', label: 'Cheque', value: 'Cheque' },
   ];
 
   const pesquisarCnpj = () => {
@@ -691,16 +691,30 @@ const MakeOrder = () => {
             <View style={styles.divideInputsContainer}>
               <View style={styles.inputContainerHalf}>
                 <Text style={styles.labelInput}>Condição de pagamento:</Text>
-                <RNPickerSelect
-                  onValueChange={(value) => setInputCondiPG(value)}
-                  value={inputCondiPG}
-                  items={paymentOptions}
-                  placeholder={{ label: 'Selecione', color: '#000', value: 'Não definido' }}
-                  style={{
-                    inputAndroid: { color: 'white' },
-                    inputIOS: { color: 'white' },
+                <ModalSelector
+                  data={paymentOptions} // Seus itens de seleção
+                  initValue="Selecione"
+                  supportedOrientations={['landscape']}
+                  accessible={true}
+                  scrollViewAccessibilityLabel={'Scrollable options'}
+                  cancelButtonAccessibilityLabel={'Cancel Button'}
+                  cancelText="Cancelar"
+                  onChange={(option) => {
+                    setInputCondiPG(option.label);
                   }}
-                />
+                ><TextInput
+                    style={{
+                      borderWidth: 1,
+                      borderColor: 'gray',
+                      padding: 10,
+                      height: 40,
+                      color: 'white',
+                    }}
+                    editable={false}
+                    placeholder="Selecione"
+                    value={inputCondiPG}
+                  />
+                </ModalSelector>
               </View>
               <View style={styles.inputContainerHalf}>
                 <Text style={styles.labelInput}>Prazo:</Text>
