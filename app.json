@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "noroeste-bloco",
-    "slug": "noroeste-bloco",
+    "name": "Noroeste",
+    "slug": "Noroeste",
     "version": "1.0.0",
     "permissions": [
       "CAMERA",
@@ -26,7 +26,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./src/assets/noroeste-logo.png",
+        "foregroundImage": "./src/assets/nutrari_logo.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.noroeste"

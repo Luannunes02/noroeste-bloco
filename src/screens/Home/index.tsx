@@ -97,7 +97,9 @@ export default function Home() {
                     const value = await AsyncStorage.getItem(key);
                     if (value !== null) {
                         setSellerName(value);
-                    } else {
+                    }
+
+                    if (value === null) {
                         saveData('vendedor', '');
                     }
                 } catch (error) {
@@ -113,7 +115,8 @@ export default function Home() {
                     const value = await AsyncStorage.getItem(key);
                     if (value !== null) {
                         setCardSimples(value);
-                    } else {
+                    }
+                    if (value === null) {
                         saveData('cardSimples', 'true');
                     }
                 } catch (error) {
@@ -129,7 +132,8 @@ export default function Home() {
                     const value = await AsyncStorage.getItem(key);
                     if (value !== null) {
                         setMostrarValor(value);
-                    } else {
+                    }
+                    if (value === null) {
                         saveData('mostrarValor', 'true');
                     }
                 } catch (error) {
@@ -148,7 +152,8 @@ export default function Home() {
             <View style={styles.logoContainer}>
                 <Image
                     style={styles.logo}
-                    source={require('../../assets/noroeste-logo.png')}
+                    source={require('../../assets/nutrari_logo.png')}
+                    resizeMode='contain'
                 />
             </View>
             <View style={styles.buttonsContainer}>
@@ -172,14 +177,18 @@ const styles = StyleSheet.create({
     },
     logoContainer: {
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#fff',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 100
     },
     logo: {
-        width: 200,
-        height: 100
+        width: 130,
+        height: 150,
     },
     buttonsContainer: {
         width: "70%",
-        marginTop: 100
+        marginTop: 20
     }
 });

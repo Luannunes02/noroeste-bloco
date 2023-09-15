@@ -109,10 +109,10 @@ const MakeOrder = () => {
   const fetchData = async () => {
     try {
       // Substitua a URL abaixo pela URL da sua API
-      const response = await fetch('https://api.jsonbin.io/v3/b/64bdb5689d312622a3839e04/latest', {
+      const response = await fetch('https://api.jsonbin.io/v3/b/6503a094d972192679c400fc', {
         method: 'GET',
         headers: {
-          'X-Master-Key': '$2b$10$fTCsCYniOvsCifPdd6ZhG.5X1tU6f8dUnGi0YHNuIVveLDGZvJIjC',
+          'X-Master-Key': '$2b$10$n65OH.qy/q2QSKLBL2eLDeYF2LdnMh3RnpNzLHeV3i5mALn.HsiOW',
         },
       });
 
@@ -366,6 +366,10 @@ const MakeOrder = () => {
       product.nome.toLowerCase().includes(text.toLowerCase())
     );
     setFilteredProducts(filtered);
+  };
+
+  const formatCurrency = (value: any) => {
+    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
   };
 
   function CriarPedido() {
@@ -878,7 +882,7 @@ const MakeOrder = () => {
                 <Row key={index} data={rowData} style={styles.tableRow} textStyle={styles.tableRowText} flexArr={columnWidths} />
               ))}
               <Row
-                data={['TOTAL', tableData.reduce((sum: any, row: any) => sum + row[3], 0)]}
+                data={['TOTAL', formatCurrency(tableData.reduce((sum: any, row: any) => sum + row[3], 0))]}
                 style={styles.tableTotalRow}
                 textStyle={styles.tableTotalRowText}
               />

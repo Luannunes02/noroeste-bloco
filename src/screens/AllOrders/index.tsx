@@ -303,6 +303,12 @@ const AllOrders: React.FC = () => {
         return acc + totalValue;
     }, 0).toFixed(2);
 
+    const formatCurrency = (value: any) => {
+        return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
+    };
+
+    const formattedTotalValue = formatCurrency(parseFloat(totalValueOfAllOrders));
+
     return (
         <View style={styles.container}>
             <View style={styles.totalContainer}>
@@ -414,7 +420,7 @@ const AllOrders: React.FC = () => {
                                 />
                                 <ModalSelector
                                     data={paymentOptions}
-                                    initValue="Selecione"
+                                    initValue="Selecione tipo de pagamento"
                                     supportedOrientations={['landscape']}
                                     accessible={true}
                                     scrollViewAccessibilityLabel={'Scrollable options'}
@@ -435,7 +441,7 @@ const AllOrders: React.FC = () => {
                                             color: '#000'
                                         }}
                                         editable={false}
-                                        placeholder="Selecione"
+                                        placeholder="Selecione tipo de pagamento"
                                         value={paymentFilter}
                                     />
                                 </ModalSelector>
@@ -463,7 +469,7 @@ const AllOrders: React.FC = () => {
                 </View>
                 <View style={{ flexDirection: 'row', marginTop: 10 }}>
                     <Text style={styles.totalLabel}>Total de Pedidos:</Text>
-                    <Text style={styles.totalValue}>R$ {totalValueOfAllOrders}</Text>
+                    <Text style={styles.totalValue}>{formattedTotalValue}</Text>
                 </View>
             </View>
             {loading ? (

@@ -48,10 +48,10 @@ const Details = ({ route }: any) => {
     const fetchData = async () => {
         try {
             // Substitua a URL abaixo pela URL da sua API
-            const response = await fetch('https://api.jsonbin.io/v3/b/64bdb5689d312622a3839e04/latest', {
+            const response = await fetch('https://api.jsonbin.io/v3/b/6503a094d972192679c400fc', {
                 method: 'GET',
                 headers: {
-                    'X-Master-Key': '$2b$10$fTCsCYniOvsCifPdd6ZhG.5X1tU6f8dUnGi0YHNuIVveLDGZvJIjC',
+                    'X-Master-Key': '$2b$10$n65OH.qy/q2QSKLBL2eLDeYF2LdnMh3RnpNzLHeV3i5mALn.HsiOW',
                 },
             });
 

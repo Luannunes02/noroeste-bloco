@@ -62,8 +62,19 @@ export default function VisualizarPedido() {
 
     const renderTableRows = () => {
         const rows = pedidoSelector.produtos.map((product: any, index: any) => {
-            const total = (parseInt(product.inputQuantity) * parseFloat(product.value)).toFixed(2).replace('.', '.');
-            return [`${product.product}`, `${product.inputQuantity}`, `R$ ${product.value.toFixed(2).replace('.', ',')}`, `${total}`]
+            const total = (parseInt(product.inputQuantity) * parseFloat(product.value)).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+                minimumFractionDigits: 2,
+            });
+
+            const formattedValue = parseFloat(product.value).toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+                minimumFractionDigits: 2,
+            });
+
+            return [`${product.product}`, `${product.inputQuantity}`, `${formattedValue}`, `${total}`]
         });
         return rows;
     };
@@ -72,7 +83,14 @@ export default function VisualizarPedido() {
         const total = pedidoSelector.produtos.reduce((sum: number, product: any) => {
             return sum + product.value * product.inputQuantity;
         }, 0);
-        return `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
+
+        const totalFormatado = total.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+            minimumFractionDigits: 2,
+        });
+
+        return `Total: ${totalFormatado}`;
     };
 
     const handleShare = async () => {
@@ -102,13 +120,13 @@ export default function VisualizarPedido() {
                 <View style={styles.header}>
                     <Image
                         style={styles.logo}
-                        source={require('../../assets/noroeste-logo.png')}
+                        source={require('../../assets/nutrari_logo.png')}
                         resizeMode='contain'
                     />
                     <View>
-                        <Text style={{ ...styles.headText, fontSize: 10.5 }}>Noroeste Nutrição Animal LTDA</Text>
-                        <Text style={{ ...styles.headText, fontSize: 10.5 }}>SHVP, Rua 10 CH 147 LT 19, Brasília - DF</Text>
-                        <Text style={{ ...styles.headText, fontSize: 10.5 }}>Telefone: (61) 3597-6322</Text>
+                        <Text style={{ ...styles.headText, fontSize: 9.5 }}>Noroeste Nutrição Animal LTDA</Text>
+                        <Text style={{ ...styles.headText, fontSize: 9.5 }}>SHVP, Rua 10 CH 147 LT 19, Brasília - DF</Text>
+                        <Text style={{ ...styles.headText, fontSize: 9.5 }}>Telefone: (61) 3597-6322</Text>
                     </View>
                 </View>
                 <Table borderStyle={styles.tableBorder}>
@@ -147,7 +165,7 @@ export default function VisualizarPedido() {
 
 const styles = StyleSheet.create({
     container: { flex: 1, backgroundColor: '#fff' },
-    scrollViewContainer: { padding: 16, backgroundColor: '#fff' },
+    scrollViewContainer: { paddingHorizontal: 8, backgroundColor: '#fff' },
     header: {
         flexDirection: 'row',
         justifyContent: 'space-around',
@@ -159,7 +177,7 @@ const styles = StyleSheet.create({
     },
     logo: {
         width: 100,
-        height: 50,
+        height: 40,
     },
     text: { paddingVertical: 0.5, marginLeft: 4, textAlign: 'left', backgroundColor: '#fff', textTransform: 'capitalize' },
     textInfoCompany: { paddingVertical: 1, marginLeft: 4, textAlign: 'left', backgroundColor: '#fff' },

@@ -322,12 +322,12 @@
         },
         {
             "id": 32,
-            "nome": "Bambito Extrusado",
+            "nome": "Bambito Extrusado 5KG",
             "descricao": "O Bambito Extrusado é um alimento completo para calopsitas, formulado para atender às necessidades nutricionais dessas aves. Ele fornece todos os nutrientes essenciais, incluindo proteínas, vitaminas e minerais, para manter suas aves saudáveis e ativas.",
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f03adedf-246b-4ad3-9e23-2d1304303b84",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/99cd7d40-f0a9-455d-99a1-6fd3299b3e74",
-            "embalagem_tamanho": "Varia",
+            "embalagem_tamanho": "5KG",
             "valor": 99.00
         },
         {
@@ -384,7 +384,7 @@
             "id": 38,
             "nome": "Bio Classic Vermelha 5KG",
             "descricao": "A Bio Classic Vermelha é uma mistura de sementes e grãos de alta qualidade, enriquecida com nutrientes essenciais. É uma escolha ideal para aves de pequeno porte, como canários, que precisam de uma dieta equilibrada para uma saúde ótima.",
-            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d0c574bd-2eaf-4d58-a443-b4fe4815db5b",
+            "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/10b7e963-7466-482b-886d-57b27b2f67df",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d0c574bd-2eaf-4d58-a443-b4fe4815db5b",
             "embalagem_tamanho": "5KG",
@@ -499,7 +499,7 @@
             "descricao": "O CC Mineral Mix com Carvão é um suplemento vitamínico e mineral para aves, formulado para atender às necessidades nutricionais dessas aves e auxiliar na digestão. Ele fornece vitaminas, minerais e carvão ativado para manter a saúde das aves e auxiliar na digestão.",
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/9cd2d3ce-8e5e-4442-95e2-381244155c45",
             "marca": "Biotron",
-            "mistura": "Varia",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a25932cc-f0a2-44a9-89de-e8272956ceef",
             "valor": 10.00
         },
         {
@@ -616,7 +616,7 @@
             "descricao": "O Gran Mix 20 é uma mistura de grãos e sementes especialmente formulada para fornecer energia e nutrientes essenciais para aves de pequeno e médio porte. Esta mistura é uma fonte de proteínas e fibras que contribuem para a saúde das aves.",
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/283a8e27-6ce9-4f7c-ab7e-6e2b3274e63a",
             "marca": "Biotron",
-            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/283a8e27-6ce9-4f7c-ab7e-6e2b3274e63a",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/67b121f4-6ec1-47ce-a701-4ba8d92cab94",
             "valor": 19.00
         },
         {
@@ -625,7 +625,7 @@
             "descricao": "O Gran Mix 20 é uma mistura de grãos e sementes especialmente formulada para fornecer energia e nutrientes essenciais para aves de pequeno e médio porte. Esta mistura é uma fonte de proteínas e fibras que contribuem para a saúde das aves.",
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/283a8e27-6ce9-4f7c-ab7e-6e2b3274e63a",
             "marca": "Biotron",
-            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/283a8e27-6ce9-4f7c-ab7e-6e2b3274e63a",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/67b121f4-6ec1-47ce-a701-4ba8d92cab94",
             "valor": 89.00
         },
         {
@@ -769,7 +769,7 @@
             "descricao": "O Sporito Mix é uma mistura de grãos, sementes e frutas especialmente formulada para fornecer nutrientes essenciais para a saúde das aves. Esta mistura é rica em proteínas, vitaminas e minerais que contribuem para o bem-estar das aves.",
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/0a383b57-65df-4ad6-935c-b6f799077182",
             "marca": "Biotron",
-            "mistura": "5KG",
+            "mistura": "https://github-production-user-asset-6210df.s3.amazonaws.com/116287208/255439595-1cd9bc43-a50e-440e-91da-73abc29827d3.png",
             "valor": 70.00
         },
         {
@@ -778,7 +778,7 @@
             "descricao": "O Saporito Mix é uma mistura de grãos, sementes e frutas especialmente formulada para fornecer nutrientes essenciais para a saúde das aves. Esta mistura é rica em proteínas, vitaminas e minerais que contribuem para o bem-estar das aves.",
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/0a383b57-65df-4ad6-935c-b6f799077182",
             "marca": "Biotron",
-            "mistura": "0,500GR",
+            "mistura": "https://github-production-user-asset-6210df.s3.amazonaws.com/116287208/255439595-1cd9bc43-a50e-440e-91da-73abc29827d3.png",
             "valor": 9.50
         },
         {
