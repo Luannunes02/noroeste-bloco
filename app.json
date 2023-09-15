@@ -30,7 +30,7 @@
       "package": "com.noroeste"
     },
     "web": {
-      "favicon": "./src/assets/nutrari_logo_largue.png"
+      "favicon": "./src/assets/icone-app.png"
     },
     "extra": {
       "eas": {
