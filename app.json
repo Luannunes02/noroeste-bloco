@@ -1,7 +1,8 @@
 {
   "expo": {
     "name": "Noroeste",
-    "slug": "Noroeste",
+    "displayName": "Noroeste",
+    "slug": "noroeste-bloco",
     "version": "1.0.0",
     "permissions": [
       "CAMERA",
