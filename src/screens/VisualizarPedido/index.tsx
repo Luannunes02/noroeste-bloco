@@ -153,7 +153,7 @@ export default function VisualizarPedido() {
                         :
                         <View></View>
                 }
-                <Text style={{ fontSize: 10.5, marginBottom: 30 }}>Vendedor: {sellerName}</Text>
+                <Text style={{ fontSize: 10.5, marginBottom: 15 }}>Vendedor: {sellerName}</Text>
             </ScrollView>
             <ButtonDefault
                 text="Compartilhar Pedido"
@@ -165,7 +165,7 @@ export default function VisualizarPedido() {
 
 const styles = StyleSheet.create({
     container: { flex: 1, backgroundColor: '#fff' },
-    scrollViewContainer: { paddingHorizontal: 8, backgroundColor: '#fff' },
+    scrollViewContainer: { paddingHorizontal: 8, paddingTop: 12, backgroundColor: '#fff' },
     header: {
         flexDirection: 'row',
         justifyContent: 'space-around',

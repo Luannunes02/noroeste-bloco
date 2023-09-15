@@ -359,6 +359,7 @@ const MakeOrder = () => {
     setInputProduct(product.nome);
     setInputValue(product.valor.toFixed(2).toString());
     setShowProductModal(false);
+    setFilteredProducts(productsData);
   };
 
   const searchProducts = (text: any) => {
@@ -543,7 +544,6 @@ const MakeOrder = () => {
       inputQuantity: produtoSelecionado.inputQuantity,
       value: produtoSelecionado.value.toString(),
     });
-
     // Abrir o modal
     setModalVisible(true);
   };
@@ -577,7 +577,6 @@ const MakeOrder = () => {
           value: updateValue,
         };
       }
-
       return newProducts;
     });
 

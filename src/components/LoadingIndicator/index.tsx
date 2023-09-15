@@ -1,11 +1,16 @@
 import React from 'react';
 import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
 
-const LoadingIndicator = () => {
+interface colorProps {
+  color?: String
+}
+
+const LoadingIndicator = (props: colorProps) => {  
+  const color = props.color === 'black' ? '#000' : '#fff813' ;
   return (
     <View style={styles.container}>
-      <Text style={styles.carregandoText}>Carregando...</Text>
-      <ActivityIndicator size="large" color="#fff813" />
+      <Text style={{...styles.carregandoText, color: color }}>Carregando...</Text>
+      <ActivityIndicator size="large" color={`${color}`} />
     </View>
   );
 };
@@ -24,7 +29,6 @@ const styles = StyleSheet.create({
   carregandoText: {
     fontWeight: 'bold',
     fontSize: 18,
-    color: '#fff813',
     marginBottom: 20
   }
 });

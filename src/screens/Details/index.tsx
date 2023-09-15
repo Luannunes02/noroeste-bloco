@@ -89,7 +89,7 @@ const Details = ({ route }: any) => {
         <View style={styles.container}>
             {loading ? (
                 <View style={styles.loadingContainer}>
-                    <LoadingIndicator />
+                    <LoadingIndicator color='black' />
                 </View>
             ) : (
                 <ScrollView contentContainerStyle={styles.scrollContainer}>
@@ -110,7 +110,7 @@ const Details = ({ route }: any) => {
                                 produto.marca === 'Biotron' ?
                                     <Image style={styles.marcaLogoSmall} source={require('../../assets/biotron_logo.png')} resizeMode='contain' />
                                     :
-                                    <Image style={styles.marcaLogoSmall} source={require('../../assets/nutrari_logo.png')} resizeMode='contain' />
+                                    <Image style={styles.marcaLogoSmall} source={require('../../assets/nutrari_logo_largue.png')} resizeMode='contain' />
                             }
                         </View>
 
