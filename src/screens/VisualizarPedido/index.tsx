@@ -151,7 +151,7 @@ export default function VisualizarPedido() {
                     pedidoSelector.observacao !== null && pedidoSelector.observacao !== '' ?
                         <Text style={{ fontSize: 10.5 }}>Observação: {pedidoSelector.observacao}</Text>
                         :
-                        <View></View>
+                        <></>
                 }
                 <Text style={{ fontSize: 10.5, marginBottom: 15 }}>Vendedor: {sellerName}</Text>
             </ScrollView>

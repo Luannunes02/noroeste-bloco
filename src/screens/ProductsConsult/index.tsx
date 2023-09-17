@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Toast from 'react-native-toast-message';
 import { FontAwesome } from '@expo/vector-icons';
+import { Asset } from 'expo-asset';
+import * as FileSystem from 'expo-file-system';
+import * as Sharing from 'expo-sharing';
 
 import CardProductsConsult from '../../components/CardProductsConsult';
 import LoadingIndicator from '../../components/LoadingIndicator';
@@ -15,6 +18,7 @@ const ProductsConsult = () => {
   const [mostrarValor, setMostrarValor] = useState<any>();
   const [searchText, setSearchText] = useState<string>('');
   const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
+  const [sharingPdf, setSharingPdf] = useState(false);
 
   useEffect(() => {
     getData('cardSimples');
@@ -94,6 +98,47 @@ const ProductsConsult = () => {
     }
   }
 
+  const sharePDF = async () => {
+    if (sharingPdf) {
+      Toast.show({
+        type: 'info',
+        text1: `Aguarde!`,
+        visibilityTime: 2000,
+      });
+      return;
+    }
+    setSharingPdf(true);
+    Toast.show({
+      type: 'info',
+      text1: `Carregando!`,
+      visibilityTime: 1000,
+    });
+    try {
+      const assetUri = Asset.fromModule(require('../../assets/catalogo.pdf')).uri;
+
+      const localDirectory = `${FileSystem.documentDirectory}assets/`;
+
+      await FileSystem.makeDirectoryAsync(localDirectory, { intermediates: true });
+
+      const localUri = `${localDirectory}catalogo.pdf`;
+
+      await FileSystem.downloadAsync(assetUri, localUri);
+
+      await Sharing.shareAsync(localUri, {
+        mimeType: 'application/pdf',
+        dialogTitle: 'Compartilhar PDF',
+      });
+      setSharingPdf(false);
+    } catch (error) {
+      Toast.show({
+        type: 'info',
+        text1: `Erro ao compartilhar o pdf!`,
+        visibilityTime: 2000,
+      });
+      setSharingPdf(false);
+    }
+  };
+
   const fetchData = async () => {
     try {
       // Substitua a URL abaixo pela URL da sua API
@@ -145,6 +190,9 @@ const ProductsConsult = () => {
               </TouchableOpacity>
             </View>
           </View>
+          <TouchableOpacity onPress={sharePDF} style={styles.catalogButton}>
+            <Text style={styles.catalogButtonText}>Catálogo</Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.searchContainer}>
           <FontAwesome name="search" size={20} color="#fff" style={styles.searchIcon} />
@@ -262,5 +310,19 @@ const styles = StyleSheet.create({
     color: '#fff813',
     borderBottomWidth: 1,
     borderBottomColor: '#fff813',
+  },
+  catalogButton: {
+    backgroundColor: '#fff813', // Cor de fundo do botão
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 8,
+    marginTop: 10,
+    marginBottom: 5
+  },
+  catalogButtonText: {
+    color: '#000', // Cor do texto do botão
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 })

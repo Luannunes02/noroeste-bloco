@@ -48,7 +48,7 @@
             "marca": "Nutrari",
             "mistura": "https://user-images.githubusercontent.com/116287208/196978010-5657b345-8a94-4af2-b1fa-6fde6122496b.jpg",
             "embalagem_tamanho": "10KG",
-            "valor": 92.80
+            "valor": 92.8
         },
         {
             "id": 5,
@@ -258,7 +258,7 @@
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/771fc6cd-7309-4867-8a7e-010b64aab994",
             "embalagem_tamanho": "45,36KG",
-            "valor": 450.00
+            "valor": 450
         },
         {
             "id": 26,
@@ -268,7 +268,7 @@
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/771fc6cd-7309-4867-8a7e-010b64aab994",
             "embalagem_tamanho": "10KG",
-            "valor": 100.00
+            "valor": 100
         },
         {
             "id": 27,
@@ -278,7 +278,7 @@
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f8c0feea-6cdd-45a1-90cb-25b5853e2cb1",
             "embalagem_tamanho": "5KG",
-            "valor": 111.00
+            "valor": 111
         },
         {
             "id": 28,
@@ -288,7 +288,7 @@
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5be87829-7ece-419e-a66d-cf2c006363db",
             "embalagem_tamanho": "40KG",
-            "valor": 115.00
+            "valor": 115
         },
         {
             "id": 29,
@@ -298,7 +298,7 @@
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d959b0cd-dbd1-4f96-b948-de0aea2e4d33",
             "embalagem_tamanho": "05 KG",
-            "valor": 20.00
+            "valor": 20
         },
         {
             "id": 30,
@@ -308,7 +308,7 @@
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d959b0cd-dbd1-4f96-b948-de0aea2e4d33",
             "embalagem_tamanho": "10KG",
-            "valor": 40.00
+            "valor": 40
         },
         {
             "id": 31,
@@ -318,7 +318,7 @@
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d959b0cd-dbd1-4f96-b948-de0aea2e4d33",
             "embalagem_tamanho": "30KG",
-            "valor": 120.00
+            "valor": 120
         },
         {
             "id": 32,
@@ -328,7 +328,7 @@
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/99cd7d40-f0a9-455d-99a1-6fd3299b3e74",
             "embalagem_tamanho": "5KG",
-            "valor": 99.00
+            "valor": 99
         },
         {
             "id": 33,
@@ -338,7 +338,7 @@
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/16c45c41-ec83-4dfd-bc74-4ed5cce3eebb",
             "embalagem_tamanho": "5KG",
-            "valor": 70.00
+            "valor": 70
         },
         {
             "id": 34,
@@ -348,7 +348,7 @@
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/00c70709-3bb8-4228-912c-596cfaef3320",
             "embalagem_tamanho": "5KG",
-            "valor": 70.00
+            "valor": 70
         },
         {
             "id": 35,
@@ -358,7 +358,7 @@
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4b9ba2c3-7490-4890-bc1f-8b73848b7165",
             "embalagem_tamanho": "01KG",
-            "valor": 28.00
+            "valor": 28
         },
         {
             "id": 36,
@@ -368,7 +368,7 @@
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/b3f5fe90-8915-4bd8-b169-6ac9ec7ec207",
             "embalagem_tamanho": "5KG",
-            "valor": 99.00
+            "valor": 99
         },
         {
             "id": 37,
@@ -378,7 +378,7 @@
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d0c574bd-2eaf-4d58-a443-b4fe4815db5b",
             "embalagem_tamanho": "01KG",
-            "valor": 36.00
+            "valor": 36
         },
         {
             "id": 38,
@@ -388,7 +388,7 @@
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d0c574bd-2eaf-4d58-a443-b4fe4815db5b",
             "embalagem_tamanho": "5KG",
-            "valor": 167.00
+            "valor": 167
         },
         {
             "id": 39,
@@ -396,9 +396,9 @@
             "descricao": "A CC 2030 Amarela é uma ração completa para aves, formulada para atender às necessidades nutricionais específicas dessas aves. Ela fornece proteínas de alta qualidade, vitaminas e minerais essenciais para uma saúde ótima.",
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/752fc2e9-a1f0-4458-a4cf-dc1f0e39208d",
             "marca": "Biotron",
-            "mistura": "",
+            "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/6a1ae2f0-6470-46d1-94c2-139ccdf25060",
             "embalagem_tamanho": "01KG",
-            "valor": 27.00
+            "valor": 27
         },
         {
             "id": 40,
@@ -408,7 +408,7 @@
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1d684e22-0c70-4f05-bce6-1b82cc62e2f8",
             "embalagem_tamanho": "01KG",
-            "valor": 21.00
+            "valor": 21
         },
         {
             "id": 41,
@@ -418,7 +418,7 @@
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1d684e22-0c70-4f05-bce6-1b82cc62e2f8",
             "embalagem_tamanho": "5KG",
-            "valor": 94.00
+            "valor": 94
         },
         {
             "id": 42,
@@ -428,7 +428,7 @@
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/9d054c72-c04f-4cb1-9f99-eaf234d71409",
             "embalagem_tamanho": "1KG",
-            "valor": 35.00
+            "valor": 35
         },
         {
             "id": 43,
@@ -437,7 +437,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/57d153f3-2115-49db-a8e4-ac2f92d81913",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/9d054c72-c04f-4cb1-9f99-eaf234d71409",
-            "valor": 167.00
+            "valor": 167
         },
         {
             "id": 44,
@@ -446,7 +446,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/92b3c65c-de8f-4026-8688-26aad8568bd7",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c6f37cc8-2ff9-47b9-8d87-b8382926f1f2",
-            "valor": 19.00
+            "valor": 19
         },
         {
             "id": 45,
@@ -455,7 +455,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/92b3c65c-de8f-4026-8688-26aad8568bd7",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c6f37cc8-2ff9-47b9-8d87-b8382926f1f2",
-            "valor": 26.00
+            "valor": 26
         },
         {
             "id": 46,
@@ -464,7 +464,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/92b3c65c-de8f-4026-8688-26aad8568bd7",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c6f37cc8-2ff9-47b9-8d87-b8382926f1f2",
-            "valor": 222.00
+            "valor": 222
         },
         {
             "id": 47,
@@ -473,7 +473,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d5a5c017-433b-42eb-955b-0776d32a09b4",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4071f409-b9cd-4ac5-a4d6-39e486ca4149",
-            "valor": 138.00
+            "valor": 138
         },
         {
             "id": 48,
@@ -482,7 +482,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d5a5c017-433b-42eb-955b-0776d32a09b4",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4071f409-b9cd-4ac5-a4d6-39e486ca4149",
-            "valor": 19.00
+            "valor": 19
         },
         {
             "id": 49,
@@ -491,7 +491,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/222610a2-a6ba-4478-bc47-69e51e7407ef",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a25932cc-f0a2-44a9-89de-e8272956ceef",
-            "valor": 10.00
+            "valor": 10
         },
         {
             "id": 50,
@@ -500,7 +500,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/9cd2d3ce-8e5e-4442-95e2-381244155c45",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a25932cc-f0a2-44a9-89de-e8272956ceef",
-            "valor": 10.00
+            "valor": 10
         },
         {
             "id": 51,
@@ -509,7 +509,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dc52c095-68dd-4ca7-a73d-83d7f397c004",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/74701132-32c7-4b48-b691-31fa0539c7d5",
-            "valor": 191.00
+            "valor": 191
         },
         {
             "id": 52,
@@ -518,7 +518,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dc52c095-68dd-4ca7-a73d-83d7f397c004",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/74701132-32c7-4b48-b691-31fa0539c7d5",
-            "valor": 26.00
+            "valor": 26
         },
         {
             "id": 53,
@@ -527,7 +527,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/bea70aff-7baa-4fee-920c-88277e9e3ef8",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/b00f41af-f962-416c-9766-fdc8a6e0ecc3",
-            "valor": 87.00
+            "valor": 87
         },
         {
             "id": 54,
@@ -536,7 +536,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e96ab113-3f96-4fe6-bda8-beb781159ed2",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/2adf0016-24d5-4249-ace3-cde5756908ac",
-            "valor": 88.00
+            "valor": 88
         },
         {
             "id": 55,
@@ -545,7 +545,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/958a6520-0a75-4506-99ed-ffb25dbddaca",
             "marca": "Biotron",
             "mistura": "0,500GR",
-            "valor": 16.00
+            "valor": 16
         },
         {
             "id": 56,
@@ -554,7 +554,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/958a6520-0a75-4506-99ed-ffb25dbddaca",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/b2cc8cf3-ec71-451e-ad2c-6d47c483442d",
-            "valor": 128.00
+            "valor": 128
         },
         {
             "id": 57,
@@ -563,7 +563,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
-            "valor": 110.00
+            "valor": 110
         },
         {
             "id": 58,
@@ -572,7 +572,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
-            "valor": 138.00
+            "valor": 138
         },
         {
             "id": 59,
@@ -581,7 +581,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
-            "valor": 172.00
+            "valor": 172
         },
         {
             "id": 60,
@@ -590,7 +590,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
-            "valor": 220.00
+            "valor": 220
         },
         {
             "id": 61,
@@ -599,7 +599,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f52789df-0580-4f4e-8b56-5a0d312a7280",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f52789df-0580-4f4e-8b56-5a0d312a7280",
-            "valor": 80.00
+            "valor": 80
         },
         {
             "id": 62,
@@ -608,7 +608,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f52789df-0580-4f4e-8b56-5a0d312a7280",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f52789df-0580-4f4e-8b56-5a0d312a7280",
-            "valor": 80.00
+            "valor": 80
         },
         {
             "id": 63,
@@ -617,7 +617,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/283a8e27-6ce9-4f7c-ab7e-6e2b3274e63a",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/67b121f4-6ec1-47ce-a701-4ba8d92cab94",
-            "valor": 19.00
+            "valor": 19
         },
         {
             "id": 64,
@@ -626,7 +626,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/283a8e27-6ce9-4f7c-ab7e-6e2b3274e63a",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/67b121f4-6ec1-47ce-a701-4ba8d92cab94",
-            "valor": 89.00
+            "valor": 89
         },
         {
             "id": 65,
@@ -635,7 +635,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/489df3d7-1ca4-47eb-a118-bcc6c5a1a01f",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/67b121f4-6ec1-47ce-a701-4ba8d92cab94",
-            "valor": 21.00
+            "valor": 21
         },
         {
             "id": 66,
@@ -644,7 +644,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/489df3d7-1ca4-47eb-a118-bcc6c5a1a01f",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/67b121f4-6ec1-47ce-a701-4ba8d92cab94",
-            "valor": 99.00
+            "valor": 99
         },
         {
             "id": 67,
@@ -653,7 +653,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c1cccfcd-1a5d-40af-80e6-e624f6f7c7c6",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c1cccfcd-1a5d-40af-80e6-e624f6f7c7c6",
-            "valor": 90.00
+            "valor": 90
         },
         {
             "id": 68,
@@ -662,7 +662,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5707c089-67d1-4305-be08-26cff13a8818",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/16f56493-aa04-4769-9a2f-397bb22002a5",
-            "valor": 78.00
+            "valor": 78
         },
         {
             "id": 69,
@@ -671,7 +671,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5707c089-67d1-4305-be08-26cff13a8818",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/16f56493-aa04-4769-9a2f-397bb22002a5",
-            "valor": 10.00
+            "valor": 10
         },
         {
             "id": 70,
@@ -680,7 +680,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5573e407-a04a-47f8-b982-75d8533e03d6",
             "marca": "Nutrari",
             "mistura": "50KG",
-            "valor": 200.00
+            "valor": 200
         },
         {
             "id": 71,
@@ -689,7 +689,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5573e407-a04a-47f8-b982-75d8533e03d6",
             "marca": "Nutrari",
             "mistura": "10KG",
-            "valor": 42.00
+            "valor": 42
         },
         {
             "id": 72,
@@ -698,7 +698,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/66434400-1aae-4b78-a40d-3f2e0519db0d",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7299cdb4-f5ca-4e65-81eb-40a5cc607e43",
-            "valor": 110.00
+            "valor": 110
         },
         {
             "id": 73,
@@ -707,7 +707,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/50ee6d28-20ff-402e-812c-41cd1f1b407c",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7faac684-4387-482b-8392-3d0b0c1409f5",
-            "valor": 94.00
+            "valor": 94
         },
         {
             "id": 74,
@@ -716,7 +716,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/214ec91e-ccb9-4dad-8335-cd4a4dcff644",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/e4523981-c2f5-4983-b23e-78ed70174018",
-            "valor": 99.00
+            "valor": 99
         },
         {
             "id": 75,
@@ -725,7 +725,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c6933cf5-2fb4-44de-af43-6cc9bd9a3d91",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/f0face30-73e3-46e8-afa2-f7c156b3e8d0",
-            "valor": 109.00
+            "valor": 109
         },
         {
             "id": 76,
@@ -734,7 +734,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/0b8749ff-2b2f-4b80-8d39-de285ed97487",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/505c68bd-3f70-43ad-8452-a63d913d91f2",
-            "valor": 14.00
+            "valor": 14
         },
         {
             "id": 77,
@@ -743,7 +743,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/cffac676-e169-4d3b-b88d-f13b634b9b5c",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/597933d7-7c78-4ae2-958a-931891b85472",
-            "valor": 14.00
+            "valor": 14
         },
         {
             "id": 78,
@@ -752,7 +752,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/b7a5af97-f309-467e-b7a3-3a3869a5ad7e",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/68527665-59c3-49f4-9ce2-5d9c0fb69c3c",
-            "valor": 26.00
+            "valor": 26
         },
         {
             "id": 79,
@@ -761,7 +761,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/03c0cc2f-768c-47aa-bc18-f4e3fe0e9862",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1ee2b555-0322-46a1-ace3-672560627cd9",
-            "valor": 55.00
+            "valor": 55
         },
         {
             "id": 80,
@@ -770,7 +770,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/0a383b57-65df-4ad6-935c-b6f799077182",
             "marca": "Biotron",
             "mistura": "https://github-production-user-asset-6210df.s3.amazonaws.com/116287208/255439595-1cd9bc43-a50e-440e-91da-73abc29827d3.png",
-            "valor": 70.00
+            "valor": 70
         },
         {
             "id": 81,
@@ -779,7 +779,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/0a383b57-65df-4ad6-935c-b6f799077182",
             "marca": "Biotron",
             "mistura": "https://github-production-user-asset-6210df.s3.amazonaws.com/116287208/255439595-1cd9bc43-a50e-440e-91da-73abc29827d3.png",
-            "valor": 9.50
+            "valor": 9.5
         },
         {
             "id": 82,
@@ -788,7 +788,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/93b6f893-3910-4a1b-9d42-eb1aa4c94c5f",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/03d5ada2-7be2-493b-a8ec-6915f130337c",
-            "valor": 91.00
+            "valor": 91
         },
         {
             "id": 83,
@@ -797,7 +797,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/93b6f893-3910-4a1b-9d42-eb1aa4c94c5f",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/03d5ada2-7be2-493b-a8ec-6915f130337c",
-            "valor": 12.00
+            "valor": 12
         },
         {
             "id": 84,
@@ -806,7 +806,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/93d3e50e-5b70-4953-a40f-c45a4a272911",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/eb103ec0-10c7-4b13-8527-1696dd54ffae",
-            "valor": 105.00
+            "valor": 105
         },
         {
             "id": 85,
@@ -815,7 +815,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/cbb300c6-2d88-4616-9e57-296e9a44a9bf",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/af23d78c-f9e4-4ca5-992e-876dfa1bb16d",
-            "valor": 110.00
+            "valor": 110
         },
         {
             "id": 86,
@@ -823,7 +823,7 @@
             "descricao": "O Savor Pisittacus é uma mistura de grãos e sementes especialmente formulada para atender às necessidades nutricionais das aves da família dos Psitacídeos, como papagaios e araras. Esta mistura fornece nutrientes essenciais para a saúde e bem-estar dessas aves, contribuindo para sua vitalidade e beleza.",
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/99057fd6-983d-4df1-97e5-3b05ffd9cbe1",
             "marca": "Biotron",
-            "valor": 110.00,
+            "valor": 110,
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/ba63089f-20ae-4c0a-8ec3-fdfd5bd56ae2"
         },
         {
@@ -833,7 +833,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/b584cf82-02b6-4a2a-813a-455e309b1dc5",
             "marca": "Biotron",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/709e0b2b-12cb-4ae5-bfeb-86c66afd03c3",
-            "valor": 12.00
+            "valor": 12
         },
         {
             "id": 88,
@@ -842,7 +842,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4a2c083f-acb5-4466-aac8-57404cb0cf6b",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4a2c083f-acb5-4466-aac8-57404cb0cf6b",
-            "valor": 21.00
+            "valor": 21
         },
         {
             "id": 89,
@@ -851,7 +851,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4a2c083f-acb5-4466-aac8-57404cb0cf6b",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/4a2c083f-acb5-4466-aac8-57404cb0cf6b",
-            "valor": 40.00
+            "valor": 40
         },
         {
             "id": 90,
@@ -860,7 +860,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5c11b20c-1695-44f1-9a8e-dc3b837a6eeb",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5c11b20c-1695-44f1-9a8e-dc3b837a6eeb",
-            "valor": 31.00
+            "valor": 31
         },
         {
             "id": 91,
@@ -869,7 +869,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5c11b20c-1695-44f1-9a8e-dc3b837a6eeb",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5c11b20c-1695-44f1-9a8e-dc3b837a6eeb",
-            "valor": 60.00
+            "valor": 60
         },
         {
             "id": 92,
@@ -878,7 +878,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/66bc5e2b-f392-4398-8664-61e998b1c659",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/66bc5e2b-f392-4398-8664-61e998b1c659",
-            "valor": 55.00
+            "valor": 55
         },
         {
             "id": 93,
@@ -887,7 +887,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5be87829-7ece-419e-a66d-cf2c006363db",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/5be87829-7ece-419e-a66d-cf2c006363db",
-            "valor": 30.00
+            "valor": 30
         },
         {
             "id": 94,
@@ -896,7 +896,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/047cfbbf-6bee-4827-871c-d8cf1d6756c8",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/047cfbbf-6bee-4827-871c-d8cf1d6756c8",
-            "valor": 45.00
+            "valor": 45
         },
         {
             "id": 95,
@@ -905,7 +905,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a176203d-b653-442a-8e8e-9893d8b3f377",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a176203d-b653-442a-8e8e-9893d8b3f377",
-            "valor": 31.00
+            "valor": 31
         },
         {
             "id": 96,
@@ -914,7 +914,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a176203d-b653-442a-8e8e-9893d8b3f377",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/a176203d-b653-442a-8e8e-9893d8b3f377",
-            "valor": 60.00
+            "valor": 60
         },
         {
             "id": 97,
@@ -923,7 +923,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/14e7a85d-12fd-4fe4-a127-79f457d8ca68",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/14e7a85d-12fd-4fe4-a127-79f457d8ca68",
-            "valor": 82.00
+            "valor": 82
         },
         {
             "id": 98,
@@ -932,7 +932,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/2c18b9c6-4068-439e-af61-72b41a6744be",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/2c18b9c6-4068-439e-af61-72b41a6744be",
-            "valor": 160.00
+            "valor": 160
         },
         {
             "id": 99,
@@ -941,7 +941,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/961caa64-7097-49a7-b677-1dff218629ff",
             "marca": "Nutrari",
             "mistura": "5KG",
-            "valor": 65.00
+            "valor": 65
         },
         {
             "id": 100,
@@ -950,7 +950,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/961caa64-7097-49a7-b677-1dff218629ff",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/961caa64-7097-49a7-b677-1dff218629ff",
-            "valor": 125.00
+            "valor": 125
         },
         {
             "id": 101,
@@ -959,7 +959,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c1cccfcd-1a5d-40af-80e6-e624f6f7c7c6",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c1cccfcd-1a5d-40af-80e6-e624f6f7c7c6",
-            "valor": 28.00
+            "valor": 28
         },
         {
             "id": 102,
@@ -968,7 +968,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7d8fa4dc-16af-4957-a898-c7cf4cfb4853",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7d8fa4dc-16af-4957-a898-c7cf4cfb4853",
-            "valor": 65.00
+            "valor": 65
         },
         {
             "id": 103,
@@ -977,7 +977,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7d8fa4dc-16af-4957-a898-c7cf4cfb4853",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/7d8fa4dc-16af-4957-a898-c7cf4cfb4853",
-            "valor": 33.00
+            "valor": 33
         },
         {
             "id": 104,
@@ -986,7 +986,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8543e59a-eec5-47f5-ab86-0793a48e7bc5",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8543e59a-eec5-47f5-ab86-0793a48e7bc5",
-            "valor": 75.00
+            "valor": 75
         },
         {
             "id": 105,
@@ -995,7 +995,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8543e59a-eec5-47f5-ab86-0793a48e7bc5",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8543e59a-eec5-47f5-ab86-0793a48e7bc5",
-            "valor": 150.00
+            "valor": 150
         },
         {
             "id": 106,
@@ -1004,7 +1004,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d6e61cb2-5714-4807-8aeb-65685829ad7e",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d6e61cb2-5714-4807-8aeb-65685829ad7e",
-            "valor": 46.00
+            "valor": 46
         },
         {
             "id": 107,
@@ -1013,7 +1013,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d6e61cb2-5714-4807-8aeb-65685829ad7e",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d6e61cb2-5714-4807-8aeb-65685829ad7e",
-            "valor": 90.00
+            "valor": 90
         },
         {
             "id": 108,
@@ -1022,7 +1022,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dd4efb66-baff-4dc6-8785-310ff3699641",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dd4efb66-baff-4dc6-8785-310ff3699641",
-            "valor": 60.00
+            "valor": 60
         },
         {
             "id": 109,
@@ -1031,7 +1031,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dd4efb66-baff-4dc6-8785-310ff3699641",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dd4efb66-baff-4dc6-8785-310ff3699641",
-            "valor": 120.00
+            "valor": 120
         },
         {
             "id": 110,
@@ -1040,7 +1040,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c656ce1b-3fad-41d9-a8c1-7e9d78a61a21",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c656ce1b-3fad-41d9-a8c1-7e9d78a61a21",
-            "valor": 45.00
+            "valor": 45
         },
         {
             "id": 111,
@@ -1049,7 +1049,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c656ce1b-3fad-41d9-a8c1-7e9d78a61a21",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/c656ce1b-3fad-41d9-a8c1-7e9d78a61a21",
-            "valor": 85.00
+            "valor": 85
         },
         {
             "id": 112,
@@ -1058,7 +1058,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d89f20d0-9308-4f6f-b6e9-4c3a4074c9b8",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d89f20d0-9308-4f6f-b6e9-4c3a4074c9b8",
-            "valor": 45.00
+            "valor": 45
         },
         {
             "id": 113,
@@ -1067,7 +1067,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d89f20d0-9308-4f6f-b6e9-4c3a4074c9b8",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d89f20d0-9308-4f6f-b6e9-4c3a4074c9b8",
-            "valor": 85.00
+            "valor": 85
         },
         {
             "id": 114,
@@ -1076,7 +1076,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/029f24af-b8a8-4b17-a2f8-1c32b4d79c39",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/029f24af-b8a8-4b17-a2f8-1c32b4d79c39",
-            "valor": 45.00
+            "valor": 45
         },
         {
             "id": 115,
@@ -1085,7 +1085,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/029f24af-b8a8-4b17-a2f8-1c32b4d79c39",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/029f24af-b8a8-4b17-a2f8-1c32b4d79c39",
-            "valor": 85.00
+            "valor": 85
         },
         {
             "id": 116,
@@ -1094,7 +1094,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dff34a48-2182-452c-aab8-d7f6f3f1c525",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/dff34a48-2182-452c-aab8-d7f6f3f1c525",
-            "valor": 90.00
+            "valor": 90
         },
         {
             "id": 117,
@@ -1103,7 +1103,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8048f9e2-67b5-43d0-b319-57f07e7372aa",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8048f9e2-67b5-43d0-b319-57f07e7372aa",
-            "valor": 62.00
+            "valor": 62
         },
         {
             "id": 118,
@@ -1112,7 +1112,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8ee3f4d6-2223-4bed-901b-de1d31c4e5c5",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8ee3f4d6-2223-4bed-901b-de1d31c4e5c5",
-            "valor": 30.00
+            "valor": 30
         },
         {
             "id": 119,
@@ -1121,7 +1121,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8ee3f4d6-2223-4bed-901b-de1d31c4e5c5",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/8ee3f4d6-2223-4bed-901b-de1d31c4e5c5",
-            "valor": 30.00
+            "valor": 30
         },
         {
             "id": 120,
@@ -1130,7 +1130,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1e4889db-4fc9-4efc-b2a2-20514e53881a",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1e4889db-4fc9-4efc-b2a2-20514e53881a",
-            "valor": 59.00
+            "valor": 59
         },
         {
             "id": 121,
@@ -1139,7 +1139,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1e4889db-4fc9-4efc-b2a2-20514e53881a",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/1e4889db-4fc9-4efc-b2a2-20514e53881a",
-            "valor": 35.00
+            "valor": 35
         },
         {
             "id": 122,
@@ -1148,7 +1148,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/113cae3e-f48f-48ec-b9a9-2e5cb72f0795",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/113cae3e-f48f-48ec-b9a9-2e5cb72f0795",
-            "valor": 35.00
+            "valor": 35
         },
         {
             "id": 123,
@@ -1157,7 +1157,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/377582f1-0460-4fbd-a0e4-19e32a68330f",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/377582f1-0460-4fbd-a0e4-19e32a68330f",
-            "valor": 62.00
+            "valor": 62
         },
         {
             "id": 124,
@@ -1166,7 +1166,7 @@
             "capa": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d704f3a1-2b86-4053-ad2c-438698560993",
             "marca": "Nutrari",
             "mistura": "https://github.com/Luannunesesb01/API-Noroeste/assets/116287208/d704f3a1-2b86-4053-ad2c-438698560993",
-            "valor": 32.00
+            "valor": 32
         }
     ]
 }
