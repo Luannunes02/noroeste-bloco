@@ -108,11 +108,6 @@ const ProductsConsult = () => {
       return;
     }
     setSharingPdf(true);
-    Toast.show({
-      type: 'info',
-      text1: `Carregando!`,
-      visibilityTime: 1000,
-    });
     try {
       const assetUri = Asset.fromModule(require('../../assets/catalogo.pdf')).uri;
 
